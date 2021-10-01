@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Acceso No Autorizado"/>
+	<meta name="author" content="Fenditrabajo"/>
+	<link rel="shortcut icon" href="https://fenditrabajo.com/view/assets/img/favicon/favicon.ico">
+
+	 <style type="text/css">
+				@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+				/*INICIALIZACIÓN DE ESTILOS*/
+				* {
+				  margin: 0;
+				  padding: 0;
+				  box-sizing: border-box;
+				}
+
+
+				/*PERSONALIZACIÓN DE P.MANTENIMIENTO*/
+				.mantenimiento {
+				  width: 600px;
+				  height: 430px;
+				  border: 1px solid #000;
+				  border-radius: 30px;
+				  margin-top: -200px;
+				  margin-left: -300px;
+				  background-color: #f7f7f7;
+				  position: fixed;
+				  top: 50%;
+				  left: 50%;
+				}
+				.mantenimiento h1, span{
+				    font-size: 5em;
+				}
+				.mantenimiento img {
+					max-width: 60%;
+				  display: block;
+				  margin: auto;
+				}
+				.mantenimiento h1,
+				.mantenimiento h2,
+				.mantenimiento p {
+				  font-family: "noto sans", sans-serif;
+				  color: #3d4950;
+				}
+
+				.mantenimiento h1 {
+				  font-size: 1.8rem;
+				  text-align: center;
+				  padding: 14px;
+				}
+				.mantenimiento h2 {
+				  font-size: 2em;
+				  text-align: center;
+				  font-style: italic;
+					padding-bottom: 10px;
+				}
+				.mantenimiento p {
+				  margin: 16px 0;
+				  line-height: 1.5em;
+				}
+
+	/*CRONOMETRO*/
+	#screen {
+font-family: Calibri,Arial;
+font-weight: 300;
+font-size: 35px;
+height: 50px;
+color: gray;
+font-family: "noto sans", sans-serif;
+letter-spacing: 3px;
+text-align: center;
+}
+.buttons {
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.emerald {
+border-radius: 5px;
+width: 80px;
+height: 30px;
+margin: 5px;
+border: 1px solid #384049;
+color: white;
+cursor: pointer;
+font-family: "noto sans", sans-serif;
+font-weight: 300;
+outline: none;
+text-shadow: 0px -1px 1px black;
+text-transform: uppercase;
+transition: all 0.2s ease;
+}
+
+.emerald{
+background-image: linear-gradient(#3933FF,#3933FF);
+}
+.emerald:active{
+background-image: linear-gradient(#3933FF,#3933FF);
+text-shadow:      0px 1px 1px black;
+}
+
+
+
+
+	</style>
+
+</head>
+<body style="background-image: url('https://fenditrabajo.com/view/assets/img/status/img_main.jpg');" >
+	<div class="mantenimiento">
+	<br/>
+		<img src="https://fenditrabajo.com/view/assets/img/logo.png" alt="logo">
+		<h1>Lo sentimos en estos momentos estamos haciendo manteniemito al Portal de Empleo para mejorar el funcionamiento a nuetros servicios<br/> </h1>
+		<h2>Portal de Empleo disponible en:</h2>
+		<div class="chronometer">
+		<div id="screen">00 : 00 : 00 : 00</div>
+		<div class="buttons">
+			<button class="emerald" onclick="start()">START &#9658;</button>
+			<button class="emerald" onclick="stop()">STOP &#8718;</button>
+			<button class="emerald" onclick="resume()" >RESUME &#8634;</button>
+			<button class="emerald" onclick="reset()">RESET &#8635;</button>
+		</div>
+	</div>
+	</div>
+ <script src="cronometro.js"></script>
+</body>
+</html>
