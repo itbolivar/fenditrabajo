@@ -1037,21 +1037,21 @@ a.wit-btn {
 .howlist li .iconcircle {
   width: 100px;
   height: 100px;
-  border: 3px solid #78ceff;
+  border: 3px solid #1b4573;
   border-radius: 50%;
   text-align: center;
   line-height: 115px;
   margin-bottom: 15px;
   display: inline-block;
-  background: #263bd6;
+  background: #1b4573;
 }
 .howlist li:nth-child(2) .iconcircle {
-  background: #6aca00;
-  border-color: #83ec0f;
+  background: #1b4573;
+  border-color: #1b4573;
 }
 .howlist li:last-child .iconcircle {
-  background: #f8a60c;
-  border-color: #ffc456;
+  background: #1b4573;
+  border-color: #1b4573;
 }
 .howlist li .iconcircle i {
   font-size: 48px;
