@@ -23,7 +23,7 @@ error_reporting(E_ALL);
  *
  * */
 
-$site_URL       = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/";
+$site_URL       = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/fenditrabajo/";
 
 // URL del Sitio Web
 $PORTAL_URL     = $site_URL.'src/view/';
@@ -57,7 +57,7 @@ $EDS_LINK   = $root_directory.'view/distri/';
 
 
 
-define('PATHSRC',               $_SERVER['DOCUMENT_ROOT'].'/src/');
+define('PATHSRC',               $_SERVER['DOCUMENT_ROOT'].'/fenditrabajo/src/');
 define('CONTROLLER',            constant('PATHSRC').'controller/');
 define('MODEL',                 constant('PATHSRC').'model/');
 define('VIEW',                  constant('PATHSRC').'view/');
@@ -82,8 +82,8 @@ define('PREFIXDB',              'u230156310_fenditrabajo.');
  *
  * */
 
-define( 'ADMIN_URL',    '/admin/assert' );
-define( 'ADMIN_LOGIN',  '/admin/' );
+define( 'ADMIN_URL',    '/fenditrabajo/admin/assert' );
+define( 'ADMIN_LOGIN',  '/fenditrabajo/admin/' );
 
 
 
