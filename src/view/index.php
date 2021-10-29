@@ -45,7 +45,7 @@ include 'view/_main.php';
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Aquí puedes ver...preba GitHub</div>
+      <div class="subtitle">Aquí puedes ver</div>
       <h3>Cómo <span> Aplicar</span></h3>
     </div>
 
