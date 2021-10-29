@@ -1,51 +1,51 @@
-<?php 
-include 'view/_main.php'; 
+<?php
+include 'view/_main.php';
 ?>
 <section>
-      <!--Search Bar start-->
-      <div class="searchbar user">
-        <div class="container col-12">
-          <div class="row">
-            <div class="col-md-5 col-sm-12">
-              <input type="text" class="form-control" placeholder="Escriba su busqueda ... " />
-            </div>
-            <div class="col-md-3 col-sm-5">
-              <select class="form-control" placeholder="Categoria">
-                <option>Asesor de servicios de combustible</option>
-                <option>Auxiliar administrativo</option>
-                <option>Auxiliar Contable</option>
-                <option>Administrador de EDS</option>
-                <option>Jefe de patio</option>
-                <option>Contador </option>
-                <option>Ingeniero en SST </option>
-                <option>Tecnólogo en SST</option>
-                <option>Técnico en SST</option>
-              </select>
-            </div>
-            <div class="col-md-2 col-sm-4">
-              <select class="form-control">
-                <option>Ciudad</option>
-                <option>Bogota</option>
-                <option>Medellin</option>
-                <option>Barraquilla</option>
-                <option>Cartagena</option>
-                <option>Cali</option>
-              </select>
-            </div>
-            <div class="col-md-2 col-sm-3">
-              <input type="submit" class="btn" value="Buscar">
-            </div>
-          </div>
+  <!--Search Bar start-->
+  <div class="searchbar user">
+    <div class="container col-12">
+      <div class="row">
+        <div class="col-md-5 col-sm-12">
+          <input type="text" class="form-control" placeholder="Escriba su busqueda ... " />
+        </div>
+        <div class="col-md-3 col-sm-5">
+          <select class="form-control" placeholder="Categoria">
+            <option>Asesor de servicios de combustible</option>
+            <option>Auxiliar administrativo</option>
+            <option>Auxiliar Contable</option>
+            <option>Administrador de EDS</option>
+            <option>Jefe de patio</option>
+            <option>Contador </option>
+            <option>Ingeniero en SST </option>
+            <option>Tecnólogo en SST</option>
+            <option>Técnico en SST</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <select class="form-control">
+            <option>Ciudad</option>
+            <option>Bogota</option>
+            <option>Medellin</option>
+            <option>Barraquilla</option>
+            <option>Cartagena</option>
+            <option>Cali</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <input type="submit" class="btn" value="Buscar">
         </div>
       </div>
-      <!-- Search End -->
+    </div>
+  </div>
+  <!-- Search End -->
 </section>
 <div class="section howitwrap">
 
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Aquí puedes ver</div>
+      <div class="subtitle">Aquí puedes ver...preba GitHub</div>
       <h3>Cómo <span> Aplicar</span></h3>
     </div>
 
@@ -83,16 +83,16 @@ include 'view/_main.php';
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Aquí puedes ver algunos de</div><br/>
+      <div class="subtitle">Aquí puedes ver algunos de</div><br />
       <h3>Nuestros Potenciales <span>Empleadores</span></h3>
     </div>
     <!-- title end -->
 
     <ul class="employerList">
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="<?php echo $img_dir?>employers/emplogo1.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="<?php echo $img_dir ?>employers/emplogo1.jpg" alt="Company Name" /></a></li>
       <!--employer-->
-      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="<?php echo $img_dir?>employers/emplogo2.jpg" alt="Company Name" /></a></li>
+      <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="<?php echo $img_dir ?>employers/emplogo2.jpg" alt="Company Name" /></a></li>
       <!--employer-->
       <li data-toggle="tooltip" data-placement="top" title="" data-original-title="Company Name"><a href="company-detail.html"><img src="assets/img/employers/emplogo3.jpg" alt="Company Name" /></a></li>
       <!--employer-->
@@ -137,8 +137,8 @@ include 'view/_main.php';
     <!-- title end -->
 
     <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci.</p>
-    <a href="#."><i class="fa fa-play-circle-o" aria-hidden="true"></i></a> 
-    </div>
+    <a href="#."><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+  </div>
 </div>
 <!-- Video end -->
 
@@ -157,7 +157,7 @@ include 'view/_main.php';
         <div class="jobint">
           <div class="row">
             <img src="assets/img/employers/logo-unidad-spe.png" alt="Job Name" />
-              <h4><a href="#.">Servicio Publico de Empleo</a></h4>
+            <h4><a href="#.">Servicio Publico de Empleo</a></h4>
           </div>
         </div>
       </li>
@@ -178,33 +178,33 @@ include 'view/_main.php';
       </li>
       Job end-->
 
-            <!--Job 8-->
-        <!--Job 1-->
-        <li class="col-md-4 col-sm-6">
-          <div class="jobint1">
-            <div class="row">
-              <img src="assets/img/employers/LogoF50.png" alt="Job Name" />
-                <h4><a href="https://fendipetroleo.com/" top ="blanck" >Fendipetroleo Nacional</a></h4>
-            </div>
+      <!--Job 8-->
+      <!--Job 1-->
+      <li class="col-md-4 col-sm-6">
+        <div class="jobint1">
+          <div class="row">
+            <img src="assets/img/employers/LogoF50.png" alt="Job Name" />
+            <h4><a href="https://fendipetroleo.com/" top="blanck">Fendipetroleo Nacional</a></h4>
           </div>
-        </li>
+        </div>
+      </li>
       <!--Job end-->
 
       <!--Job 9-->
-        <!--Job 1-->
-        <li class="col-md-4 col-sm-6">
-          <div class="jobint">
-            <div class="row">
-              <img src="assets/img/employers/logo-unidad-spe.png" alt="Job Name" />
-                <h4><a href="https://www.serviciodeempleo.gov.co/">Servicio Publico de Empleo</a></h4>
-            </div>
+      <!--Job 1-->
+      <li class="col-md-4 col-sm-6">
+        <div class="jobint">
+          <div class="row">
+            <img src="assets/img/employers/logo-unidad-spe.png" alt="Job Name" />
+            <h4><a href="https://www.serviciodeempleo.gov.co/">Servicio Publico de Empleo</a></h4>
           </div>
-        </li>
+        </div>
+      </li>
       <!--Job end-->
     </ul>
-    
+
   </div>
 </div>
 <!-- Latest Jobs ends -->
 
-<?php include 'view/_footer.php';?>
+<?php include 'view/_footer.php'; ?>
