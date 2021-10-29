@@ -2,7 +2,6 @@
 
 <!-- Revolution slider start -->
 <section>
-    <ul>
       <!--Search Bar start-->
       <div class="searchbar user">
         <div class="container col-12">
@@ -11,11 +10,16 @@
               <input type="text" class="form-control" placeholder="Escriba su busqueda ... " />
             </div>
             <div class="col-md-3 col-sm-5">
-              <select class="form-control">
-                <option>Categoria</option>
-                <option>Ingenieria</option>
-                <option>Auditoria</option>
-                <option>Contabilidad</option>
+              <select class="form-control" placeholder="Categoria">
+                <option>Asesor de servicios de combustible</option>
+                <option>Auxiliar administrativo</option>
+                <option>Auxiliar Contable</option>
+                <option>Administrador de EDS</option>
+                <option>Jefe de patio</option>
+                <option>Contador </option>
+                <option>Ingeniero en SST </option>
+                <option>Tecnólogo en SST</option>
+                <option>Técnico en SST</option>
               </select>
             </div>
             <div class="col-md-2 col-sm-4">
@@ -35,9 +39,6 @@
         </div>
       </div>
       <!-- Search End -->
-      <!--Slide-->
-      <!--Slide end-->
-    </ul>
 </section>
 <!-- Latest Jobs start -->
 <div class="section greybg">

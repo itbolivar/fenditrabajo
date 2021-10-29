@@ -1,9 +1,4 @@
 <?php
-namespace src\controller;
-use DateTime;
-use src\model as model;
-
-require_once 'browserDetection.php';
 
 class logController
 {
@@ -12,11 +7,12 @@ class logController
         private String          $_fecha         = '';
         private String          $_navegador     = '';
         private int             $_id_usuario    = 0;
-        private model\logModel        $log;
+        private logModel        $log;
+        private browserDetection $bDetect;
                 
         
         public function __construct(){
-            $this->log = new model\logModel();
+            $this->log = new logModel();
         }
         
         
@@ -82,9 +78,9 @@ class logController
         
        private function getBrowser()
         {
-             $obj = new browserDetection();
+            $this->bDetect = new browserDetection();
              
-             return $obj->detect()->getInfo();
+            return $this->bDetect->detect()->getInfo();
         }
 }
 ?>

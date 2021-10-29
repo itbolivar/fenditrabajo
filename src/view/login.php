@@ -1,16 +1,18 @@
 <?php 
-namespace src\view;
-use src;
-include         '../../src/config.inc.php';
-require_once    '../../src/controller/loginSession.php';
 
-$login = new src\controller\loginSession();
+require_once '../../src/config.inc.php';
+require_once constant('PATHSRC').'include.php';
+
+$login = new loginSession();
+$uSesion = user_session::getInstance();
 
 if(isset($_POST['candidatoLogin']))
 {
     if($_POST['password'] != ''){
         $login->postUsuarioEmpresaFrontEnd();
         //echo "OK USUARIO o CANDIDATO";
+        
+        
     }else{
         echo "No se acepta campos vacios USUARIO Password";
     }
@@ -23,6 +25,10 @@ else
         session_start();
         $login->postUsuarioEmpresaFrontEnd();
          //echo "OK EDS u OFERENTE";
+            /*$_SESSION["id"]     = $id_u;
+            $_SESSION["user_codsicom"]  =  (isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : ''; */
+            $uSesion->getCurrentIdSession($login->getID());
+            $uSesion->getCurrentIdSession((isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : '');
         }else{
             echo "No se acepta campos vacios EDS Password";
         }
@@ -40,7 +46,7 @@ else
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inicio Fenditrabajo</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="https://fendipetroleo.com/nuevoF/public/icon/favicon.ico">
 
 <!-- Owl carousel -->
 <link href="<?php echo $css_dir?>owl.carousel.css" 	rel="stylesheet">

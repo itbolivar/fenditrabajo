@@ -1,22 +1,19 @@
 <?php
-namespace src\model;
-use \PDO;
-use src\controller as controller;
- 
+
 class permisosModel{
 
     private     $_id_permisos               = "";
     private     $_descripcion               = "";
     private     $_estado                    = "";
     
-    private     Controller\Conexion        $objeto;
+    private     Conexion        $objeto;
     private     $conexion;
     //private     logController   $logC;
     private     $data;
     
     public function __construct(){
         
-        $this->objeto       = controller\Conexion::getInstance();
+        $this->objeto       = Conexion::getInstance();
     }
     
 

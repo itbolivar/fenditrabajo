@@ -1,13 +1,15 @@
 <?php
-namespace src\view\user;
 require_once '../../config.inc.php';
-session_start();
+require_once constant('PATHSRC').'include.php';
 
+$uSesion = user_session::getInstance();
 
-$id_usuaroempresa          = $_SESSION["id_usuaroempresa"];
-$user_codsicom             = $_SESSION["user_codsicom"];
+$id_usuario                 = $_SESSION["id_usuaroempresa"];
+$user_codsicom              = $_SESSION["user_codsicom"];
+
+$uSesion->setCurrentID($id_usuario);
+$uSesion->setCurrentUserCodSicom($user_codsicom);
 $dataemp = '';
-
 
 /*if(isset($_SESSION['IDEMPRESA']))
 {

@@ -1,5 +1,5 @@
 <?php
-namespace src\controller;
+
 
 //include 'logController.php';
 // Inicializar la sesión.

@@ -1,22 +1,15 @@
 <?php
-namespace src\model;
-//require_once '../admin.inc.php';
-//require_once CONTROLLER."conexion.php";
-
-use \PDO;
-use src\controller as controller;
-
 
 class empresaModel{
 
     private     $id_empresa         = '';
     private     $id_replegal        = '';
     private     $id_infoadmin       ='';
-    private     controller\Conexion        $objeto;
+    private     Conexion        $objeto;
 
     
     public function __construct(){
-        $this->objeto       = controller\Conexion::getInstance();
+        $this->objeto       = Conexion::getInstance();
     }
     
     
@@ -27,11 +20,10 @@ class empresaModel{
      **/
     
     public function getAllEmpresa(){
-        //$this->objeto       = Controller\Conexion::getInstance();
         $conexion           = $this->objeto->Conectar();
         $data               = '';
         
-        $sql = "Select id_empresa, nomRazonSocial, nit, email, departamento, ciudad, telefono, celular, direccion from u230156310_fenditrabajo.empresa;";
+        $sql        = "Select id_empresa, nomRazonSocial, nit, email, departamento, ciudad, telefono, celular, direccion from u230156310_fenditrabajo.empresa;";
         $resultado  = $conexion->prepare($sql);
         $resultado->execute();
         
@@ -41,11 +33,11 @@ class empresaModel{
     }
     
     public function selectIDEmpresa($id_emp){
-        //$this->objeto       = Controller\Conexion::getInstance();
+        
         $conexion           = $this->objeto->Conectar();
         $data               = '';
         
-        $sql = "Select * from u230156310_fenditrabajo.empresa where id_empresa ='$id_emp'";
+        $sql        = "Select * from u230156310_fenditrabajo.empresa where id_empresa ='$id_emp'";
         $resultado  = $conexion->prepare($sql);
         $resultado->execute();
         
@@ -72,7 +64,7 @@ class empresaModel{
     
     
     public function selectRepLegal($id_emp){
-        //$this->objeto       = Controller\Conexion::getInstance();
+        
         $conexion           = $this->objeto->Conectar();
         $data               = '';
         
@@ -104,7 +96,7 @@ class empresaModel{
     }
     
     public function selectAdminsitrador($id_emp){
-        //$this->objeto       = Controller\Conexion::getInstance();
+        
         $conexion           = $this->objeto->Conectar();
         $data               = '';
         
@@ -143,7 +135,7 @@ class empresaModel{
     
     public function getUsuarioEmpresa($id_usuario){
         $id_empresa = '';
-       // $this->objeto       = Controller\Conexion::getInstance();
+       
         $conexion           = $this->objeto->Conectar();
         $data               = '';
         
@@ -184,7 +176,7 @@ class empresaModel{
      **/
     
     public function addEmpresa(String $nomRazonSocial, int $nit, String $email, String $departamento, String $ciudad, int $telefono, int $celular, String $direccion, String $descripcion){
-        //$this->objeto       = Controller\Conexion::getInstance();
+        
         $conexion           = $this->objeto->Conectar();
         
         $sql                = "INSERT INTO u230156310_fenditrabajo.empresa (nomRazonSocial, nit, email, departamento, ciudad, telefono, celular, direccion, descripcion) VALUES ('$nomRazonSocial', '$nit', '$email', '$departamento', '$ciudad', '$telefono', '$celular', '$direccion','$descripcion');";
@@ -212,7 +204,7 @@ class empresaModel{
       **/
      
     public function addRepLegal(String $nombre, String $tipoId, int $numId, String $cargo, String $email, int $telefono, int $celular, int $id_empresa){
-        // $this->objeto       = Controller\Conexion::getInstance();
+        
          $conexion           = $this->objeto->Conectar();
          $sql                = "INSERT INTO u230156310_fenditrabajo.representante_legal (nombre, tipoId, numId, cargo, email, telefono, celular) VALUES ('$nombre','$tipoId','$numId','$cargo','$email','$telefono','$celular');";
          $resultado  = $conexion->prepare($sql);
@@ -236,7 +228,7 @@ class empresaModel{
       * Tabla Fk de Empresa y representante_legal
       * */
      private function empresa_replegal(int $id_empresa, int $id_replegal){
-         //$this->objeto       = Controller\Conexion::getInstance();
+         
          $conexion           = $this->objeto->Conectar();
          
          $sql = "INSERT INTO u230156310_fenditrabajo.empresa_replegal (id_empresa, id_replegal) VALUES ('$id_empresa', '$id_replegal');";
@@ -252,7 +244,7 @@ class empresaModel{
      
      public function addAdminsitrador(String $nombre, String $tipoId, int $numId, String $cargo, String $email, int $telefono, int $celular, 
                                         String $arl, String $nivelriesgo, int $numTrabajadores, int $id_empresa){
-         //$this->objeto       = Controller\Conexion::getInstance();
+         
          $conexion           = $this->objeto->Conectar();
          
          $sql = "INSERT INTO u230156310_fenditrabajo.info_administrador (nombre, tipoId, numId, cargo, email, telefono, celular, arl, nivelriesgo, numTrabajadores) 
@@ -271,7 +263,7 @@ class empresaModel{
       * Tabla Fk de Empresa y Info Administrador
       * */
      private function empresa_infoAdmin(int $id_infoadmin, int $id_empresa){
-         //$this->objeto       = Controller\Conexion::getInstance();
+         
          $conexion           = $this->objeto->Conectar();
          
          $sql = "INSERT INTO u230156310_fenditrabajo.empresa_infoAdmin (id_infoadmin, id_empresa) VALUES ('$id_infoadmin', '$id_empresa');";
@@ -286,7 +278,7 @@ class empresaModel{
       **/
      
      public function updateEmpresa(int $id_emp, String $nomRazonSocial, int $nit, String $email, String $departamento, String $ciudad, int $telefono, int $celular, String $direccion, String $descripcion){
-         //$this->objeto       = Controller\Conexion::getInstance();
+         
          $conexion           = $this->objeto->Conectar();
          
          $sql = "UPDATE u230156310_fenditrabajo.empresa SET nomRazonSocial='$nomRazonSocial', nit='$nit', email='$email', departamento='$departamento', ciudad='$ciudad', telefono='$telefono', celular='$celular', direccion='$direccion' , descripcion ='$descripcion' 

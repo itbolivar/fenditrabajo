@@ -1,21 +1,18 @@
-<?php 
-include 'view/_main.php';
-//require_once CONTROLLER."rolesController.php";
+<?php include 'view/main.php';
+require_once CONTROLLER.'empresaController.php';
 
-//$rController = new rolesController();
-
-//if($_POST['descripcion'] != "" || $_POST['estado'] != "" ){
-//$rController->postRoles();
-//}
-//$data = $rController->getAllRoles();
+$emp = new empresaController();
+$data = $emp->getAllEmpresa();
 
 ?>
 
-<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<!-- 
+
+<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">  -->
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
-    <h1 align="center">Administracion de los Roles</h1>
+    <h1 align="center">Administracion de las EDS</h1>
     
  <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -40,13 +37,47 @@ include 'view/_main.php';
                                             <thead class="text-center">
                                                 <tr>
                                                    <th>ID</th>  
-                                                   <th>Descripcion</th>  
-                                                   <th>Estado</th> 
-                                                   <th>Aciones</th> 
+                                                   <th>Razon Social</th>
+                                                   
+                                                   <th>email</th>
+                                                   <th>departamento</th>
+                                                   <th>ciudad</th>
+                                                   
+                                                   <th>direccion</th>
+                                                   <th>Accion</th>
                                                 </tr>
-                                            </thead>
+                                            </thead> 
                                             <tbody>
-                                            
+                                            	<?php                            
+                                            	foreach($data as $dat)
+                                                    {                                                        
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $dat['id_empresa']; ?></td>
+                                                        <td><?php echo $dat['nomRazonSocial']; ?></td>
+                                                        
+                                                        <td><?php echo $dat['email'];?></td>
+                                                        <td><?php echo $dat['departamento']; ?></td>
+                                                        <td><?php echo $dat['ciudad']; ?></td>
+                                                        
+                                                        <td><?php echo $dat['direccion']; ?>
+                                                     
+                                            	   
+                                                   	<td>
+                                                    	<div class="text-center">
+                                							<div class="btn-group">
+                                    							<button class="btn btn-primary" data-toggle="modal" data-target="#actualizarRol" >
+                                    								<i class="fa fa-edit" aria-hidden="true"></i>
+                                    							</button>
+                                    							<button class="btn btn-danger" data-toggle="modal" data-target="#eliminarRol">
+                                    								<i class="fa fa-trash" aria-hidden="true"></i>
+                                    							</button>
+                                							</div>
+                                						</div> 
+                                                	</td>
+                                                	
+                                                	</tr>
+                                            	<?php }?>
                                             </tbody>        
                                        </table>                    
                                 	</div>
@@ -119,10 +150,4 @@ include 'view/_main.php';
         </div>
     </div> 
 
-
-
-
-    
-
-<?php require_once "view/_footer.php"; ?>
-<script src="../js/roles.js"></script> 
+<?php require_once "view/footer.php"; ?>

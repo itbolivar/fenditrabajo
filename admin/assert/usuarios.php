@@ -1,16 +1,19 @@
 <?php 
-include 'view/_main.php';
-require_once CONTROLLER."usuariosController.php";
-require_once CONTROLLER.'permisosController.php';
-
-use src\controller as controller;
+require_once '../../src/include.php';
+include 'view/main.php';
 
 
-$pController = new controller\permisosController();
-$uController = new controller\usuariosController();
+$pController = new permisosController();
+
+
+
+$uController = new usuariosController();
+$pController = new permisosController();
+
 
 $dataRol   = $pController->getAllPermisos();
 $data      = $uController->getAllUsuariosRolPermisos();
+
 
 
 function isValidMd5($md5 ='')
@@ -231,4 +234,4 @@ function isValidMd5($md5 ='')
 
 
 
-<?php require_once "view/_footer.php"; ?>
+<?php require_once "view/footer.php"; ?>

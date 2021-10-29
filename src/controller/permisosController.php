@@ -1,18 +1,15 @@
 <?php
-namespace src\controller;
 
-
-use src\model as model;
 
 class permisosController{
 
     private     $_id_permisos = "";
     private     $_descripcion = "";
     private     $_estado      = "";
-    private     model\permisosModel    $pModel;
+    private     permisosModel    $pModel;
     
     public function __construct(){
-        $this->pModel = new model\permisosModel();
+        $this->pModel = new permisosModel();
     }
 
     public function setId_Permisos($id)

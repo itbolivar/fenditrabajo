@@ -1,10 +1,4 @@
 <?php 
-namespace src\model;
-require_once 'empresaModel.php';
-require_once 'usuariosModel.php';
-
-use src\controller  as controller;
-use src\model       as model;
 
 class registroModel{
     
@@ -12,19 +6,19 @@ class registroModel{
     private     $_descripcion   = "";
     private     $_estado        = "";
     //private     logController   $logC;
-    private     controller\Conexion        $objeto;
+    private     Conexion        $objeto;
     private     $conexion;
     private     $data;
     
     /* Declaracion de Clases */
-    private     model\usuariosModel  $userModel;
+    private     usuariosModel  $userModel;
     private     empresaModel   $empModel;
     
    
     public function __construct(){
-        $this->objeto       = controller\Conexion::getInstance();
-        $this->userModel    = new model\usuariosModel();
-        $this->empModel     = new model\empresaModel();
+        $this->objeto       = Conexion::getInstance();
+        $this->userModel    = new usuariosModel();
+        $this->empModel     = new empresaModel();
     }
     
     /*

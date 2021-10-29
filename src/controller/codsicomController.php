@@ -1,20 +1,14 @@
 <?php 
-namespace src\controller;
-require_once MODEL.'codsicomModel.php';
-
-use Exception;
-
-use src\model       as model;
 
 class codsicomController{
     
-    private     model\codsicomModel    $cModel;
+    private     codsicomModel    $cModel;
     private     $subfix         = '-77';
     private     $codsicom_af    ;
     private     $nombreEDS      ;
     
     public function __construct(){
-        $this->cModel = new model\codsicomModel();
+        $this->cModel = new codsicomModel();
     }
     
     public function codsicom_check($cod_sicom)

@@ -1,8 +1,7 @@
-<?php include 'view/_main.php';
+<?php include 'view/main.php';
+require_once CONTROLLER.'permisosController.php';
 
-use src\controller as controller;
-
-$pController = new Controller\permisosController();
+$pController = new permisosController();
 
 
 $data = $pController->getAllPermisos();
@@ -184,4 +183,4 @@ $data = $pController->getAllPermisos();
 
 
 
-<?php require_once "view/_footer.php"; ?>
+<?php require_once "view/footer.php"; ?>

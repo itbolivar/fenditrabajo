@@ -1,7 +1,5 @@
 <?php require_once 'view/_main.php';?>
 
-
-
 <!-- Page Title start -->
 <div class="pageTitle">
   <div class="container">
@@ -24,8 +22,8 @@
       <div class="row">
         <div class="col-md-12 column">
           <div class="title"> <span>Estamos aqui para ayudarte</span>
-          <br/>
-            <h2>PONGASE EN CONTACTO</h2>
+          <br/><br/>
+            <h2>CONTACTENOS</h2>
           </div>
         </div>
 
@@ -34,21 +32,20 @@
           <div class="contact-now">
             <div class="contact"> <span><i class="fa fa-home"></i></span>
               <div class="information"> <strong>Direccion:</strong>
-                <p>130001, New Ispum, Dolor amet sit 12301</p>
+                <p>Cra. 18 #78-40, Localidad de Chapinero, Bogotá</p>
               </div>
             </div>
             <!-- Contact Info -->
             <div class="contact"> <span><i class="fa fa-envelope"></i></span>
               <div class="information"> <strong>Correo Electronico:</strong>
-                <p>investigate@your-site.com</p>
-                <p>investigate@your-site.com</p>
+                <p>info@fenditrabajo.com</p>
               </div>
             </div>
             <!-- Contact Info -->
             <div class="contact"> <span><i class="fa fa-phone"></i></span>
               <div class="information"> <strong>Telefono:</strong>
-                <p>+057 300 345 67 009</p>
-                <p>+057 300 345 67 009</p>
+                <p>+057 XXX XX XX XXX</p>
+                <p>+057 XXX XX XX XXX</p>
               </div>
             </div>
             <!-- Contact Info -->
@@ -63,16 +60,33 @@
             <form method="post" action="" name="contactform" id="contactform">
               <div class="row">
                 <div class="col-md-6">
-                  <input name="name" type="text" id="name" placeholder="Nombre Completo">
+                  <input name="name" type="text" id="name" placeholder="Nombre">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="phone" placeholder="Apellido">
                 </div>
                 <div class="col-md-6">
                   <input type="text" name="phone" placeholder="Numero de Telefono">
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <input name="email" type="text" id="email" placeholder="Correco Electronico">
                 </div>
+                <div class="col-md-6">
+                  <select class="form-control" name="registro" id="registro" required="required">
+                     <option value= "" >Tipo de Documento</option>
+                     <option value="CC">Cedula de Ciudania</option>
+                     <option value="CEX">Cedula de Extrajeria</option>
+                     <option value="NUIT">Numero de Identificacion Tributaria</option>
+                     <option value="NIT">NIT</option>
+                     <option value="SICOM">Codigo Sicom</option>
+                   </select>
+                </div>
+                <div class="col-md-6">
+                  <input name="email" type="text" id="email" placeholder="Documento de Identidad">
+                </div>
+                
                 <div class="col-md-12">
-                  <textarea rows="4" name="comments" id="comments" placeholder="Detalle"></textarea>
+                  <textarea rows="4" name="comments" id="comments" placeholder="Solicitud"></textarea>
                 </div>
                 <div class="col-md-12">
                   <button title="" class="button" type="submit" id="submit">Enviar</button>

@@ -1,6 +1,4 @@
 <?php
-namespace src\controller;
-use src\model as model;
 
 class usuariosController{
 
@@ -8,12 +6,12 @@ class usuariosController{
     private     $_descripcion = "";
     private     $_estado      = "";
     private     $_accionRol;
-    private     model\usuariosModel    $uModel;
+    private     usuariosModel    $uModel;
     private static $cryptKey = "a.RYoH5)d]svz9vfNIPc(^HywK{O08Xb7a@lgk[gcPKJ!fGHOX";
    
     
     public function __construct(){
-        $this->uModel = new model\usuariosModel();
+        $this->uModel = new usuariosModel();
     }
 
     

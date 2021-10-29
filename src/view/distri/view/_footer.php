@@ -1,6 +1,7 @@
-<?php namespace src\view\distri;
-/*include MODAL;
-$modal = new Controller\modalMaster();*/
+<?php 
+require_once '../../config.inc.php';
+require_once constant('PATHSRC').'include.php';
+$modal = new modalMaster();
 
 ?>
 <!--Footer-->
@@ -43,7 +44,7 @@ $modal = new Controller\modalMaster();*/
 
 
 <?php
-//$modal->setModal('acces','Cerrar Sesion','¿ Desea Salir de la Session '.$user_codsicom.' ?');
+$modal->setModal('acces','Cerrar Sesion','¿ Desea Salir de la Session '.$user_codsicom.' ?');
 ?>
 </body>
 </html>

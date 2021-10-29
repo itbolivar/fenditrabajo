@@ -1,15 +1,12 @@
 <?php
 
-namespace src\view;
-use src;
-
-include         '../../src/config.inc.php';
-require_once    '../../src/controller/registroController.php';
+require_once '../config.inc.php';
+require_once constant('PATHSRC').'include.php';
 //include MODAL;
 
 
 $nombreEDS      = '';
-$reg = new src\controller\registroController();
+$reg = new registroController();
 
 if(isset($_POST['candidatoReg']))
 {

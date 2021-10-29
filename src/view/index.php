@@ -1,21 +1,25 @@
 <?php 
 include 'view/_main.php'; 
 ?>
-
 <section>
       <!--Search Bar start-->
-      <div class="searchbar user1">
+      <div class="searchbar user">
         <div class="container col-12">
           <div class="row">
             <div class="col-md-5 col-sm-12">
               <input type="text" class="form-control" placeholder="Escriba su busqueda ... " />
             </div>
             <div class="col-md-3 col-sm-5">
-              <select class="form-control">
-                <option>Categoria</option>
-                <option>Ingenieria</option>
-                <option>Auditoria</option>
-                <option>Contabilidad</option>
+              <select class="form-control" placeholder="Categoria">
+                <option>Asesor de servicios de combustible</option>
+                <option>Auxiliar administrativo</option>
+                <option>Auxiliar Contable</option>
+                <option>Administrador de EDS</option>
+                <option>Jefe de patio</option>
+                <option>Contador </option>
+                <option>Ingeniero en SST </option>
+                <option>Tecnólogo en SST</option>
+                <option>Técnico en SST</option>
               </select>
             </div>
             <div class="col-md-2 col-sm-4">
@@ -35,8 +39,6 @@ include 'view/_main.php';
         </div>
       </div>
       <!-- Search End -->
-      
-    
 </section>
 <div class="section howitwrap">
 
@@ -81,8 +83,8 @@ include 'view/_main.php';
   <div class="container">
     <!-- title start -->
     <div class="titleTop">
-      <div class="subtitle">Aquí puedes ver</div>
-      <h3>Nuestros <span>empleadores</span></h3>
+      <div class="subtitle">Aquí puedes ver algunos de</div><br/>
+      <h3>Nuestros Potenciales <span>Empleadores</span></h3>
     </div>
     <!-- title end -->
 

@@ -1,9 +1,4 @@
 <?php
-namespace src\controller;
- 
-use \Exception;
-use src\model as model;
-use src\controller as controller;
 
 class rolesController
 {
@@ -11,10 +6,10 @@ class rolesController
     private     $_descripcion = "";
     private     $_estado      = "";
     private     $_accionRol;
-    private  static model\rolesModel    $rModel;
+    private  static rolesModel    $rModel;
     
     public function __construct(){
-        self::$rModel = new model\rolesModel();
+        self::$rModel = new rolesModel();
     }
 
     public function postRoles()
@@ -74,7 +69,7 @@ class rolesController
     
 
 }
-$rController = new controller\rolesController();
+$rController = new rolesController();
 print json_encode($rController->postRoles(), JSON_UNESCAPED_UNICODE);
 
 ?>

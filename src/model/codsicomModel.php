@@ -1,17 +1,12 @@
 <?php 
-namespace src\model;
-//require_once '../admin.inc.php';
-
-use \PDO;
-use src\controller  as controller;
 
 class codsicomModel
 {
-    private     controller\conexion        $objeto;
+    private     Conexion        $objeto;
     private     $conexion;
      
     public function __construct(){
-        $this->objeto       = controller\conexion::getInstance();
+        $this->objeto       = Conexion::getInstance();
     }
     
     public function get_codsicom($cod_sicom){

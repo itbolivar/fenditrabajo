@@ -1,42 +1,29 @@
 <?php 
-namespace src\controller;
 
-use \src;
-use \Exception;
-use src\model as model;
 
 class registroController{
     
-    private model\registroModel $regModel;
+    private registroModel $regModel;
     
     public function __construct(){
-        $this->regModel = new model\registroModel();
+        $this->regModel = new registroModel();
     }
     
     public function getPOST(){
-        
-        
         if(isset($_POST['candidatoReg']))
         {
-            
             $user_codsicom      =   $_POST['user_codsicom'];
             $password           =   $_POST['password'];
-            
             $this->addRegistroUSUARIO($user_codsicom, $password);           
         }
         if(isset($_POST['eds_empleadorReg']))
         {
-            
             $user_codsicom2     =   $_POST['user_codsicom2'];
             $nombreEDS          =   $_POST['nombreEDS'];
             $emp_email          =   $_POST['emp_email'];
             $emp_password       =   $_POST['emp_password'];
-            
             $this->addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password);
-            
         }
-        
-        
     }
     
     private function addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password){

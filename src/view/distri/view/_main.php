@@ -1,8 +1,9 @@
 <?php
-namespace src\view\distri;
-include_once '../../config.inc.php';
 
-session_start();
+require_once '../../config.inc.php';
+require_once constant('PATHSRC').'include.php';
+
+$uSesion = user_session::getInstance();
 if (!isset($_SESSION['id_usuaroempresa'])  || !isset($_SESSION['user_codsicom'])) {
     header('location: ../status/401.html');
 }
@@ -11,7 +12,8 @@ if (!isset($_SESSION['id_usuaroempresa'])  || !isset($_SESSION['user_codsicom'])
 $id_usuario                 = $_SESSION["id_usuaroempresa"];
 $user_codsicom              = $_SESSION["user_codsicom"];
 
-
+$uSesion->setCurrentID($id_usuario);
+$uSesion->setCurrentUserCodSicom($user_codsicom);
 
 
 //$eds = "Eds The OilExample";
@@ -34,7 +36,7 @@ $user_codsicom              = $_SESSION["user_codsicom"];
 
 <title>EDS-Fenditrabajo</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="<?php echo $img_dir?>favicon/favicon.ico">
 
 <!-- Slider -->
 <link href="../assets/js/revolution-slider/css/settings.css" rel="stylesheet">

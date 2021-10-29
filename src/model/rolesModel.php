@@ -1,10 +1,4 @@
 <?php
-namespace src\model;
-
-use Exception;
-use \PDO;
-use src\controller  as controller;
-
 
 class rolesModel{
 
@@ -12,14 +6,14 @@ class rolesModel{
     private     $_descripcion   = "";
     private     $_estado        = "";
 
-    private     controller\conexion        $objeto;
+    private     Conexion        $objeto;
     private     $conexion;
     //private     logController   $logC;
     private     $data;
     
     
     public function __construct(){
-        $this->objeto       = controller\conexion::getInstance();
+        $this->objeto       = Conexion::getInstance();
     }
 
     

@@ -1,12 +1,9 @@
 <?php
-namespace src\controller;
-use Exception;
-use src\model as model;
 
 class empresaController{
 
     private     $id_empresa     = '';
-    private     model\empresaModel    $empModel ;
+    private     empresaModel    $empModel ;
 
     /* Datos Personales*/
     private $emp_razonsocial    ;
@@ -75,7 +72,7 @@ class empresaController{
         $this->admin_riesgo       = null;
         $this->admin_numtabajador = null;
 
-        $this->empModel = new model\empresaModel();
+        $this->empModel = new empresaModel();
     }
 
     public function getPOST(){

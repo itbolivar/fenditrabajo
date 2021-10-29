@@ -1,8 +1,8 @@
-<?php require_once 'view/_main.php'; ?>
+<?php require_once 'view/_main.php'; 
 
-<!-- Page Title start -->
+//<!-- Page Title start -->
 
-<div class="card card-body">
+echo '<div class="card card-body">
     <br/>
       <h2 class="text-center">AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES</h2>
       <br/>
@@ -42,5 +42,7 @@
     <br/>
 </div>
 </div>
-</div>
-<?php require_once 'view/_footer.php';?>
+</div>';
+
+      
+      require_once 'view/_footer.php';?>

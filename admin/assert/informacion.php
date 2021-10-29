@@ -1,4 +1,4 @@
-<?php include 'view/_main.php';
+<?php include 'view/main.php';
 
 ?>
 
@@ -36,4 +36,4 @@ require_once CONTROLLER.'aboutSer.php'; ?>
 </div>
 
 
-<?php require_once "view/_footer.php"; ?>
+<?php require_once "view/footer.php"; ?>

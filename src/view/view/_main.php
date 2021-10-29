@@ -1,7 +1,7 @@
 <?php 
 
-include '../config.inc.php';
-
+require_once '../config.inc.php';
+require_once constant('PATHSRC').'include.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -81,7 +81,14 @@ header("Pragma: no-cache");
           				<li><a href="tratamientodatos.php">Aviso legal y Privacidad</a><li>
                 	</ul>
               </li>
-              <li><a href="">Talleres</a></li>
+              <li><a href="">Talleres</a>
+              		<ul class="dropdown-menu">
+                      	<li><a href="#">Apectos Juridicos en el proceso de Selscion</a><li>
+          				<li><a href="#">Clave del proceso de seleccion</a></li>
+          				<li><a href="#">¿Qué debe contener un perfil laboral?</a><li>
+          				<li><a href="#">Proceso de selección de personal</a><li>
+                	</ul>
+              </li>
               <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Iniciar Sesion</a></li>
             </ul>
             <!-- Nav collapes end -->

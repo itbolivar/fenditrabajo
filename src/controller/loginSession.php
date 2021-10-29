@@ -1,9 +1,4 @@
 <?php 
-namespace src\controller;
-require_once '../../src/controller/Conexion.php';
-use \PDO;
-use src;
-
     
 class loginSession{
         
@@ -11,12 +6,12 @@ class loginSession{
         private String                          $user_codsicom;
         private String                          $password;          
         
-        private src\controller\Conexion         $objeto;
+        private Conexion         $objeto;
         //private Model\logController   $logC;
         //private $data;
         
         public function __construct(){
-            $this->objeto     = src\controller\Conexion::getInstance();
+            $this->objeto     = Conexion::getInstance();
             //$this->logC       = new Model\logController();
         }
         
@@ -54,18 +49,15 @@ class loginSession{
                 {
                     $id_u   =  $row["id"];
                 }
-                session_id($id_u);
+                /*session_id($id_u);
                 session_start();
-                $_SESSION["id"]     = $id_u;
-                $_SESSION["user_codsicom"]  = $this->user_codsicom;
+                $this->id    = $id_u;
+                $_SESSION["user_codsicom"]  = $this->user_codsicom;*/
                 
                 //$logC->setLog("Inicio de Sesion con el Usuario ".$this->user_codsicom."",$id_u);
             }else
             {
-                $boolean                    = false;
-                $_SESSION["id"]             =   null;
-                $_SESSION["user_codsicom"]  =   null;
-                //$data                     =   null;
+                $boolean                    =   false;
                 $conexion                   =   null;
             }
             
@@ -78,15 +70,15 @@ class loginSession{
          * 
          * */
 
-        
+        public function getID(){
+            return $this->id;
+        }
         
         public function postUsuarioEmpresaFrontEnd(){
             if(isset($_POST['candidatoLogin']))
             {
-                
                 $user_codsicom      =   $_POST['user_codsicom'];
                 $password           =   $_POST['password'];
-                
                 
                 $res = $this->getTypeLoginUserEDS($user_codsicom,$password);
                 if($res == true){
@@ -96,12 +88,9 @@ class loginSession{
                 }else{
                     echo "NO Loging USUARIO ".$res;
                 }
-                
-                
             }
             if(isset($_POST['eds_empleadorLogin']))
             {
-                
                 $user_codsicom2     =   $_POST['user_codsicom2'];
                 $emp_password       =   $_POST['emp_password'];
                 $res =  $this->getTypeLoginUserEDS($user_codsicom2,$emp_password);
@@ -112,9 +101,6 @@ class loginSession{
                 }else{
                     echo "NO Loging EDS".$res;
                 }
-                
-                
-                
             }
         }
         

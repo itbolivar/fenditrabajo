@@ -1,8 +1,4 @@
 <?php
-namespace src\model;
-
-
-use src\controller as controller;
       
 class logModel{
     
@@ -13,7 +9,7 @@ class logModel{
     
     public function setLog($_nomAccion,  $_ip,  $_navegador,  $_fecha,  $id_usuario){
         
-        $objeto     = controller\conexion::getInstance();
+        $objeto     = Conexion::getInstance();
         $conexion   = $objeto->Conectar();
         
         $sql        = "INSERT INTO log (nomAccion,ip,navegador,fecha, id_usuarios) VALUES ('$_nomAccion','$_ip', '$_navegador', '$_fecha', '$id_usuario');";
