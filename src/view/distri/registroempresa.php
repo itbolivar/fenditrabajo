@@ -5,7 +5,7 @@ namespace src\view\distri;
 include_once 'view/_main.php';
 
 require_once '../../../src/config.inc.php';
-require_once constant('PATHSRC') . 'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
 
 use src\controller\empresaController;
 use src\controller\codsicomController;
