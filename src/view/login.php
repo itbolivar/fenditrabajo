@@ -17,19 +17,22 @@ if(isset($_POST['candidatoLogin']))
     if($_POST['password'] != ''){
         $uSesion->setCurrentID($login->getID());
         $uSesion->setCurrentUserCodSicom((isset($_POST['user_codsicom']))  ? $_POST['user_codsicom'] : '');
-        $login->postUsuarioEmpresaFrontEnd();
+        if($login->postUsuarioEmpresaFrontEnd() == false){
+            $errorLogin = "Usuario y Contraseña Invalidos. ";
+        }
     }else{
-        $errorLogin = "No se acepta campos vacios USUARIO Password";
+        $errorLogin = "No se acepta campos vacios. Verifique la informacion";
     }
 }
 
 if(isset($_POST['eds_empleadorLogin']))
 {
    if($_POST['emp_password'] != ''){
-    session_start();
     $uSesion->getCurrentIdSession($login->getID());
     $uSesion->getCurrentIdSession((isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : '');
-    $login->postUsuarioEmpresaFrontEnd();
+    if($login->postUsuarioEmpresaFrontEnd() == false){
+        $errorLogin = "Codigo Sicom y Contraseña Invalidos. <br> Intente de Nuevo.";
+    }
     
     }else{
         $errorLogin = "No se acepta campos vacios EDS Password";
@@ -135,11 +138,11 @@ if(isset($_POST['eds_empleadorLogin']))
         				</div>
         				<?php 
                         if(isset($errorLogin)){
-                            echo "<div class='alert alert-denger alert-dismissible' role='alert'>
-                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                            echo "<div class='alert alert-danger alert-dismissible' role='alert' style='text-align: center;'>
+                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                            <span aria-hidden='true'>&times;</span></button>
                                   $errorLogin
-                                
-                            </div>";
+                                </div>";
                         }
                       ?>
         				

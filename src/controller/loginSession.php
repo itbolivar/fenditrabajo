@@ -86,6 +86,8 @@ class loginSession extends conexion{
                 $res = $this->getTypeLoginUserEDS($user_codsicom,$password);
                 if($res == true){
                     header('Location:../view/user/index.php');
+                }else {
+                   return false;
                 }
             }
             if(isset($_POST['eds_empleadorLogin']))
@@ -95,6 +97,8 @@ class loginSession extends conexion{
                 $res =  $this->getTypeLoginUserEDS($user_codsicom2,$emp_password);
                 if($res){
                     header("Location:../view/distri/index.php");
+                }else {
+                    return false;
                 }
             }
         }
