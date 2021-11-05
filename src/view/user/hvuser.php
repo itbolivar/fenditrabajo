@@ -42,10 +42,10 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Correo Electronico</label>
+										<label for="nombre" class="control-label">Correo Electrónico</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span></span>
-											<input type="text" class="form-control" name="dpEmail" id="dpEmail" placeholder="luis@gmail.com" required>
+											<input type="email" class="form-control" name="dpEmail" id="dpEmail" placeholder="luis@gmail.com" required>
 										</div>
 									</div>
 								</div>
@@ -53,42 +53,42 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-3">
 									<div class="form-group">
-											<label for="form-group" class="control-label">Tipo</label>
+											<label for="form-group" class="control-label">Tipo Documento</label>
 											<div class="input-group">
 												<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
 												<select name="dpTipoid" id="dpTipoid" class="form-control">
 													<option value="" selected disabled>Seleccionar</option>
 													<option value="Cédula">Cédula</option>
-                          <option value="Nit">Nit</option>
-                          <option value="Cédula Extranjería">Cédula Extranjería</option>
+                         							<option value="Nit">Nit</option>
+                          							<option value="Cédula Extranjería">Cédula Extranjería</option>
 												</select>
 											</div>
 										</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Numero de Documento</label>
+										<label for="nombre" class="control-label">Número de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span></span>
-											<input type="text" class="form-control" name="dpNumid" id="dpNumid" placeholder="8400000" required>
+											<input type="number" class="form-control" name="dpNumid" id="dpNumid" placeholder="8400000" required>
 										</div>
 									</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">Telefono fijo</label>
+										<label for="ciudad">Teléfono  fijo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-											<input type="tel" class="form-control" name="dpTel" id="dpTel" placeholder="Telefono Fijo" />
+											<input type="tel" class="form-control" name="dpTel" id="dpTel" placeholder="Teléfono  Fijo" />
 										</div>
 									</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">Telefono Celular</label>
+										<label for="ciudad">Teléfono  Celular</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-											<input type="tel" class="form-control" name="dpCel" id="dpCel" placeholder="Telefono Celular" />
+											<input type="tel" class="form-control" name="dpCel" id="dpCel" placeholder="Teléfono  Celular" />
 										</div>
 									</div>
 								</div>
@@ -106,7 +106,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Pais de Nacimiento</label>
+										<label for="nombre" class="control-label">País de Nacimiento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span></span>
 											<input type="text" class="form-control" name="dpPais" id="dpPais" placeholder="Colombia" required>
@@ -136,10 +136,15 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Genero</label>
+										<label for="nombre" class="control-label">Tipo de Genero</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
-											<input type="text" class="form-control" name="dpGenero" id="dpGenero"  placeholder="Genero" required>
+												<select name="dpGenero" id="dpGenero" class="form-control">
+														<option value="Seleccionar" selected disabled>Seleccionar</option>
+														<option value="Femenino">Femenino</option>
+														<option value="Masculino">Masculino</option>
+														<option value="Otro">Otro</option>
+												</select>
 										</div>
 									</div>
 								</div>
@@ -148,16 +153,21 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre" class="control-label">Estado Civil</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
-											<input type="text" class="form-control" name="dpEstCivil" id="dpEstCivil" placeholder="soltero" required>
+											<select name="dpEstCivil" id="dpEstCivil" class="form-control" required>
+														<option value="Seleccionar" selected disabled>Seleccionar</option>
+														<option value="Soltero">Soltero</option>
+														<option value="Casado">Casado</option>
+														<option value="Ulibre">Únion Libre</option>
+												</select>
 										</div>
 									</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Ocupación</label>
+										<label for="nombre" class="control-label">Ocupación o Profesión</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span></span>
-											<input type="text" class="form-control" name="dpOcupacion" id="dpOcupacion"  placeholder="estudiante" required>
+											<input type="text" class="form-control" name="dpProfesion" id="dpProfesion"  placeholder="Técnico" required />
 										</div>
 									</div>
 								</div>
@@ -166,21 +176,22 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre" class="control-label">Tipo de Población</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
-											<input type="text" class="form-control" name="dpTipoPobla" id="dpTipoPobla" placeholder="poblacion"  required>
+											<select name="dpTipoPobla" id="dpTipoPobla" class="form-control">
+														<option value="Seleccionar" selected disabled>Seleccionar</option>
+														<option value="Noaplica">No Aplica</option>
+														<option value="Minetnica">Mionoría étnica</option>
+														<option value="disfisica">Discapacidad física</option>
+														<option value="Discognitiva">Discapacidad cognitiva</option>
+														<option value="Madrecaflia">Madre cabeza de familia</option>
+														<option value="Desforzoso">Desplazamiento forzoso</option>
+														<option value="Dissensorial">Discapacidad sensorial</option>
+														<option value="comlgtbi">Comunidad LGTBIQ+</option>
+												</select>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="nombre" class="control-label">Pais de Residencia</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span></span>
-											<input type="text" class="form-control" name="dpPaisResiden" id="dpPaisResiden" placeholder="pois" required>
-										</div>
-									</div>
-								</div>
+							<div class="row">			
 								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="nombre" class="control-label">Departamento de Residencia</label>
@@ -192,83 +203,33 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="nombre" class="control-label">Ciudad de Residencia</label>
+										<label for="nombre" class="control-label">Ciudad o Municipio de Residencia</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span></span>
-											<input type="text" class="form-control" name="dpCiuResiden" id="dpCiuResiden" placeholder="ciudad Residencia" required>
+											<input type="text" class="form-control" name="dpCiuResiden" id="dpCiuResiden" placeholder="Ciudad Residencia" required>
 										</div>
 									</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">Cambio de Residencia</label>
+										<label for="ciudad">Disponibilidad Cambio de Residencia</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-pin"></i></span>
-											<input type="text" class="form-control" name="dpCambioResiden" id="dpCambioResiden" placeholder="cali" />
+											<input type="text" class="form-control" name="dpCambioResiden" id="dpCambioResiden" placeholder="Si/No" />
 										</div>
 									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xs-3">
+								</div><div class="col-xs-3">
 									<div class="form-group">
-										<label for="estado">Direccion de Residencia</label>
+										<label for="estado">Dirección de Residencia</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 											<input type="text" class="form-control" name="dpDireccion" id="dpDireccion" placeholder="calle 1 b 23-10" required />
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="nombre" class="control-label">Barrio de Residencia</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span></span>
-											<input type="text" class="form-control" name="dpBarrio" id="dpBarrio" placeholder="las mercerdes" required>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="nombre" class="control-label">Nivel de Estudio</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span></span>
-											<input type="text" class="form-control" name="dpEstudio" id="dpEstudio"  placeholder="tecnico-laboral" required />
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="nombre" class="control-label">Profesión</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span></span>
-											<input type="text" class="form-control" name="dpProfesion" id="dpProfesion"  placeholder="tecnico" required />
-										</div>
-									</div>
-								</div>
 							</div>
-
 							<div class="row">
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="nombre" class="control-label">Disponibilidad</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span></span>
-											<input type="text" class="form-control" name="dpDisponibi" id="dpDisponibi"  placeholder="tiempo completo" required>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-3">
-									<div class="form-group">
-										<label for="ciudad">Area Laboral</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-map-pin"></i></span>
-											<input type="text" class="form-control" name="dpAreaLab" id="dpAreaLab" placeholder="Admimistrativa" />
-										</div>
-									</div>
-								</div>
+								
 								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="ciudad">Aspiración Salarial</label>
@@ -288,7 +249,6 @@ require_once 'view/_main.php'; ?>
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-xs-2">
 									<div class="form-group">
@@ -373,7 +333,7 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="estado">Pais</label>
+										<label for="estado">País</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 											<input type="text" class="form-control" name="estado" id="estado" placeholder="colombia" />
@@ -532,7 +492,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="ciudad">Pais</label>
+										<label for="ciudad">País</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Colombia" >
@@ -654,10 +614,10 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="puesto_r">Telefono</label>
+										<label for="puesto_r">Teléfono </label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="telefono" required>
+											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Teléfono " required>
 										</div>
 									</div>
 								</div>
