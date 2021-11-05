@@ -5,7 +5,7 @@ namespace src\view\distri;
 include_once 'view/_main.php';
 
 require_once '../../../src/config.inc.php';
-require_once constant('PATHSRC').'libraryFendi.php';
+require_once constant('PATHSRC') . 'libraryFendi.php';
 
 use src\controller\empresaController;
 use src\controller\codsicomController;
@@ -97,7 +97,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 			<ul class="nav nav-tabs">
 				<!-- Pestaña Inicio-->
 				<li class="active" id="tab-eds"><a href="#eds" role="tab" data-toggle="tab">
-						<span class="glyphicon glyphicon-tint"></span> Información EDS</a>
+						<span class="glyphicon glyphicon-tint"></span> Información ED</a>
 				</li>
 				<li class="" id="tab-representante-legal"><a href="#representante-legal" role="tab" data-toggle="tab">
 						<span class="glyphicon glyphicon-bookmark"></span> Información Representate legal</a>
