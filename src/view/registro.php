@@ -1,9 +1,9 @@
 <?php
-
+namespace src\view;
 require_once '../config.inc.php';
-require_once constant('PATHSRC').'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
 //include MODAL;
-
+use src\controller\registroController;
 
 $nombreEDS      = '';
 $reg = new registroController();

@@ -1,4 +1,6 @@
 <?php
+namespace src\controller;
+
 $indicesServer = '';
 
 $indicesServer = array('PHP_SELF',

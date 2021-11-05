@@ -1,7 +1,10 @@
 <?php 
+namespace src\view\distri\view;
+
 require_once '../../config.inc.php';
-require_once constant('PATHSRC').'include.php';
-$modal = new modalMaster();
+require_once constant('PATHSRC').'libraryFendi.php';
+
+
 
 ?>
 <!--Footer-->

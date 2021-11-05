@@ -1,4 +1,6 @@
-<?php include 'view/_main.php'; ?>
+<?php 
+namespace src\view\distri;
+include 'view/_main.php'; ?>
 
 <!-- Revolution slider start -->
 <div class="tp-banner-container">

@@ -1,5 +1,7 @@
 <?php
+namespace src\controller;
 
+use permisosModel;
 
 class permisosController{
 

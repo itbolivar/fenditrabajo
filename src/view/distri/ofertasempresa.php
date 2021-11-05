@@ -1,4 +1,6 @@
-<?php require_once 'view/_main.php';?>
+<?php 
+namespace src\view\distri;
+require_once 'view/_main.php';?>
 
 <!-- Page Title start -->
 <div class="pageTitle">

@@ -1,6 +1,10 @@
 <?php
+namespace src\controller;
 
-class Conexion
+use Exception;
+use PDO;
+
+class conexion
 {
         private static string $servidor           = '';
         private static string $db                 = '';
@@ -33,9 +37,9 @@ class Conexion
         public static function getInstance()
         {
             if (!self::$instance instanceof self ) {
-                self::$instance = new Conexion();
+                self::$instance = new conexion();
             }
-            return Conexion::$instance;
+            return conexion::$instance;
         }
         
         public static function Close(){

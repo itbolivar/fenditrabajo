@@ -1,4 +1,8 @@
 <?php 
+namespace src\controller;
+
+use Exception;
+use src\model\codsicomModel;
 
 class codsicomController{
     

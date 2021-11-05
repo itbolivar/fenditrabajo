@@ -1,15 +1,19 @@
 <?php
+namespace src\model;
+
+use PDO;
+use src\controller\conexion;
 
 class empresaModel{
 
     private     $id_empresa         = '';
     private     $id_replegal        = '';
     private     $id_infoadmin       ='';
-    private     Conexion        $objeto;
+    private     conexion        $objeto;
 
     
     public function __construct(){
-        $this->objeto       = Conexion::getInstance();
+        $this->objeto       = conexion::getInstance();
     }
     
     

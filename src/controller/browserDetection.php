@@ -1,4 +1,5 @@
 <?php 
+namespace src\controller;
 
 class browserDetection {
     private $_user_agent;

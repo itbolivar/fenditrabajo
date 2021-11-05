@@ -1,4 +1,6 @@
 <?php 
+namespace src;
+use src\controller\user_session;
 
 class libraryFendi
 {
@@ -10,7 +12,7 @@ class libraryFendi
         require_once 'config.inc.php';
         
         /* Controller */
-        require_once constant('CONTROLLER').'Conexion.php';
+        require_once constant('CONTROLLER').'conexion.php';
         require_once constant('CONTROLLER').'browserDetection.php';
         require_once constant('CONTROLLER').'codsicomController.php';
         require_once constant('CONTROLLER').'empresaController.php';

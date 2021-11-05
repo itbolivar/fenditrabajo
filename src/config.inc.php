@@ -1,4 +1,5 @@
 <?php 
+namespace src;
 include_once('fendiversion.php');
 
 $timezone = 'America/Bogota';

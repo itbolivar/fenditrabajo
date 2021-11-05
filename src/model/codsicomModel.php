@@ -1,12 +1,16 @@
 <?php 
+namespace src\model;
+
+use PDO;
+use src\controller\conexion;
 
 class codsicomModel
 {
-    private     Conexion        $objeto;
+    private     conexion        $objeto;
     private     $conexion;
      
     public function __construct(){
-        $this->objeto       = Conexion::getInstance();
+        $this->objeto       = conexion::getInstance();
     }
     
     public function get_codsicom($cod_sicom){

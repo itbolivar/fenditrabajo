@@ -1,4 +1,6 @@
 <?php 
+namespace src\controller;
+
 class modalMaster
 {
     private $headerTitle     =   "";
@@ -9,14 +11,14 @@ class modalMaster
         switch ($tipo){
             
             case "acces":
-                echo "<form action='modalMaster.php' method='post' >
+                echo "<form action='../../controller/logout.php' method='post' >
                         <div id='logoutModal' class='modal fade' role='dialog'>
                             <div class='modal-dialog'>
                                 <div class='modal-content'>
                                     <div class='modal-header'>
                                         <button type='button' class='close' data-dismiss='modal'>&times;</button>
                                         <h4 class='modal-title'>
-                                        <img src='https://fenditrabajo.com/src/view/assets/img/icon/aceptar.png' width='5%' height='5%'></img> $headerTitle</h4>
+                                        <img src='https://fenditrabajo.com/fenditrabajo/src/view/assets/img/icon/aceptar.png' width='5%' height='5%'></img> $headerTitle</h4>
                                     </div>
                                     <div class='modal-body'>
                                     	<div class='container-fluid'> 
@@ -121,9 +123,6 @@ class modalMaster
                 
                 break;
         }
-        
-        
-        
     }
 }
 

@@ -1,21 +1,32 @@
 <?php
+namespace src\view\user\view;
+
+use src\controller\user_session;
+use src\controller\modalMaster;
+
 require_once '../../config.inc.php';
-require_once constant('PATHSRC').'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
+
+header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+$modal = new modalMaster();
+
 
 $uSesion = user_session::getInstance();
+if (!isset($_SESSION['id_usuaroempresa'])  || !isset($_SESSION['user_codsicom'])) {
+    header('location: ../status/401.html');
+}
+
 
 $id_usuario                 = $_SESSION["id_usuaroempresa"];
 $user_codsicom              = $_SESSION["user_codsicom"];
 
 $uSesion->setCurrentID($id_usuario);
 $uSesion->setCurrentUserCodSicom($user_codsicom);
-$dataemp = '';
-
-/*if(isset($_SESSION['IDEMPRESA']))
-{
-    $id_empresa = $_SESSION['IDEMPRESA'];
-}
-*/
 
 
 

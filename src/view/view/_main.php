@@ -1,7 +1,8 @@
 <?php 
+namespace src\view\view;
 
 require_once '../config.inc.php';
-require_once constant('PATHSRC').'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");

@@ -1,40 +1,41 @@
 <?php 
+namespace src\view;
+
+use src\controller\user_session;
+use src\controller\loginSession;
 
 require_once '../../src/config.inc.php';
-require_once constant('PATHSRC').'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
 
 $login = new loginSession();
 $uSesion = user_session::getInstance();
 
+$errorLog = '';
+
 if(isset($_POST['candidatoLogin']))
 {
     if($_POST['password'] != ''){
+        $uSesion->setCurrentID($login->getID());
+        $uSesion->setCurrentUserCodSicom((isset($_POST['user_codsicom']))  ? $_POST['user_codsicom'] : '');
         $login->postUsuarioEmpresaFrontEnd();
-        //echo "OK USUARIO o CANDIDATO";
-        
-        
     }else{
-        echo "No se acepta campos vacios USUARIO Password";
+        $errorLogin = "No se acepta campos vacios USUARIO Password";
     }
 }
-else
+
+if(isset($_POST['eds_empleadorLogin']))
 {
-    if(isset($_POST['eds_empleadorLogin']))
-    {
-       if($_POST['emp_password'] != ''){
-        session_start();
-        $login->postUsuarioEmpresaFrontEnd();
-         //echo "OK EDS u OFERENTE";
-            /*$_SESSION["id"]     = $id_u;
-            $_SESSION["user_codsicom"]  =  (isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : ''; */
-            $uSesion->getCurrentIdSession($login->getID());
-            $uSesion->getCurrentIdSession((isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : '');
-        }else{
-            echo "No se acepta campos vacios EDS Password";
-        }
+   if($_POST['emp_password'] != ''){
+    session_start();
+    $uSesion->getCurrentIdSession($login->getID());
+    $uSesion->getCurrentIdSession((isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : '');
+    $login->postUsuarioEmpresaFrontEnd();
+    
+    }else{
+        $errorLogin = "No se acepta campos vacios EDS Password";
     }
-    else
-    {
+}
+   
  
 ?>
 
@@ -52,7 +53,8 @@ else
 <link href="<?php echo $css_dir?>owl.carousel.css" 	rel="stylesheet">
 
 <!-- Bootstrap -->
-<link href="<?php echo $css_dir?>bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 <!-- Font Awesome -->
 <link href="<?php echo $css_dir?>font-awesome.css" 	rel="stylesheet">
@@ -131,6 +133,16 @@ else
         	            	<img src="<?php echo $img_dir?>logo.png" class="logo" width="50%" height="50%"  alt="" />
         					<h5>Inicio de sesion</h5>
         				</div>
+        				<?php 
+                        if(isset($errorLogin)){
+                            echo "<div class='alert alert-denger alert-dismissible' role='alert'>
+                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                                  $errorLogin
+                                
+                            </div>";
+                        }
+                      ?>
+        				
         				
                         <div class="userbtns">
                             <ul class="nav nav-tabs">
@@ -200,9 +212,12 @@ else
           </div>
         <!--Footer end-->
 
-<!-- Bootstrap's JavaScript -->
+<!-- Bootstrap's JavaScript 
 <script src="<?php echo $js_dir?>jquery-2.1.4.min.js"></script>
-<script src="<?php echo $js_dir?>bootstrap.min.js"></script>
+<script src="<?php echo $js_dir?>bootstrap.min.js"></script> -->
+
+<script src="<?php echo $js_dir?>jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Owl carousel -->
 <script src="<?php echo $js_dir?>owl.carousel.js"></script>
@@ -212,6 +227,6 @@ else
 </body>
 </html>
 <?php 
-    }
-}
+    
+
 ?>

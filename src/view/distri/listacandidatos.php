@@ -1,4 +1,4 @@
-<?php  ?>
+<?php namespace src\view\distri; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

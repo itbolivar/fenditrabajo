@@ -1,1 +1,3 @@
-<?php ?>
+<?php
+namespace src\view;
+?>

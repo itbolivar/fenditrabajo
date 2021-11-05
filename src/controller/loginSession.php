@@ -1,8 +1,11 @@
 <?php 
-    
-class loginSession{
+namespace src\controller;
+
+use PDO;
+
+class loginSession extends conexion{
         
-        private String                          $id;
+        private String                          $id = '';
         private String                          $user_codsicom;
         private String                          $password;          
         
@@ -43,11 +46,11 @@ class loginSession{
             if($resultado->rowCount() >= 1)
             {
                 $boolean    = true;
-                $id_u       = "";
+                
                 $data       = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($data as $row)
                 {
-                    $id_u   =  $row["id"];
+                    $this->id   =  $row["id"];
                 }
                 /*session_id($id_u);
                 session_start();
@@ -82,11 +85,7 @@ class loginSession{
                 
                 $res = $this->getTypeLoginUserEDS($user_codsicom,$password);
                 if($res == true){
-                    echo "Loging USUARIO OK ".$res;
                     header('Location:../view/user/index.php');
-                    
-                }else{
-                    echo "NO Loging USUARIO ".$res;
                 }
             }
             if(isset($_POST['eds_empleadorLogin']))
@@ -95,11 +94,7 @@ class loginSession{
                 $emp_password       =   $_POST['emp_password'];
                 $res =  $this->getTypeLoginUserEDS($user_codsicom2,$emp_password);
                 if($res){
-                    echo "Loging EDS".$res;
                     header("Location:../view/distri/index.php");
-                    
-                }else{
-                    echo "NO Loging EDS".$res;
                 }
             }
         }

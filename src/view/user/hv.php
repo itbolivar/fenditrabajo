@@ -1,4 +1,6 @@
-<?php require_once 'view/_main.php';?>
+<?php 
+namespace src\view\user;
+require_once 'view/_main.php';?>
 
 <!-- Header end --> <!-- Page Title start -->
 <div class="pageTitle">

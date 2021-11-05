@@ -1,4 +1,8 @@
 <?php
+namespace src\model;
+
+use PDO;
+use src\controller\conexion;
 
 class rolesModel{
 
@@ -6,14 +10,14 @@ class rolesModel{
     private     $_descripcion   = "";
     private     $_estado        = "";
 
-    private     Conexion        $objeto;
+    private     conexion        $objeto;
     private     $conexion;
     //private     logController   $logC;
     private     $data;
     
     
     public function __construct(){
-        $this->objeto       = Conexion::getInstance();
+        $this->objeto       = conexion::getInstance();
     }
 
     
@@ -42,7 +46,6 @@ class rolesModel{
     
     public function getIdRoles($id){
         $data = "";
-        try {
             //$this->objeto     = new Conexion();
             $sql                = "SELECT id, descripcion, estado  FROM roles; where id='.$id.'";
             
@@ -61,10 +64,6 @@ class rolesModel{
                 $this->conexion     =   null;
                 $this->objeto->close();
             }
-        } catch (Exception $e) {
-            echo $e;
-        }
-        
         return $data;
     }
     

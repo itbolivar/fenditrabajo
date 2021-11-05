@@ -1,4 +1,6 @@
 <?php 
+
+namespace src\view\view;
 //use src\controller as controller;
 //$modal = new controller\modalMaster();
 ?>

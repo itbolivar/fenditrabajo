@@ -1,6 +1,6 @@
 <?php
 
-namespace src\view\user;
+namespace src\view\user\view;
 
 /*include MODAL;
 $modal = new Controller\modalMaster();*/
@@ -51,7 +51,7 @@ $modal = new Controller\modalMaster();*/
 
 
 <?php
-//$modal->setModal('acces','Cerrar Sesion','¿ Desea Salir de la Session ?');
+$modal->setModal('acces','Cerrar Sesion','¿ Desea Salir de la Session '.$user_codsicom.' ?');
 ?>
 </body>
 </html>

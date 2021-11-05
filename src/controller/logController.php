@@ -1,4 +1,8 @@
 <?php
+namespace src\controller;
+
+use DateTime;
+use src\model\logModel;
 
 class logController
 {

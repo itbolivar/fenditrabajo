@@ -1,4 +1,6 @@
-<?php require_once 'view/_main.php'; ?>
+<?php 
+namespace src\view\user;
+require_once 'view/_main.php'; ?>
 
 <div class="container">
 	<h4>Hoja de Vida</h4>

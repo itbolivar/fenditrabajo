@@ -1,4 +1,5 @@
 <?php
+namespace src\view;
 include 'view/_main.php';
 ?>
 <section>

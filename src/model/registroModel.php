@@ -1,4 +1,7 @@
 <?php 
+namespace src\model;
+
+use src\controller\conexion;
 
 class registroModel{
     
@@ -6,7 +9,7 @@ class registroModel{
     private     $_descripcion   = "";
     private     $_estado        = "";
     //private     logController   $logC;
-    private     Conexion        $objeto;
+    private     conexion        $objeto;
     private     $conexion;
     private     $data;
     
@@ -16,7 +19,7 @@ class registroModel{
     
    
     public function __construct(){
-        $this->objeto       = Conexion::getInstance();
+        $this->objeto       = conexion::getInstance();
         $this->userModel    = new usuariosModel();
         $this->empModel     = new empresaModel();
     }

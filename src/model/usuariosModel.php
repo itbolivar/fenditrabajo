@@ -1,4 +1,8 @@
 <?php
+namespace src\model;
+
+use PDO;
+use src\controller\conexion;
 
 class usuariosModel{
 
@@ -6,14 +10,14 @@ class usuariosModel{
     private     $_descripcion   = "";
     private     $_estado        = "";
 
-    private     Conexion        $objeto;
+    private     conexion        $objeto;
     private     $conexion;
     //private     logController   $logC;
     private     $data;
     
     
     public function __construct(){
-        $this->objeto       = Conexion::getInstance();
+        $this->objeto       = conexion::getInstance();
     }
 
     public function selectUsuarios()
