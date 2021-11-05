@@ -8,12 +8,11 @@ require_once '../../src/config.inc.php';
 require_once constant('PATHSRC').'libraryFendi.php';
 
 $login = new loginSession();
-$uSesion = user_session::getInstance();
-
 $errorLog = '';
 
 if(isset($_POST['candidatoLogin']))
 {
+    $uSesion = user_session::getInstance();
     if($_POST['password'] != ''){
         $uSesion->setCurrentID($login->getID());
         $uSesion->setCurrentUserCodSicom((isset($_POST['user_codsicom']))  ? $_POST['user_codsicom'] : '');
@@ -27,6 +26,7 @@ if(isset($_POST['candidatoLogin']))
 
 if(isset($_POST['eds_empleadorLogin']))
 {
+   $uSesion = user_session::getInstance();
    if($_POST['emp_password'] != ''){
     $uSesion->getCurrentIdSession($login->getID());
     $uSesion->getCurrentIdSession((isset($_POST['user_codsicom2']))  ? $_POST['user_codsicom2'] : '');
