@@ -1,4 +1,9 @@
-<?php include "view/main.php"; ?>
+<?php 
+namespace admin\view;
+require_once '../../src/config.inc.php';
+require_once constant('PATHSRC').'libraryFendi.php';
+
+include "view/main.php"; ?>
 
 
 <!-- Content Wrapper -->
@@ -43,4 +48,4 @@
 <!-- End of Page Wrapper -->
 
 
-<?php require_once "view/footer.php"; ?>
+<?php require_once "../assert/view/footer.php"; ?>

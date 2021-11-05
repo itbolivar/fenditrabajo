@@ -52,10 +52,8 @@ class loginSession extends conexion{
                 {
                     $this->id   =  $row["id"];
                 }
-                /*session_id($id_u);
-                session_start();
-                $this->id    = $id_u;
-                $_SESSION["user_codsicom"]  = $this->user_codsicom;*/
+                $_SESSION["id_usuaroempresa"]    = $this->id;
+                $_SESSION["user_codsicom"]       = $this->user_codsicom;
                 
                 //$logC->setLog("Inicio de Sesion con el Usuario ".$this->user_codsicom."",$id_u);
             }else

@@ -2,7 +2,7 @@
 namespace src\controller;
 
 use Exception;
-use rolesModel;
+use src\model\rolesModel;
 
 class rolesController
 {

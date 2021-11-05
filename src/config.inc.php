@@ -83,7 +83,7 @@ define('PREFIXDB',              'u230156310_fenditrabajo.');
  *
  * */
 
-define( 'ADMIN_URL',    '/fenditrabajo/admin/assert' );
+define( 'ADMIN_URL',    '/fenditrabajo/admin/view' );
 define( 'ADMIN_LOGIN',  '/fenditrabajo/admin/' );
 
 

@@ -1,4 +1,7 @@
 <?php
+namespace src\controller;
+
+use src\model\usuariosModel;
 
 class usuariosController{
 

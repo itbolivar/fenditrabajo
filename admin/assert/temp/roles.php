@@ -1,5 +1,5 @@
 <?php 
-require_once "view/main.php"; 
+/*require_once "view/main.php"; 
 require_once CONTROLLER."rolesController.php";
 
 $rController = new rolesController();
@@ -210,4 +210,4 @@ $data = $rController->getAllRoles();
 
     
 
-<?php require_once "view/footer.php"; ?>
+<?php require_once "view/footer.php"; ?>*/

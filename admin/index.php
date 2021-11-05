@@ -1,19 +1,15 @@
-<?php 
+<?php namespace admin;
+use src\controller\loginSession;
 require_once '../src/config.inc.php';
-require_once constant('PATHSRC').'include.php';
+require_once constant('PATHSRC').'libraryFendi.php';
 if(isset($_POST['submit']))
 {
     $login = new loginSession();
     
     if($login->login_check() >= 1 )
     {
-        
-        echo "OK <br/>";
-        echo "".$_SESSION["id"]."<br/>";
-        echo "".$_SESSION["user_codsicom"]."<br/>";
-        
-        //header("Status: 301 Moved Permanently");
-        //header("Location: ".constant('ADMIN_URL')."/index.php");
+        header("Status: 301 Moved Permanently");
+        header("Location: ".constant('ADMIN_URL')."/index.php");
         
       /*  $id     =   (isset($_SESSION["id"])) ? $_SESSION["id"] : '';
         $user   =   (isset($_SESSION["email"])) ? $_SESSION["email"] : ''; */

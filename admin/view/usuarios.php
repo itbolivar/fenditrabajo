@@ -1,6 +1,11 @@
 <?php 
-require_once '../../src/include.php';
-include 'view/main.php';
+namespace admin\view;
+require_once '../src/config.inc.php';
+require_once constant('PATHSRC').'libraryFendi.php';
+use src\controller\permisosController;
+use src\controller\usuariosController;
+
+include '../assert/view/main.php';
 
 
 $pController = new permisosController();
@@ -234,4 +239,4 @@ function isValidMd5($md5 ='')
 
 
 
-<?php require_once "view/footer.php"; ?>
+<?php require_once "../assert/view/footer.php"; ?>

@@ -1,5 +1,5 @@
 <?php 
-include 'view/main.php';
+include '../assert/view/main.php';
 //require_once CONTROLLER."rolesController.php";
 
 //$rController = new rolesController();
@@ -124,5 +124,5 @@ include 'view/main.php';
 
     
 
-<?php require_once "view/footer.php"; ?>
+<?php require_once "../assert/view/footer.php"; ?>
 <script src="../js/roles.js"></script> 

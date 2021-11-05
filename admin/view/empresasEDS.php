@@ -1,5 +1,11 @@
-<?php include 'view/main.php';
-require_once CONTROLLER.'empresaController.php';
+<?php 
+namespace admin\view;
+require_once '../src/config.inc.php';
+require_once constant('PATHSRC').'libraryFendi.php';
+use src\controller\empresaController;
+
+include '../assert/view/main.php';
+
 
 $emp = new empresaController();
 $data = $emp->getAllEmpresa();
@@ -150,4 +156,4 @@ $data = $emp->getAllEmpresa();
         </div>
     </div> 
 
-<?php require_once "view/footer.php"; ?>
+<?php require_once "../assert/view/footer.php"; ?>
