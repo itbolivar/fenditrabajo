@@ -1,5 +1,7 @@
-<?php 
+<?php
+
 namespace src\view\distri;
+
 require_once 'view/_main.php'; ?>
 
 <!-- Page Title start -->
@@ -25,10 +27,11 @@ require_once 'view/_main.php'; ?>
           <div class="formpanel">
 
             <!-- Job Information -->
-            <h5>Informacion del Trabajo</h5>
+            <h5>Información de la oferta</h5>
             <div class="row">
               <div class="col-md-12">
                 <div class="formrow">
+                  <label for="tituloOferta">Titulo de la Oferta</label>
                   <input type="text" name="jobtitle" class="form-control" placeholder="vacante">
                 </div>
               </div>
@@ -101,6 +104,12 @@ require_once 'view/_main.php'; ?>
                   </select>
                 </div>
               </div>
+              <div class="col-md-6">
+                <div class="formrow">
+                  <label for="tituloOferta">Tiempo de Experiencia</label>
+                  <input type="number" name="timeExperiencia" class="form-control" placeholder="0">
+                </div>
+              </div>
 
               <!--<div class="col-md-12">
                 <div class="formrow">
@@ -120,7 +129,8 @@ require_once 'view/_main.php'; ?>
 
               <div class="col-md-12">
                 <div class="formrow">
-                  <textarea class="form-control" name="jobdetail" placeholder="Descripcion del Empleo"></textarea>
+                  <label for="descripcion">Descripción de la Oferta</label>
+                  <textarea class="form-control" name="jobdetail" placeholder="Descripción detallada de la oferta..."></textarea>
                 </div>
               </div>
             </div>
