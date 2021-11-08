@@ -102,8 +102,8 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 				<li class="" id="tab-representante-legal"><a href="#representante-legal" role="tab" data-toggle="tab">
 						<span class="glyphicon glyphicon-bookmark"></span> Información Representate legal</a>
 				</li>
-				<li class="" id="tab-administrador"><a href="#adminsitrador" role="tab" data-toggle="tab">
-						<span class="glyphicon glyphicon-user"></span>Información Administrador</a>
+				<li class="" id="tab-personaContacto"><a href="#personaContacto" role="tab" data-toggle="tab">
+						<span class="glyphicon glyphicon-user"></span>Persona de Contacto</a>
 				</li>
 				<li class="" id="tab-documentos"><a href="#documentos" role="tab" data-toggle="tab">
 						<span class="glyphicon glyphicon-list-alt"></span> Documentos</a>
@@ -281,6 +281,35 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 									</div>
 								</div>
 							</div>
+							<div class="row">
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="correo_r">ARL</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
+											<input class="form-control" type="text" name="admin_arl" id="admin_arl" placeholder="ARL EDS ASEGURADORA" value="<?php echo $admin_arl; ?>" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="numero_r">Nivel de Riesgo</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
+											<input class="form-control" type="text" name="admin_riesgo" id="admin_riesgo" placeholder="Escribir el Nivel de Riesgo" value="<?php echo $admin_riesgo; ?>" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="correo_r">Numero de trabajadores y Contratistas</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
+											<input class="form-control" type="number" name="admin_numtabajador" id="admin_numtabajador" placeholder="4" value="<?php echo $admin_numtabajador; ?>" required>
+										</div>
+									</div>
+								</div>
+							</div>
 
 							<div class="row">
 								<div class="col-xs-12">
@@ -319,29 +348,29 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="nombre">Nombre</label>
+										<label for="nombre">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input type="text" class="form-control" name="rep_nom" id="rep_nom" value="<?php echo $rep_nom; ?>" placeholder="Jhon Doe" required />
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="form-group" class="control-label">Tipo</label>
+										<label for="form-group" class="control-label">Tipo de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
 											<select name="rep_tipoid" id="rep_tipoid" class="form-control" value="<?php echo $rep_tipoid; ?>" required>
 												<option value="" selected disabled>Seleccionar</option>
-												<option value="Cedula">cédula</option>
-												<option value="Nit">nit</option>
+												<option value="Cedula">Cédula</option>
+												<option value="Nit">Nit</option>
 												<option value="Cedula de Extranjeria">Cédula de Extranjéria</option>
 												</option>
 											</select>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="numeroid">Numero de Documento</label>
 										<div class="input-group">
@@ -353,39 +382,28 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 							</div>
 
 							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="direccion">Cargo</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="fa fa-briefcase"></span></span>
-											<input class="form-control" type="text" name="rep_cargo" id="rep_cargo" placeholder="Administrador EDS" value="<?php echo $rep_cargo; ?>" required>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="numero">E-mail</label>
+										<label for="numero">Correo Electrónico </label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
 											<input class="form-control" type="email" name="rep_email" id="rep_email" placeholder="ejemplo@ejemplo.com" value="<?php echo $rep_email; ?>" required>
 										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="razon_social">Telefono Fijo</label>
+										<label for="razon_social">Teléfono Fijo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
 											<input class="form-control" type="number" name="rep_tel" id="rep_tel" placeholder="123456789" value="<?php echo $rep_tel; ?>" required>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="giro">celular</label>
+										<label for="giro">Celular</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
 											<input class="form-control" type="number" name="rep_cel" id="rep_cel" placeholder="3001234567" value="<?php echo $rep_cel; ?>" required>
@@ -407,30 +425,22 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 					<!--======================================================================================-->
 
 					<!--======================================================================================-->
-					<div class="tab-pane" id="adminsitrador">
+					<div class="tab-pane" id="personaContacto">
 						<!-- Informacion sobre Adminitrador -->
 						<div class="container well col-xs-12">
 							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="nombre_r">Nombre</label>
+										<label for="nombre_r">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input class="form-control" type="text" name="admin_nom" id="admin_nom" placeholder="Jhon Doe" value="<?php echo $admin_nom; ?>" required>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-6">
-									<input name="file-input" id="file-input" type="file" />
-									<br />
-									<img id="imgSalida" width="25%" height="50%" src="" />
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-2">
 									<div class="form-group">
-										<label for="form-group" class="control-label">Tipo</label>
+										<label for="form-group" class="control-label">Tipo de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
 											<select name="admin_tipoid" id="admin_tipoid" class="form-control" value="<?php echo $admin_tipoid; ?>" required>
@@ -441,10 +451,8 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 											</select>
 										</div>
 									</div>
-
-
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="numero_r">Numero de Documento</label>
 										<div class="input-group">
@@ -453,11 +461,26 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										</div>
 									</div>
 								</div>
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="numero_r">Cargo</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="fa fa-briefcase"></span></span>
+											<input class="form-control" type="text" name="admin_cargo" id="admin_cargo" placeholder="Cargo" value="<?php echo $admin_cargo; ?>" required>
+										</div>
+									</div>
+								</div>
+
+								<!-- Código para inserción de documentos html -->
+								<!-- <div class="col-xs-6">
+									<input name="file-input" id="file-input" type="file" />
+									<br />
+									<img id="imgSalida" width="25%" height="50%" src="" />
+								</div> -->
 							</div>
 
-
 							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-4">
 									<div class="form-group">
 										<label for="correo_r">Correo electronico</label>
 										<div class="input-group">
@@ -466,19 +489,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="numero_r">Cargo</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="fa fa-briefcase"></span></span>
-											<input class="form-control" type="text" name="admin_cargo" id="admin_cargo" placeholder="Administrador" value="<?php echo $admin_cargo; ?>" required>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="correo_r">Celular</label>
 										<div class="input-group">
@@ -487,7 +498,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="numero_r">Telefono Fijo</label>
 										<div class="input-group">
@@ -498,38 +509,6 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 								</div>
 							</div>
 
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="correo_r">ARL</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="text" name="admin_arl" id="admin_arl" placeholder="ARL EDS ASEGURADORA" value="<?php echo $admin_arl; ?>" required>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="numero_r">Nivel de Riesgo</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="text" name="admin_riesgo" id="admin_riesgo" placeholder="Escribir el Nivel de Riesgo" value="<?php echo $admin_riesgo; ?>" required>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="correo_r">Numero Actual de trabajadores y Contratistas</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="number" name="admin_numtabajador" id="admin_numtabajador" placeholder="4" value="<?php echo $admin_numtabajador; ?>" required>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="form-group">
 								<a class="btn btn-primary btnPrevious">Regresar</a>
 								<a class="btn btn-primary btnNext">Siguiente</a>
@@ -553,6 +532,11 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 									<div>
 										<a href="">Documento no Afiliado</a>
+									</div>
+
+									<div>
+										<input type="checkbox" value="agree text" name="agree">
+										Politica de datos
 									</div>
 
 
