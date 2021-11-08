@@ -22,7 +22,7 @@ $modal = new Controller\modalMaster();*/
         </div>
         <div class="copyright">
          &copy; Copyright <strong> <span>Fenditrabajo Nacional</span> 2021</strong>. Todos los derechos reservados. <br/>
-         <p class="text-center">Desarrollado por Mesa IT.</p>
+         <!-- <p class="text-center">Desarrollado por Mesa IT.</p> -->
        </div>
         <!-- Social Icons end -->
       <!--About us End-->
