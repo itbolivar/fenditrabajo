@@ -275,10 +275,23 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="estado">Estudio</label>
+										<label for="estado">Nivel de Estudio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-o"></i></span>
-											<input type="text" class="form-control" name="estado" id="estado" placeholder="Estudio" />
+												<select name="nestudio" id="nestudio" class="form-control">
+														<option value="Seleccionar" selected disabled>Seleccionar</option>
+														<option value="Bprimaria">Básica Primaria</option>
+														<option value="Bagraduado">Bachiller Graduado</option>
+														<option value="Baincompleto">Bachiller Incompleto</option>
+														<option value="Esuniversitario">Estudiante Universitario</option>
+														<option value="Tecnico">Técnico</option>
+														<option value="Tecnologo">Tecnólogo</option>
+														<option value="Profesional">Profesional</option>
+														<option value="Proespecialista">Profesional con Especialización</option>
+														<option value="Promaestria">Profesional con Maestría</option>
+														<option value="prodoctorado">Profesional con Doctorado</option>
+														<option value="otro">Otro</option>
+												</select>
 										</div>
 									</div>
 								</div>
