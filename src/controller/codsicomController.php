@@ -1,12 +1,12 @@
 <?php 
 namespace src\controller;
-
+require_once '../../src/model/codsicomModel.php';
 use Exception;
 use src\model\codsicomModel;
 
 class codsicomController{
     
-    private     codsicomModel    $cModel;
+    private     $cModel;
     private     $subfix         = '-77';
     private     $codsicom_af    ;
     private     $nombreEDS      ;
@@ -39,8 +39,8 @@ if(!empty($_POST['id_cod'])){
     
     $codsicom   = new codsicomController();
     
-    $id_codsicom    = '';
-    $cod            = '';
+    //$id_codsicom    = '';
+   // $cod            = '';
     $nombreEDS      = '';
     
     //echo 'idcod ->'.$_POST['id_cod']."<br/>";
@@ -51,8 +51,8 @@ if(!empty($_POST['id_cod'])){
     }else{
         foreach($data as $dat)
         {
-            $id_codsicom    = $dat['id_cod'];
-            $cod            = $dat['cod_sicom'];
+           // $id_codsicom    = $dat['id_cod'];
+           // $cod            = $dat['cod_sicom'];
             $codsicom->setNombreEDS($dat['nombre']);
         }
         $nombreEDS = $codsicom->getNombreEDS();
