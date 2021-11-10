@@ -216,7 +216,7 @@ if (isset($_POST['candidatoReg'])) {
                         <input type="text" name="txtcopia" id="txtcopia" size="10">
                         <input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha" size="4" readonly>
                       </div>
-                      <button type="submit" class="btn" name="eds_empleadorReg" id="eds_empleadorReg" value="Registrar" onclick="validar();">Registrar</button>
+                      <button type="submit" class="btn" name="eds_empleadorReg" id="eds_empleadorReg" value="Registrar" onclick="validarCapcha();">Registrar</button>
                     </div>
                   </div>
 
@@ -244,9 +244,9 @@ if (isset($_POST['candidatoReg'])) {
         }
       </script>
 
-
-      <?php require_once 'view/_footer.php'; ?>
       <script src="<?php echo $js_dir; ?>main.js"></script>
+      <?php require_once 'view/_footer.php'; ?>
   <?php
   }
-} ?>
+}
+  ?>

@@ -1,4 +1,4 @@
-function validar(){
+function validarCapcha(){
 
     var copia = document.getElementById("txtcopia").value;
     var captcha = document.getElementById("captcha").value;

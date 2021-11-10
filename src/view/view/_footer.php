@@ -45,7 +45,6 @@ namespace src\view\view;
 
 <!-- Custom js -->
 <script src="<?php echo $js_dir ?>script.js"></script>
-<script src="<?php echo $js_dir ?>capcha.js"></script>
 
 
 </body>
