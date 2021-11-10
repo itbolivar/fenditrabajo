@@ -2,6 +2,7 @@
 namespace src\controller;
 
 use DateTime;
+use Exception;
 use src\model\logModel;
 
 class logController
@@ -11,7 +12,7 @@ class logController
         private String          $_fecha         = '';
         private String          $_navegador     = '';
         private int             $_id_usuario    = 0;
-        private logModel        $log;
+        private $log;
         private browserDetection $bDetect;
                 
         
@@ -22,7 +23,7 @@ class logController
         
         public function setLog($nom,$id)
         {
-            if($id == 0 || $id == "" || $id == null || $nom == 0 || $nom == "" || $nom == null ){
+            if($id == 0 || $id == '' || $id == null || $nom == 0 || $nom == '' || $nom == null ){
                 /*echo "\n Accion     : ".$nom."<br/>";
                 echo "\n IP         : ".$this->getRealIP()."<br/>";
                 echo "\n ".$this->getBrowser()."<br/>";
@@ -30,10 +31,23 @@ class logController
                 echo "\n Id Usuario : ".$id."<br/>";*/
                 
                 //$logModel = new logModel();
-                //$$logModel->setLog(''.$nom,''.$this->getRealIP(),''.$this->getBrowser(),$this->getfechaHoraActual(),''.$id);
+                $this->log->setLog(''.$nom,''.$this->getRealIP(),''.$this->getBrowser(),$this->getfechaHoraActual(),''.$id);
             }
         }
         
+        
+        public function setLogContacto($nom)
+        {
+            $res = '';
+            try {
+                 $res = $this->log->setLogContacto($nom,$this->getRealIP(),$this->getBrowser(),$this->getfechaHoraActual());
+                
+            } catch (Exception $e) {
+                echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n";
+            }
+            
+            return $res;
+        }
         
         /*
          * Obtener el IP Real del Usuario
@@ -73,6 +87,13 @@ class logController
             }
         }
         
+        private function getBrowser()
+        {
+            $this->bDetect = new browserDetection();
+            
+            return $this->bDetect->detect()->getInfo();
+        }
+        
         private function getfechaHoraActual(){
             $Object             = new DateTime();
             $DateAndTime        = $Object->format("d-m-Y h:i:s a");
@@ -80,11 +101,6 @@ class logController
         }
         
         
-       private function getBrowser()
-        {
-            $this->bDetect = new browserDetection();
-             
-            return $this->bDetect->detect()->getInfo();
-        }
+       
 }
 ?>

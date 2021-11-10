@@ -14,7 +14,8 @@ class libraryFendi
         /* Controller */
         require_once constant('CONTROLLER').'conexion.php';
         require_once constant('CONTROLLER').'browserDetection.php';
-        require_once constant('CONTROLLER').'codsicomController.php';
+        require_once constant('CONTROLLER').'codsicomController.php'; 
+        require_once constant('CONTROLLER').'contactoController.php'; 
         require_once constant('CONTROLLER').'empresaController.php';
         require_once constant('CONTROLLER').'logController.php';
         require_once constant('CONTROLLER').'loginSession.php';
@@ -26,7 +27,8 @@ class libraryFendi
         
         
         /* Model */
-        require_once constant('MODEL').'codsicomModel.php';
+        require_once constant('MODEL').'codsicomModel.php'; 
+        require_once constant('MODEL').'contactoModel.php'; 
         require_once constant('MODEL').'empresaModel.php';
         require_once constant('MODEL').'logModel.php';
         require_once constant('MODEL').'permisosModel.php';

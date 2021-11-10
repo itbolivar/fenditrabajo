@@ -4,9 +4,11 @@ namespace src\model;
 use PDO;
 use src\controller\conexion;
 
+require_once '../../src/controller/conexion.php';
+
 class codsicomModel
 {
-    private     conexion        $objeto;
+    private     $objeto;
     private     $conexion;
      
     public function __construct(){

@@ -1,3 +1,8 @@
+/*
+ * VALIDACION NOMBRE DE EDS
+ *
+ */
+
 document.addEventListener('keyup',function(){
     var datoBusqueda = document.querySelector('#user_codsicom2').value;
     if(datoBusqueda != ""){
@@ -8,7 +13,7 @@ document.addEventListener('keyup',function(){
 function buscar_datos(id_cod) {
 
     var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-        var ajaxUrl = '../admin/controller/codsicomController.php';
+        var ajaxUrl = '../controller/codsicomController.php';
         var data = 'id_cod='+id_cod;
         request.open('POST',ajaxUrl,true);
         request.setRequestHeader('Content-type','Application/x-www-form-urlencoded');
@@ -114,8 +119,3 @@ $(document).ready(function () {
 	      }
 	    });
 });
-
-/*
- * VALIDACION NOMBRE DE EDS
- *
- */

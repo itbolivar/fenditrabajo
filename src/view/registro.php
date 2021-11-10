@@ -46,7 +46,7 @@ if (isset($_POST['candidatoReg'])) {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Registro Fenditrabajo</title>
       <!-- Fav Icon -->
-      <link rel="shortcut icon" href="favicon.ico">
+	  <link rel="shortcut icon" href="https://fendipetroleo.com/nuevoF/public/icon/favicon.ico">
 
       <!-- Owl carousel -->
       <link href="<?php echo $css_dir ?>owl.carousel.css" rel="stylesheet">
