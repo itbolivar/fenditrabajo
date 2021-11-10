@@ -1,8 +1,9 @@
 <?php 
+namespace src\phpmailer;
 
-use phpmailer\src\Exception;
-use phpmailer\src\PHPMailer;
-use phpmailer\src\SMTP;
+use src\phpmailer\src\Exception;
+use src\phpmailer\src\PHPMailer;
+use src\phpmailer\src\SMTP;
 
 require 'src/Exception.php';
 require 'src/PHPMailer.php';
@@ -88,12 +89,40 @@ class enviarEmail{
         }
         
     }
+    
+    public function sendEmailContacto($email)
+    {
+        try {
+            $this->initMailServer();
+            
+            //Recipients
+            $this->mail->setFrom('info@fenditrabajo.com', 'Contactenos Fenditrabajo');
+            $this->mail->addAddress($email);     //Add a recipient
+            
+            //Content
+            $this->mail->isHTML(true);                                  //Set email format to HTML
+            $this->mail->Subject = $this->subjet;
+            $this->mail->Body    = $this->body;
+            $this->mail->AltBody = $this->altBody;
+            
+            //Attachments
+            /*$this->mail->addAttachment('/var/tmp/file.tar.gz');         Add attachments
+             $this->mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name*/
+            
+            $this->mail->send();
+            
+            echo 'El email fue enviado <strong>Satisfactoriamente</strong>';
+        } catch (Exception $e) {
+            echo "El email no pudo ser enviado. Error de envio: {$this->mail->ErrorInfo}";
+        }
+        
+    }
 }
 
 
-$m = enviarEmail::getInstance();
+/*$m = enviarEmail::getInstance();
 $m->sendEmail();
-
+*/
 
 
 ?>
