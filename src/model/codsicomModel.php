@@ -4,9 +4,9 @@ namespace src\model;
 use PDO;
 use src\controller\conexion;
 
-require_once '../../src/controller/conexion.php';
+require_once $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/controller/conexion.php';
 
-class codsicomModel
+class codsicomModel extends conexion
 {
     private     $objeto;
     private     $conexion;

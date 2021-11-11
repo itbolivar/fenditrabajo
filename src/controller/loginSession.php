@@ -7,7 +7,8 @@ class loginSession extends conexion{
         
         private String                          $id = '';
         private String                          $user_codsicom;
-        private String                          $password;          
+        private String                          $password;   
+        private static                          $instance;
         
         private Conexion         $objeto;
         //private Model\logController   $logC;
@@ -16,6 +17,14 @@ class loginSession extends conexion{
         public function __construct(){
             $this->objeto     = Conexion::getInstance();
             //$this->logC       = new Model\logController();
+        }
+        
+        public static function getInstance()
+        {
+            if (!self::$instance instanceof self ) {
+                self::$instance = new loginSession();
+            }
+            return loginSession::$instance;
         }
         
         private function postUserPws(){

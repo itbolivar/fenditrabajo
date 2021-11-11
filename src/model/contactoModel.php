@@ -60,12 +60,5 @@ class contactoModel extends conexion{
                                         
             return false;
     }
-    
-    
-    
-    
 }
-
-
-
 ?>

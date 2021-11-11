@@ -2,9 +2,8 @@
 namespace src\view;
 require_once 'view/_main.php';
 
+require_once '../../libraryFendi.php';
 use src\controller\contactoController;
-
-
 $mensaje;
 $contacto = null;
 

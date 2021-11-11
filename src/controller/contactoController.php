@@ -1,12 +1,12 @@
 <?php 
 namespace src\controller;
 
+require_once $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
 use Exception;
 use src\model\contactoModel;
-//use src\phpmailer\enviarEmail;
 
-require_once '../../src/config.inc.php';
-require_once constant('PATHSRC').'libraryFendi.php';
+
+//use src\phpmailer\enviarEmail;
 
 class contactoController{
     

@@ -7,11 +7,12 @@ use src\controller\loginSession;
 require_once '../../src/config.inc.php';
 require_once constant('PATHSRC').'libraryFendi.php';
 
-$login = new loginSession();
+
 $errorLog = '';
 
 if(isset($_POST['candidatoLogin']))
 {
+    $login = loginSession::getInstance();
     $uSesion = user_session::getInstance();
     if($_POST['password'] != ''){
         $uSesion->setCurrentID($login->getID());
@@ -26,6 +27,7 @@ if(isset($_POST['candidatoLogin']))
 
 if(isset($_POST['eds_empleadorLogin']))
 {
+    $login = loginSession::getInstance();
    $uSesion = user_session::getInstance();
    if($_POST['emp_password'] != ''){
     $uSesion->getCurrentIdSession($login->getID());
