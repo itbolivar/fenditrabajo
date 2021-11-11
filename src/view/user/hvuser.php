@@ -276,7 +276,7 @@ require_once 'view/_main.php'; ?>
 						<!-- Contenido sobre informacion basica Inicio-->
 						<div class="container well col-xs-12">
 							<div class="row">
-								<div class="col-xs-4">
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="estado">Nivel de Estudio</label>
 										<div class="input-group">
@@ -298,7 +298,7 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="ciudad">TÍtulo</label>
 										<div class="input-group">
@@ -307,7 +307,16 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="direccion">Estudio Informal</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="Curso o taller" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="form-group" class="control-label">Universidad ó Institución</label>
 										<div class="input-group">
@@ -316,18 +325,10 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
+
 							</div>
 							<div class="row">
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="estado">Fecha inicio</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-map-o"></i></span>
-											<input type="date" class="form-control" name="estado" id="estado" placeholder="06-07-1990" />
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="ciudad">¿Estudia Actualmente?</label>
 										<div class="input-group">
@@ -337,11 +338,19 @@ require_once 'view/_main.php'; ?>
 												<option value="estudiasi">Si</option>
 												<option value="estudiano">No</option>
 											</select>
-
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="form-group" class="control-label">Fecha Inicio</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
+											<input type="date" class="form-control" name="estado" id="estado" placeholder="06-07-1990" />
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="form-group" class="control-label">Fecha Final</label>
 										<div class="input-group">
@@ -350,6 +359,30 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
+								<div class="col-xs-2">
+									<div class="form-group">
+										<label for="direccion">Idiomas</label>
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="español" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="form-group">
+										<label for="numero">Nivel</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span>
+											<select name="nivelingles" id="nivelingles" class="form-control">
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="nivbasico">Básico</option>
+												<option value="nivintermedio">Intermedio</option>
+												<option value="niavanzado">Avanzado</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
 							</div>
 							<div class="row">
 								<div class="col-xs-4">
@@ -380,52 +413,7 @@ require_once 'view/_main.php'; ?>
 									</div>
 								</div>
 							</div>
-							<div class="row">
 
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="direccion">Idiomas</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="español" required>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="numero">Nivel</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span>
-											<select name="nivelingles" id="nivelingles" class="form-control">
-												<option value="Seleccionar" selected disabled>Seleccionar</option>
-												<option value="nivbasico">Básico</option>
-												<option value="nivintermedio">Intermedio</option>
-												<option value="niavanzado">Avanzado</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="form-group" class="control-label">Nombre de Institución</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Universidad ó Institución">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="direccion">Año de Estudio</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="1990" required>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="form-group">
 								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 								<input type="button" id="siguiente1" class="btn btn-info btnPrevious" value="Regresar">
@@ -441,6 +429,17 @@ require_once 'view/_main.php'; ?>
 						<!-- Contenido sobre informacion experiencia Inicio-->
 						<div class="container well col-xs-12">
 							<div class="row">
+								<div class="col-xs-8">
+									<div class="form-group">
+										<div class="input-group">
+											<h5>¿Cuenta con Experiencia Laboral?
+												<input type="checkbox" name="nomempresa" id="nomempresa" placeholder="Estudio" />
+											</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
 										<label for="estado">Nombre de la Empresa</label>
@@ -452,25 +451,36 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="ciudad">Perfil</label>
+										<label for="ciudad">Actividad de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
 											<input type="text" class="form-control" name="perfillabo" id="perfillabo" placeholder="Titulo" />
 										</div>
 									</div>
 								</div>
+
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="form-group" class="control-label">Cargo</label>
+										<label for="form-group" class="control-label">Nombre del Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
 											<input type="text" class="form-control" name="cargolabo" id="cargolab" placeholder="Universidad ó Institución" />
 										</div>
 									</div>
 								</div>
+
 							</div>
 							<div class="row">
-								<div class="col-xs-4">
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="form-group" class="control-label">Perfil</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
+											<input type="text" class="form-control" name="cargolabo" id="cargolab" placeholder="Universidad ó Institución" />
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="estado">Ocupación</label>
 										<div class="input-group">
@@ -479,7 +489,7 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="ciudad">País</label>
 										<div class="input-group">
@@ -488,7 +498,7 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="form-group" class="control-label">Departamento</label>
 										<div class="input-group">
@@ -497,9 +507,7 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-4">
+								<div class="col-xs-2">
 									<div class="form-group">
 										<label for="estado">Municipio</label>
 										<div class="input-group">
@@ -508,36 +516,9 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="ciudad">Fecha de ingreso</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="date" class="form-control" name="fechaingres" id="fechaingres">
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="form-group" class="control-label">Fecha de retiro</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="date" class="form-control" name="fecharetiro" id="fecharetiro" />
-										</div>
-									</div>
-								</div>
 							</div>
 							<div class="row">
-								<div class="col-xs-4">
-									<div class="form-group">
-										<label for="form-group" class="control-label">Motivo de retiro</label>
-										<div class="input-group">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="text" class="form-control" name="motivoretiro" id="motivoretiro" />
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="direccion">¿Labora Actualmente?</label>
 										<div class="input-group">
@@ -550,30 +531,40 @@ require_once 'view/_main.php'; ?>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-4">
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="ciudad">Fecha de ingreso</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+											<input type="date" class="form-control" name="fechaingres" id="fechaingres">
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
+									<div class="form-group">
+										<label for="form-group" class="control-label">Fecha de retiro</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+											<input type="date" class="form-control" name="fecharetiro" id="fecharetiro" />
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="direccion">Total Tiempo experiencia Laboral</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="años o meses " required>
+											<input class="form-control" type="number" name="direccion" id="direccion" placeholder="años o meses " required>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="row">
-
-								<div class="col-xs-4">
-
-								</div>
-
-
-							</div>
-							<div class="row">
 								<div class="col-xs-12">
 									<div class="form-group">
-										<label for="estado">Descripción de tu experiencia</label>
+										<label for="estado">Descripción de las funciones realizadas</label>
 										<div class="input-group">
-											<textarea name="" id="" cols="100" rows="5" placeholder="Cuentanos tu perfil!!"></textarea>
+											<textarea name="" id="" cols="100" rows="5" placeholder="Cuentanos..."></textarea>
 										</div>
 									</div>
 								</div>
@@ -593,10 +584,11 @@ require_once 'view/_main.php'; ?>
 						<!-- Contenido sobre informacion responsable Inicio-->
 						<div class="container well col-xs-12">
 							<h3>Referencia Personal</h3>
+							<br>
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="nombre_r">Nombre</label>
+										<label for="nombre referencia personal">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="Maria Gutierrez" required>
@@ -605,7 +597,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="puesto_r">Ocupacion</label>
+										<label for="Ocupacion referencia personal">Ocupación</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Administradora" required>
@@ -614,40 +606,22 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="puesto_r">Teléfono </label>
+										<label for="Telefono referebcia personal">Teléfono</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Teléfono " required>
+											<input class="form-control" type="tel" name="puesto_r" id="puesto_r" placeholder="Teléfono " required>
 										</div>
 									</div>
 								</div>
 							</div>
+							<br>
 
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="correo_r">E-mail</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-											<input class="form-control" type="email" name="correo_r" id="correo_r" placeholder="maria@gmail.com" required>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="form-group">
-										<label for="numero_r">Numero celular</label>
-										<div class="input-group">
-											<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-											<input class="form-control" type="text" name="numero_r" id="numero_r" placeholder="30077777" required>
-										</div>
-									</div>
-								</div>
-							</div>
 							<h3>Referencia Laboral</h3>
+							<br>
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="nombre_r">Nombre de la Empresa</label>
+										<label for="Nombre de la Empresa">Nombre de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="EDS_Progreso" required>
@@ -656,7 +630,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="puesto_r">Jefe Inmediato</label>
+										<label for="Nombre de el Jefe Inmediato">Nombre de el Jefe Inmediato</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Alfonso Molina " required>
@@ -665,7 +639,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="puesto_r">Cargo</label>
+										<label for="Nombre del Cargo">Nombre del Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
 											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Gerente" required>
@@ -676,7 +650,7 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="form-group">
-										<label for="correo_r">E-mail</label>
+										<label for="email referencia laboral">E-mail</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
 											<input class="form-control" type="email" name="correo_r" id="correo_r" placeholder="edsprogfreso22@gmail.com" required>
@@ -685,10 +659,10 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-6">
 									<div class="form-group">
-										<label for="numero_r">Numero celular</label>
+										<label for="telefono referencia laboral">Teléfono</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-											<input class="form-control" type="text" name="numero_r" id="numero_r" placeholder="300777777" required>
+											<input class="form-control" type="tel" name="numero_r" id="numero_r" placeholder="300777777" required>
 										</div>
 									</div>
 								</div>
