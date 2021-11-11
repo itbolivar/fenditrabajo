@@ -4,8 +4,8 @@ namespace src\view\distri\view;
 use src\controller\user_session;
 use src\controller\modalMaster;
 
-require_once '../../config.inc.php';
-require_once constant('PATHSRC').'libraryFendi.php';
+//require_once '../../config.inc.php';
+require_once '../../libraryFendi.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");

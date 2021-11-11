@@ -1,8 +1,9 @@
 <?php 
 namespace src\controller;
-require_once '../../src/model/codsicomModel.php';
+require_once $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/model/codsicomModel.php';
 use Exception;
-use src\model\codsicomModel;
+use src;
+
 
 class codsicomController{
     
@@ -12,7 +13,7 @@ class codsicomController{
     private     $nombreEDS      ;
     
     public function __construct(){
-        $this->cModel = new codsicomModel();
+        $this->cModel = new src\model\codsicomModel();
     }
     
     public function codsicom_check($cod_sicom)

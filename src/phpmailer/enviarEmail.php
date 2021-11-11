@@ -14,7 +14,7 @@ require 'src/SMTP.php';
 class enviarEmail{
     /**/
     private PHPMailer $mail;
-    
+    private static $instance;
     
     /*Configuracion de Servidor*/
     private $hots       = 'smtp.hostinger.com';
