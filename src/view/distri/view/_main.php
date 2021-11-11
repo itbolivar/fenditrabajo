@@ -5,7 +5,7 @@ use src\controller\user_session;
 use src\controller\modalMaster;
 
 //require_once '../../config.inc.php';
-require_once '../../libraryFendi.php';
+include $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -49,22 +49,22 @@ $uSesion->setCurrentUserCodSicom($user_codsicom);
 
 <title>EDS-Fenditrabajo</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="<?php echo $img_dir?>favicon/favicon.ico">
+<link rel="shortcut icon" href="<?php echo constant('IMG')?>favicon/favicon.ico">
 
 <!-- Slider -->
-<link href="../assets/js/revolution-slider/css/settings.css" rel="stylesheet">
+<link href="<?php echo constant('JS')?>revolution-slider/css/settings.css" rel="stylesheet">
 
 <!-- Owl carousel -->
-<link href="../assets/css/owl.carousel.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>owl.carousel.css" rel="stylesheet">
 
 <!-- Bootstrap -->
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>bootstrap.min.css" rel="stylesheet">
 
 <!-- Font Awesome -->
-<link href="../assets/css/font-awesome.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>font-awesome.css" rel="stylesheet">
 
 <!-- Custom Style -->
-<link href="../assets/css/main.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>main.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -80,7 +80,7 @@ $uSesion->setCurrentUserCodSicom($user_codsicom);
   <div class="container">
     <div class="row">
       <div class="col-md-2 col-sm-3 col-xs-12"> <a href="index.php" class="logo">
-      <img src="../assets/img/logo.png" alt="" /></a>
+      <img src="<?php echo constant('IMG')?>logo.png" alt="" /></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>

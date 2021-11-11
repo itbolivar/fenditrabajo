@@ -2,7 +2,7 @@
 namespace src\view;
 require_once 'view/_main.php';
 
-require_once '../../libraryFendi.php';
+include $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
 use src\controller\contactoController;
 $mensaje;
 $contacto = null;

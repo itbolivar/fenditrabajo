@@ -2,7 +2,7 @@
 namespace src\view\view;
 
 require_once '../config.inc.php';
-require_once constant('PATHSRC').'libraryFendi.php';
+//require_once constant('PATHSRC').'libraryFendi.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -27,23 +27,23 @@ header("Pragma: no-cache");
 
 <title>Fenditrabajo</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="<?php echo $img_dir?>favicon/favicon.ico">
+<link rel="shortcut icon" href="<?php echo constant('IMG')?>favicon/favicon.ico">
 
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Slider -->
-<link href="<?php echo $js_dir?>revolution-slider/css/settings.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>revolution-slider/css/settings.css" rel="stylesheet">
 
 <!-- Owl carousel -->
-<link href="<?php echo $css_dir?>owl.carousel.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>owl.carousel.css" rel="stylesheet">
 
 <!-- Font Awesome -->
-<link href="<?php echo $css_dir?>font-awesome.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>font-awesome.css" rel="stylesheet">
 
 <!-- Custom Style -->
-<link href="<?php echo $css_dir?>main.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>main.css" rel="stylesheet">
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

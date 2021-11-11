@@ -33,16 +33,20 @@ $PORTAL_URL     = $site_URL.'src/view/';
 $root_directory = $PORTAL_URL;//'/home/u230156310/domains/fenditrabajo.com/public_html/';
 
 // Css es la variable donde esta la URL de las hogas de estilo
-$css_dir        = $PORTAL_URL.'assets/css/';
+$css_dir        = $site_URL.'src/view/assets/css/';
+define('CSS', $site_URL.'src/view/assets/css/');
 
 // js_dir es la variable global de los scripts/
-$js_dir         = $PORTAL_URL.'assets/js/';
+$js_dir         = $site_URL.'src/view/assets/js/';
+define('JS', $site_URL.'src/view/assets/js/');
 
 // img_dir es la variable global de imagenes/
-$img_dir        = $PORTAL_URL.'assets/img/';
+$img_dir        = $site_URL.'src/view/assets/img/';
+define('IMG', $site_URL.'src/view/assets/img/');
 
 // upload_dir default value prepended by cache_dir = upload/
-$documents_dir  = 'documentos/';
+$documents_dir  = $site_URL.'documentos/';
+
 
 
 /*
@@ -51,8 +55,8 @@ $documents_dir  = 'documentos/';
  *
  * */
 
-$USER_LINK  = $root_directory.'view/user/';
-$EDS_LINK   = $root_directory.'view/distri/';
+$USER_LINK  = $documents_dir.'user/';
+$EDS_LINK   = $documents_dir.'distri/';
 
 
 

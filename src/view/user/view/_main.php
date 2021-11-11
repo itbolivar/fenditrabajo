@@ -4,8 +4,8 @@ namespace src\view\user\view;
 use src\controller\user_session;
 use src\controller\modalMaster;
 
-require_once '../../config.inc.php';
-require_once constant('PATHSRC').'libraryFendi.php';
+//require_once '../../config.inc.php';
+include $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
 
 header("Expires: Tue, 01 Jan 1900 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
@@ -46,23 +46,23 @@ $uSesion->setCurrentUserCodSicom($user_codsicom);
 
 <title>Usuario Fenditrabajo</title>
 <!-- Fav Icon -->
-<link rel="shortcut icon" href="<?php echo $img_dir?>favicon/favicon.ico">
+<link rel="shortcut icon" href="<?php echo constant('IMG')?>favicon/favicon.ico">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Slider -->
-<link href="<?php echo $js_dir?>revolution-slider/css/settings.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>revolution-slider/css/settings.css" rel="stylesheet">
 
 
 <!-- Owl carousel -->
-<link href="<?php echo $css_dir?>owl.carousel.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>owl.carousel.css" rel="stylesheet">
 
 <!-- Font Awesome -->
-<link href="<?php echo $css_dir?>font-awesome.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>font-awesome.css" rel="stylesheet">
 
 <!-- Custom Style -->
-<link href="<?php echo $css_dir?>main.css" rel="stylesheet">
+<link href="<?php echo constant('CSS')?>main.css" rel="stylesheet">
 
 </head>
 <body>
@@ -70,7 +70,8 @@ $uSesion->setCurrentUserCodSicom($user_codsicom);
 <div class="header">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-sm-3 col-xs-12"> <a href="../user/index.php" class="logo"><img src="<?php echo $img_dir?>logo.png" alt="" /></a>
+      <div class="col-md-2 col-sm-3 col-xs-12"> <a href="../user/index.php" class="logo">
+      	<img src="<?php echo constant('IMG')?>logo.png" alt="" /></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>

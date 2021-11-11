@@ -88,8 +88,8 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 	}
 }
 ?>
-<link rel="stylesheet" href="<?php echo $js_dir; ?>res/style.css" />
-<link rel="stylesheet" href="<?php echo $js_dir; ?>richtexteditor/rte_theme_default.css" />
+<link rel="stylesheet" href="<?php echo constant('JS')?>res/style.css" />
+<link rel="stylesheet" href="<?php echo constant('JS')?>richtexteditor/rte_theme_default.css" />
 
 <div class="container">
 	<h4>Registro de Empresa</h4>
@@ -567,7 +567,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 
 <?php require_once 'view/_footer.php'; ?>
-<script type="text/javascript" src="<?php echo $js_dir ?>richtexteditor/rte.js"></script>
+<script type="text/javascript" src="<?php echo constant('JS')?>richtexteditor/rte.js"></script>
 <script src="./js/next.js"></script>
 <script>
 	var editor1 = new RichTextEditor("#emp_descripcion");
@@ -582,5 +582,5 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 <script>
 	RTE_DefaultConfig.url_base = 'richtexteditor'
 </script>
-<script type="text/javascript" src='<?php echo $js_dir ?>richtexteditor/plugins/all_plugins.js'></script>
-<script src="<?php echo $js_dir ?>res/patch.js"></script>
+<script type="text/javascript" src='<?php echo constant('JS')?>richtexteditor/plugins/all_plugins.js'></script>
+<script src="<?php echo constant('JS')?>res/patch.js"></script>
