@@ -1,5 +1,7 @@
-<?php 
+<?php
+
 namespace src\view\user;
+
 require_once 'view/_main.php'; ?>
 
 <div class="container">
@@ -26,8 +28,8 @@ require_once 'view/_main.php'; ?>
 									<div class="form-group">
 										<label for="nombre" class="control-label">Nombres</label>
 										<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
-										<input type="text" class="form-control" name="dpNombre" id="dpNombre" placeholder="Nombre*" required>
+											<span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+											<input type="text" class="form-control" name="dpNombre" id="dpNombre" placeholder="Nombre*" required>
 										</div>
 									</div>
 								</div>
@@ -53,17 +55,17 @@ require_once 'view/_main.php'; ?>
 							<div class="row">
 								<div class="col-xs-3">
 									<div class="form-group">
-											<label for="form-group" class="control-label">Tipo Documento</label>
-											<div class="input-group">
-												<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-												<select name="dpTipoid" id="dpTipoid" class="form-control">
-													<option value="" selected disabled>Seleccionar</option>
-													<option value="Cédula">Cédula</option>
-                         							<option value="Nit">Nit</option>
-                          							<option value="Cédula Extranjería">Cédula Extranjería</option>
-												</select>
-											</div>
+										<label for="form-group" class="control-label">Tipo Documento</label>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
+											<select name="dpTipoid" id="dpTipoid" class="form-control">
+												<option value="" selected disabled>Seleccionar</option>
+												<option value="Cédula">Cédula</option>
+												<option value="Nit">Nit</option>
+												<option value="Cédula Extranjería">Cédula Extranjería</option>
+											</select>
 										</div>
+									</div>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
@@ -76,7 +78,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">Teléfono  fijo</label>
+										<label for="ciudad">Teléfono fijo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
 											<input type="tel" class="form-control" name="dpTel" id="dpTel" placeholder="Teléfono  Fijo" />
@@ -85,7 +87,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">Teléfono  Celular</label>
+										<label for="ciudad">Teléfono Celular</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
 											<input type="tel" class="form-control" name="dpCel" id="dpCel" placeholder="Teléfono  Celular" />
@@ -118,7 +120,7 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre" class="control-label">Departamento de Nacimiento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span></span>
-											<input type="text" class="form-control" name="dpDepartamento" id="dpDepartamento"  placeholder="Antioquia" required>
+											<input type="text" class="form-control" name="dpDepartamento" id="dpDepartamento" placeholder="Antioquia" required>
 										</div>
 									</div>
 								</div>
@@ -139,12 +141,12 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre" class="control-label">Tipo de Genero</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
-												<select name="dpGenero" id="dpGenero" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="Femenino">Femenino</option>
-														<option value="Masculino">Masculino</option>
-														<option value="Otro">Otro</option>
-												</select>
+											<select name="dpGenero" id="dpGenero" class="form-control">
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="Femenino">Femenino</option>
+												<option value="Masculino">Masculino</option>
+												<option value="Otro">Otro</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -154,11 +156,11 @@ require_once 'view/_main.php'; ?>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
 											<select name="dpEstCivil" id="dpEstCivil" class="form-control" required>
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="Soltero">Soltero</option>
-														<option value="Casado">Casado</option>
-														<option value="Ulibre">Únion Libre</option>
-												</select>
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="Soltero">Soltero</option>
+												<option value="Casado">Casado</option>
+												<option value="Ulibre">Únion Libre</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -167,7 +169,7 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre" class="control-label">Ocupación o Profesión</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span></span>
-											<input type="text" class="form-control" name="dpProfesion" id="dpProfesion"  placeholder="Técnico" required />
+											<input type="text" class="form-control" name="dpProfesion" id="dpProfesion" placeholder="Técnico" required />
 										</div>
 									</div>
 								</div>
@@ -177,21 +179,21 @@ require_once 'view/_main.php'; ?>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span></span>
 											<select name="dpTipoPobla" id="dpTipoPobla" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="Noaplica">No Aplica</option>
-														<option value="Minetnica">Mionoría étnica</option>
-														<option value="disfisica">Discapacidad física</option>
-														<option value="Discognitiva">Discapacidad cognitiva</option>
-														<option value="Madrecaflia">Madre cabeza de familia</option>
-														<option value="Desforzoso">Desplazamiento forzoso</option>
-														<option value="Dissensorial">Discapacidad sensorial</option>
-														<option value="comlgtbi">Comunidad LGTBIQ+</option>
-												</select>
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="Noaplica">No Aplica</option>
+												<option value="Minetnica">Mionoría étnica</option>
+												<option value="disfisica">Discapacidad física</option>
+												<option value="Discognitiva">Discapacidad cognitiva</option>
+												<option value="Madrecaflia">Madre cabeza de familia</option>
+												<option value="Desforzoso">Desplazamiento forzoso</option>
+												<option value="Dissensorial">Discapacidad sensorial</option>
+												<option value="comlgtbi">Comunidad LGTBIQ+</option>
+											</select>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">			
+							<div class="row">
 								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="nombre" class="control-label">Departamento de Residencia</label>
@@ -218,7 +220,8 @@ require_once 'view/_main.php'; ?>
 											<input type="text" class="form-control" name="dpCambioResiden" id="dpCambioResiden" placeholder="Si/No" />
 										</div>
 									</div>
-								</div><div class="col-xs-3">
+								</div>
+								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="estado">Dirección de Residencia</label>
 										<div class="input-group">
@@ -229,7 +232,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 							</div>
 							<div class="row">
-								
+
 								<div class="col-xs-3">
 									<div class="form-group">
 										<label for="ciudad">Aspiración Salarial</label>
@@ -260,7 +263,7 @@ require_once 'view/_main.php'; ?>
 								</div>
 							</div>
 							<div class="form-group">
-							 <input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
+								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 
 							</div>
 							<div class="form-group">
@@ -278,20 +281,20 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Nivel de Estudio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-o"></i></span>
-												<select name="nestudio" id="nestudio" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="Bprimaria">Básica Primaria</option>
-														<option value="Bagraduado">Bachiller Graduado</option>
-														<option value="Baincompleto">Bachiller Incompleto</option>
-														<option value="Esuniversitario">Estudiante Universitario</option>
-														<option value="Tecnico">Técnico</option>
-														<option value="Tecnologo">Tecnólogo</option>
-														<option value="Profesional">Profesional</option>
-														<option value="Proespecialista">Profesional con Especialización</option>
-														<option value="Promaestria">Profesional con Maestría</option>
-														<option value="prodoctorado">Profesional con Doctorado</option>
-														<option value="otro">Otro</option>
-												</select>
+											<select name="nestudio" id="nestudio" class="form-control">
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="Bprimaria">Básica Primaria</option>
+												<option value="Bagraduado">Bachiller Graduado</option>
+												<option value="Baincompleto">Bachiller Incompleto</option>
+												<option value="Esuniversitario">Estudiante Universitario</option>
+												<option value="Tecnico">Técnico</option>
+												<option value="Tecnologo">Tecnólogo</option>
+												<option value="Profesional">Profesional</option>
+												<option value="Proespecialista">Profesional con Especialización</option>
+												<option value="Promaestria">Profesional con Maestría</option>
+												<option value="prodoctorado">Profesional con Doctorado</option>
+												<option value="otro">Otro</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -330,11 +333,11 @@ require_once 'view/_main.php'; ?>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
 											<select name="estudiaactual" id="estudiaactual" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="estudiasi">Si</option>
-														<option value="estudiano">No</option>
-											</select>			
-											
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="estudiasi">Si</option>
+												<option value="estudiano">No</option>
+											</select>
+
 										</div>
 									</div>
 								</div>
@@ -378,13 +381,13 @@ require_once 'view/_main.php'; ?>
 								</div>
 							</div>
 							<div class="row">
-								
+
 								<div class="col-xs-4">
 									<div class="form-group">
 										<label for="direccion">Idiomas</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="español" required >
+											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="español" required>
 										</div>
 									</div>
 								</div>
@@ -394,11 +397,11 @@ require_once 'view/_main.php'; ?>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span>
 											<select name="nivelingles" id="nivelingles" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="nivbasico">Básico</option>
-														<option value="nivintermedio">Intermedio</option>
-														<option value="niavanzado">Avanzado</option>
-											</select>		
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="nivbasico">Básico</option>
+												<option value="nivintermedio">Intermedio</option>
+												<option value="niavanzado">Avanzado</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -407,7 +410,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Nombre de Institución</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Universidad ó Institución" >
+											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Universidad ó Institución">
 										</div>
 									</div>
 								</div>
@@ -501,7 +504,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Municipio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="municipiolab" id="municipiolab" placeholder="Estudiante" >
+											<input type="text" class="form-control" name="municipiolab" id="municipiolab" placeholder="Estudiante">
 										</div>
 									</div>
 								</div>
@@ -540,9 +543,9 @@ require_once 'view/_main.php'; ?>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-check"></span></span>
 											<select name="laboractual" id="laboractual" class="form-control">
-														<option value="Seleccionar" selected disabled>Seleccionar</option>
-														<option value="laborasi">Si</option>
-														<option value="laborano">No</option>
+												<option value="Seleccionar" selected disabled>Seleccionar</option>
+												<option value="laborasi">Si</option>
+												<option value="laborano">No</option>
 											</select>
 										</div>
 									</div>
@@ -552,18 +555,18 @@ require_once 'view/_main.php'; ?>
 										<label for="direccion">Total Tiempo experiencia Laboral</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion"  placeholder="años o meses " required>
+											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="años o meses " required>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="row">
-								
+
 								<div class="col-xs-4">
-									
+
 								</div>
 
-							
+
 							</div>
 							<div class="row">
 								<div class="col-xs-12">
@@ -596,7 +599,7 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre_r">Nombre</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input class="form-control" type="text" name="nombre_r" id="nombre_r"  placeholder="Maria Gutierrez"required>
+											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="Maria Gutierrez" required>
 										</div>
 									</div>
 								</div>
@@ -605,7 +608,7 @@ require_once 'view/_main.php'; ?>
 										<label for="puesto_r">Ocupacion</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Administradora"required>
+											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Administradora" required>
 										</div>
 									</div>
 								</div>
@@ -626,7 +629,7 @@ require_once 'view/_main.php'; ?>
 										<label for="correo_r">E-mail</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-											<input class="form-control" type="email" name="correo_r" id="correo_r" placeholder="maria@gmail.com"  required>
+											<input class="form-control" type="email" name="correo_r" id="correo_r" placeholder="maria@gmail.com" required>
 										</div>
 									</div>
 								</div>
@@ -647,7 +650,7 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre_r">Nombre de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input class="form-control" type="text" name="nombre_r" id="nombre_r"  placeholder="EDS_Progreso"required>
+											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="EDS_Progreso" required>
 										</div>
 									</div>
 								</div>
@@ -665,7 +668,7 @@ require_once 'view/_main.php'; ?>
 										<label for="puesto_r">Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r"placeholder="Gerente" required>
+											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Gerente" required>
 										</div>
 									</div>
 								</div>
@@ -707,7 +710,7 @@ require_once 'view/_main.php'; ?>
 		</div>
 	</div>
 </div>
-<script>
+<!-- <script>
 	$(document).ready(function() {
 		$('#siguiente1').click(function() {
 			/*$("#home").hide();
@@ -716,5 +719,5 @@ require_once 'view/_main.php'; ?>
 			$('#tab-info-basica').removeClass('').addClass('active');
 		});
 	});*/
-</script>
+</script> -->
 <?php require_once 'view/_footer.php'; ?>

@@ -4,7 +4,9 @@ namespace src\view\distri;
 
 include_once 'view/_main.php';
 
-require_once $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/config.inc.php';
+/* require_once $_SERVER["DOCUMENT_ROOT"] . '/fenditrabajo/src/config.inc.php';
+require_once constant('PATHSRC') . 'libraryFendi.php'; */
+require_once '../../../src/config.inc.php';
 require_once constant('PATHSRC') . 'libraryFendi.php';
 
 use src\controller\empresaController;
@@ -565,8 +567,8 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 
 <?php require_once 'view/_footer.php'; ?>
-<script src="js/next.js"></script>
 <script type="text/javascript" src="<?php echo $js_dir ?>richtexteditor/rte.js"></script>
+<script src="./js/next.js"></script>
 <script>
 	var editor1 = new RichTextEditor("#emp_descripcion");
 
