@@ -174,7 +174,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
 
                     <div class="newuser">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        ¿Nuevo Usuario? <a href="registro.php">Registrate aquí</a>
+                        ¿Nuevo Usuario? <a href="registroEmpresa.php">Registrate aquí</a>
                     </div>
                 </div>
             </div>

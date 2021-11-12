@@ -134,8 +134,8 @@ if (isset($_POST['eds_empleadorLogin'])) {
                         ?>
 
 
-                        <div class="userbtns">
-                            <h3><i class="glyphicon glyphicon-user"></i> Persona</h3>
+                        <div class="userbtns ">
+                            <h3> <i class="glyphicon glyphicon-user"></i> Persona</h3>
                         </div>
 
                         <form action="login.php" method="post" id="form1">
@@ -173,7 +173,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
 
                     <div class="newuser">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        ¿Nuevo Usuario? <a href="registro.php">Registrate aquí</a>
+                        ¿Nuevo Usuario? <a href="registroUser.php">Registrate aquí</a>
                     </div>
                 </div>
             </div>
