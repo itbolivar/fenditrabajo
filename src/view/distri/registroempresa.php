@@ -44,6 +44,17 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		$cel_empresa        = $demp['celular'];
 		$dir_empresa        = $demp['direccion'];
 		$emp_descripcion    = $demp['descripcion'];
+		
+		echo $emp_idempresa."<br/>";
+		echo $emp_razonsocial."<br/>";
+		echo $emp_nit_empresa."<br/>";
+		echo $emp_email."<br/>";
+		echo $emp_depa."<br/>";
+		echo $emp_ciudad."<br/>";
+		echo $tel_empresa."<br/>";
+		echo $cel_empresa."<br/>";
+		echo $dir_empresa."<br/>";
+		echo $emp_descripcion."<br/>";
 	}
 
 	$datRepLegal = $emp->selectRepLegal($id_empresa);
@@ -59,6 +70,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		/*$dir_empresa      = $drl['arl'];
         $emp_descripcion    = $drl['nivelriesgo'];
         $emp_idempresa      = $drl['numTrabajadores'];*/
+		echo $datRepLegal;
 	}
 
 	$datAdministador = $emp->selectAdminsitrador($id_empresa);
@@ -74,6 +86,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		$admin_arl              = $dadmin['arl'];
 		$admin_riesgo           = $dadmin['nivelriesgo'];
 		$admin_numtabajador     = $dadmin['numTrabajadores'];
+		echo $datAdministador;
 	}
 
 	//Rep LEgal
@@ -85,10 +98,11 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 } else {
 	if (isset($_POST['submit'])) {
 		$res = $emp->agregarRegistroEDS();
+		echo "Aqui se le dio Click en Guardar";
 	}
 }
 ?>
-<link rel="stylesheet" href="<?php echo constant('JS')?>res/style.css" />
+<link rel="stylesheet" href="<?php echo constant('CSS')?>res/style.css" />
 <link rel="stylesheet" href="<?php echo constant('JS')?>richtexteditor/rte_theme_default.css" />
 
 <div class="container">

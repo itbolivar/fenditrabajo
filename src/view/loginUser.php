@@ -54,17 +54,17 @@ if (isset($_POST['eds_empleadorLogin'])) {
     <link rel="shortcut icon" href="https://fendipetroleo.com/nuevoF/public/icon/favicon.ico">
 
     <!-- Owl carousel -->
-    <link href="<?php echo $css_dir ?>owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo constant('CSS')?>owl.carousel.css" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
     <!-- Font Awesome -->
-    <link href="<?php echo $css_dir ?>font-awesome.css" rel="stylesheet">
+    <link href="<?php echo constant('CSS')?>font-awesome.css" rel="stylesheet">
 
     <!-- Custom Style -->
-    <link href="<?php echo $css_dir ?>main.css" rel="stylesheet">
+    <link href="<?php echo constant('CSS')?>main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -84,7 +84,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-10"> <a href="<?php echo $PORTAL_URL ?>" class="logo">
-                        <img src="<?php echo $img_dir ?>logo.png" alt="" /></a>
+                        <img src="<?php echo constant('IMG')?>logo.png" alt="" /></a>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
@@ -120,7 +120,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
                 <div class="col-md-6 col-md-offset-3">
                     <div class="userccount">
                         <div class="socialLogin">
-                            <img src="<?php echo $img_dir ?>logo.png" class="logo" width="50%" height="50%" alt="" />
+                            <img src="<?php echo constant('IMG')?>logo.png" class="logo" width="50%" height="50%" alt="" />
                             <h5>Inicio de sesion</h5>
                         </div>
                         <?php
@@ -138,7 +138,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
                             <h3> <i class="glyphicon glyphicon-user"></i> Persona</h3>
                         </div>
 
-                        <form action="login.php" method="post" id="form1">
+                        <form action="loginUser.php" method="post" id="form1">
                             <div class="tab-content">
                                 <!-- Login Candidato o Usuario -->
                                 <div id="candidato" class="formpanel tab-pane active">
@@ -154,19 +154,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
                                 </div>
                                 <!-- login form  end-->
 
-                                <!-- Login Emresa o Distribuidor o EDS -->
-                                <div id="eds_empleador" class="formpanel tab-pane">
-                                    <div class="formpanel">
-                                        <div class="formrow">
-                                            <input type="text" name="user_codsicom2" id="user_codsicom2" class="form-control" placeholder="Codigo Sicom">
-                                        </div>
-                                        <div class="formrow">
-                                            <input type="password" name="emp_password" id="emp_password" class="form-control" placeholder="Contraseña">
-                                        </div>
-                                        <button type="submit" class="btn" name="eds_empleadorLogin" id="eds_empleadorLogin" value="Ingresar">Ingresar</button>
-                                    </div>
-                                </div>
-                                <!-- sign up form end-->
+                                
                             </div>
                         </form>
                     </div>
@@ -184,7 +172,7 @@ if (isset($_POST['eds_empleadorLogin'])) {
     <div class="footerWrap">
         <div class="container">
             <!--About Us-->
-            <div class="ft-logo"><img src="<?php echo $img_dir ?>logo.png" alt="texto adicional"></div>
+            <div class="ft-logo"><img src="<?php echo constant('IMG')?>logo.png" alt="texto adicional"></div>
             <!-- Social Icons -->
             <div class="social"> <a href="#." target="_blank"> <i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#." target="_blank"><i class="fa fa-youtube-square" aria-hidden="true">
                     </i></a>
@@ -199,22 +187,14 @@ if (isset($_POST['eds_empleadorLogin'])) {
     </div>
     <!--Footer end-->
 
-    <!-- Bootstrap's JavaScript 
-<script src="<?php echo $js_dir ?>jquery-2.1.4.min.js"></script>
-<script src="<?php echo $js_dir ?>bootstrap.min.js"></script> -->
-
-    <script src="<?php echo $js_dir ?>jquery-2.1.4.min.js"></script>
+   <!-- Bootstrap's JavaScript -->
+    <script src="<?php echo constant('JS')?>jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Owl carousel -->
-    <script src="<?php echo $js_dir ?>owl.carousel.js"></script>
+    <script src="<?php echo constant('JS')?>owl.carousel.js"></script>
 
     <!-- Custom js -->
-    <script src="<?php echo $js_dir ?>script.js"></script>
+    <script src="<?php echo constant('JS')?>script.js"></script>
 </body>
-
 </html>
-<?php
-
-
-?>

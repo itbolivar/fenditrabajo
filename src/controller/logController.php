@@ -36,11 +36,11 @@ class logController
         }
         
         
-        public function setLogContacto($nom)
+        public function setLogContacto($data)
         {
             $res = '';
             try {
-                 $res = $this->log->setLogContacto($nom,$this->getRealIP(),$this->getBrowser(),$this->getfechaHoraActual());
+                 $res = $this->log->setLogContacto($data,$this->getRealIP(),$this->getBrowser(),$this->getfechaHoraActual());
                 
             } catch (Exception $e) {
                 echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n";
