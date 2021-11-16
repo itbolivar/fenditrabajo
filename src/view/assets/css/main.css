@@ -234,7 +234,7 @@ select {
   color: #000;
 }
 .titleTop h3 span {
-  color: #263bd6;
+  color: #1b4573;
   font-weight: 200;
 }
 
@@ -739,7 +739,7 @@ h6 {
   padding: 15px 20px;
 }
 .searchblack {
-  background: url(../img/search-bg.jpg) no-repeat;
+  background: url(../img/imgindex.png) no-repeat;
   background-size: 100%;
   padding: 40px 90px;
   margin-top: 0;
@@ -752,7 +752,7 @@ h6 {
 }
 
 .user {
-  background: url(../img/search-bg.jpg) no-repeat;
+  background: url(../img/imgindex.png) no-repeat;
   background-size: 100%;
   padding: 140px 140px;
   margin-top: 0;
@@ -1297,7 +1297,7 @@ a.wit-btn {
   color: #000;
 }
 .videowraper p {
-  color: #fff;
+  color: #555;
   max-width: 800px;
   margin: 0 auto;
   font-size: 18px;
