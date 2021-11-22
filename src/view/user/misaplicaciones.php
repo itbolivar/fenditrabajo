@@ -83,7 +83,7 @@ require_once 'view/_main.php'; ?>
                 <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
                 <br>
                 <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
+                  <h3><a href="#.">Adminitrador Estación de servicio</a></h3>
                   <span>Ibague</span>
                 </div>
                 <div class="clearfix"></div>
@@ -103,8 +103,8 @@ require_once 'view/_main.php'; ?>
                 <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
                 <br>
                 <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
+                  <h3><a href="#.">Vendedor de Servicio</a></h3>
+                  <span>Medellín</span>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -116,167 +116,6 @@ require_once 'view/_main.php'; ?>
             </div>
           </li>
           <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="seleccionado">Seleccionado</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="enproceso">En Proceso</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
-          <!-- job start -->
-          <li>
-            <div class="row">
-              <div class="col-md-8 col-sm-8">
-                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                <br>
-                <div class="jobinfo">
-                  <h3><a href="#.">Adminitrador de Base de Datos</a></h3>
-                  <span>Ibague</span>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                <div class="location"><label class="seleccionado">Seleccionado</label>
-                <div class="listbtn"><a href="detalleempleo.php">Detalle de la Oferta</a></div>
-              </div>
-            </div>
-          </li>
-          <!-- job end -->
-
         </ul>
 
         <!-- Pagination Start -->
