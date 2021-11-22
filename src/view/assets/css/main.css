@@ -1570,9 +1570,12 @@ a.wit-btn {
 /*Listing*/
 .searchList {
   list-style: none;
+ 
 }
 .searchList li {
   background: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
 
   margin-bottom: 30px;
 }
@@ -1602,10 +1605,18 @@ a.wit-btn {
 }
 .searchList li .location {
   color: #000;
+  
 }
 .searchList li .location span {
   color: #333;
+  margin-top: 50px;
 }
+.searchList li .location div {
+  color: #1b4573;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .searchList li .listbtn {
   margin-top: 20px;
 }
@@ -1630,6 +1641,7 @@ a.wit-btn {
   line-height: 22px;
   color: #333;
   margin: 10px 0 0 0;
+  width: 100%;
 }
 .searchList li .cateinfo {
   color: #1b4573;
