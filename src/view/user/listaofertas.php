@@ -59,11 +59,11 @@ require_once 'view/_main.php';?>
 
         <!-- Search Result and sidebar start -->
         <div class="row">
-            <div class="col-md-3 col-sm-6">
+            <!-- <div class="col-md-3 col-sm-6">
                 <!-- Side Bar start -->
-                <div class="sidebar">
+                <!-- <div class="sidebar">
                     <!-- Jobs By Title -->
-                    <div class="widget">
+                   <!--  <div class="widget"> 
                         <h4 class="widget-title">Ofertas de Empleo</h4>
                         <ul class="optionlist">
                             <li>
@@ -88,11 +88,11 @@ require_once 'view/_main.php';?>
                                 Auxiliar ADminitrativo <span>33</span>
                             </li>
                         </ul>
-                        <!-- title end -->
+                        <!-- title end 
                         <a href="#.">Mas</a>
                     </div>
 
-                    <!-- Jobs By City -->
+                    <!-- Jobs By City 
                     <div class="widget">
                         <h4 class="widget-title">Ciudades</h4>
                         <ul class="optionlist">
@@ -128,11 +128,11 @@ require_once 'view/_main.php';?>
                             </li>
                         </ul>
                         <a href="#.">Mas</a>
-                    </div>
+                    </div> -->
                     <!-- Jobs By City end-->
 
                     <!-- Jobs By Experience -->
-                    <div class="widget">
+                   <!-- <div class="widget">
                         <h4 class="widget-title">Experiencia</h4>
                         <ul class="optionlist">
                             <li>
@@ -161,7 +161,7 @@ require_once 'view/_main.php';?>
                     <!-- Jobs By Experience end -->
 
                     <!-- Jobs By Industry -->
-                    <div class="widget">
+                    <!--<div class="widget">
                         <h4 class="widget-title">Industriales</h4>
                         <ul class="optionlist">
                             <li>
@@ -200,7 +200,7 @@ require_once 'view/_main.php';?>
                     <!-- Jobs By Industry end -->
 
                     <!-- Top Companies -->
-                    <div class="widget">
+                    <!--<div class="widget">
                         <h4 class="widget-title">Top Banderas Mayoristas</h4>
                         <ul class="optionlist">
                             <li>
@@ -239,7 +239,7 @@ require_once 'view/_main.php';?>
                     <!-- Top Companies end -->
 
                     <!-- Salary -->
-                    <div class="widget">
+                    <!--<div class="widget">
                         <h4 class="widget-title">Rango Salario</h4>
                         <ul class="optionlist">
                             <li>
@@ -278,14 +278,14 @@ require_once 'view/_main.php';?>
                     <!-- Salary end -->
 
                     <!-- button -->
-                    <div class="searchnt">
+                    <!-- <div class="searchnt">
                         <button class="btn"><i class="fa fa-search" aria-hidden="true"></i> Buscar oferta</button>
-                    </div>
+                    </div> -->
                     <!-- button end-->
-                </div>
+               <!-- </div> -->
                 <!-- Side Bar end -->
             </div>
-            <div class="col-md-3 col-sm-6 pull-right">
+            <div class="col-md-4 col-sm-6 pull-right">
                 <!-- Social Icons -->
                 <div class="sidebar">
                     <h4 class="widget-title">siguenos</h4>
@@ -311,14 +311,13 @@ require_once 'view/_main.php';?>
                     <div class="gad"><img src="../assets/img/googlead2.jpg" alt="publicidad" /></div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-8 col-sm-12">
                 <!-- Search List -->
                 <ul class="searchList">
                     <!-- job start -->
                     <li>
                         <div class="row">
                             <div class="col-md-8 col-sm-8">
-                              
                                 <div class="jobinfo">
                                     <h3><a href="#.">Adminitrador de Estación de Servicio</a></h3>
                                     <div class="companyName"><a href="#.">Importante empresa del sector</a></div>
@@ -335,204 +334,11 @@ require_once 'view/_main.php';?>
                                     en Corabastos y Soacha...</p>
                                   <div>Bogotá</div>
                             </div>
-                           
+                            <div class="negrita" >
+                            <p>Fecha de publicación: <span>21-11-2021</span></p>
+                            <p>Salario: <span> A convenir. </span></p>
                         </div>
-                        <p>sugerencia para poder aplicar ala oferta .</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                               
-                                <div class="jobinfo">
-                                    <h3><a href="#.">ADministrador de Empresas</a></h3>
-                                    <div class="companyName"><a href="#.">Nombre</a></div>
-                                    <div class="location"><label class="freelance">tiempo completo</label> -
-                                        <span>Barranquillla</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
                         </div>
-                        <p>Sugerencia para poder aplicar ala oferta .</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">secretiria</a></h3>
-                                    <div class="companyName"><a href="#.">nombre</a></div>
-                                    <div class="location"><label class="partTime">medio tiempo</label> -
-                                        <span>Guajira</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencia para poder aplicar ala oferta.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">contador</a></h3>
-                                    <div class="companyName"><a href="#.">nombre</a></div>
-                                    <div class="location"><label class="fulltime">medio tiempo</label> -
-                                        <span>Cartagena</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencias para poder aplicar a la oferta.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">oferta</a></h3>
-                                    <div class="companyName"><a href="#.">nombre</a></div>
-                                    <div class="location"><label class="freelance">tiempo</label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerecnias para poder aplicar.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">oferta</a></h3>
-                                    <div class="companyName"><a href="#.">nombre empresa</a></div>
-                                    <div class="location"><label class="partTime">tiempo</label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencia para poder aplicar.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">oferta</a></h3>
-                                    <div class="companyName"><a href="#.">nombre empresa</a></div>
-                                    <div class="location"><label class="fulltime">tiempo </label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencia para poder aplicar.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">ofertar</a></h3>
-                                    <div class="companyName"><a href="#.">nombre de la empresa</a></div>
-                                    <div class="location"><label class="freelance">tiempo</label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencia para poder aplicar a la oferta de trabajo.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">ofertar</a></h3>
-                                    <div class="companyName"><a href="#.">nombre de la empresa</a></div>
-                                    <div class="location"><label class="fulltime">tiempo</label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p>sugerencias para poder aplicar a la oferta.</p>
-                    </li>
-                    <!-- job end -->
-
-                    <!-- job start -->
-                    <li>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="jobimg"><img src="../assets/img/jobs/jobimg.jpg" alt="Job Name" /></div>
-                                <div class="jobinfo">
-                                    <h3><a href="#.">oferta</a></h3>
-                                    <div class="companyName"><a href="#.">nombre de la empresa</a></div>
-                                    <div class="location"><label class="partTime">tiempo</label> - <span>ciudad</span>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="listbtn"><a href="detalleempleo.php">Aplicar</a></div>
-                            </div>
-                        </div>
-                        <p> sugerencia para poder aplicar a la oferta.</p>
-                    </li>
-                    <!-- job end -->
-
                 </ul>
 
                 <!-- Pagination Start -->
@@ -545,12 +351,7 @@ require_once 'view/_main.php';?>
                             <ul class="pagination">
                                 <li class="active"><a href="#.">1</a></li>
                                 <li><a href="#.">2</a></li>
-                                <li><a href="#.">3</a></li>
-                                <li><a href="#.">4</a></li>
-                                <li><a href="#.">5</a></li>
-                                <li><a href="#.">6</a></li>
-                                <li><a href="#.">7</a></li>
-                                <li><a href="#.">8</a></li>
+                              
                             </ul>
                         </div>
                     </div>

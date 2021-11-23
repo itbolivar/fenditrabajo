@@ -1590,7 +1590,7 @@ a.wit-btn {
 .searchList li h3 a {
   font-size: 18px;
   font-weight: 600;
-  color: #00a8ff;
+  color: #1971B8;
 }
 .searchList li .companyName {
   margin: 10px 0;
@@ -1609,8 +1609,16 @@ a.wit-btn {
   color: #333;
   margin-top: 50px;
 }
+.searchList li .negrita span{
+  font-weight: bold;
+  
+}
+.searchList li .negrita{
+  padding-bottom: 10px;
+  
+}
 .searchList li .location div {
-  color: #1b4573;
+  color: #1971B8;
   font-weight: bold;
   margin-top: 10px;
 }
