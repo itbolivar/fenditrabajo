@@ -647,6 +647,10 @@ h6 {
   font-size: 18px;
 }
 
+.pad_busqueda {
+  margin-left: 10px;
+}
+
 .searchbar .btn {
   background: #1b4573;
   border-radius: 10px;
