@@ -161,16 +161,16 @@ if (isset($_POST['candidatoReg'])) {
             </div>
 
             <script type="text/javascript">
-                function validar() {
+               // function validar() {
                     //obteniendo el valor que se puso en el campo text del formulario
-                    miCampoTexto = document.getElementById("nombreEDS").value;
+                //    miCampoTexto = document.getElementById("nombreEDS").value;
                     //la condición
-                    if (miCampoTexto.length > 1) {
-                        alert('El campo de texto esta vacio!');
-                        return false;
-                    }
-                    return true;
-                }
+               //     if (miCampoTexto.length > 1) {
+               //         alert('El campo de texto esta vacio!');
+               //         return false;
+                //    }
+                //    return true;
+               // }
             </script>
 
             <script src="<?php echo $js_dir; ?>main.js"></script>
