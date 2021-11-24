@@ -1,20 +1,20 @@
 <?php 
 namespace src\view;
 require_once 'view/_main.php';
-
-include $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
-use src\controller\contactoController;
+require_once '../controller/contactoController.php';
+use src;
+//require_once $_SERVER["DOCUMENT_ROOT"].'/fenditrabajo/src/libraryFendi.php';
 $mensaje;
 $contacto = null;
 
 
 if(isset($_POST['envio_contacto'])){
     
-    $contacto = new contactoController();
+    $contacto = new src\controller\contactoController();
     if($contacto->postContactos())
        {
           //$mensaje = "Entro Sin campos vacios";
-           $contacto->registrarContacto();
+          $contacto->registrarContacto();
     }else{
         $mensaje = "No se aceptan campos <b>vacios</b>";
     }

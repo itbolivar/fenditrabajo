@@ -21,8 +21,6 @@ class contactoModel extends conexion{
                                     $cnt_apellido,
                                     $cnt_telefono,
                                     $cnt_email,
-                                    $cnt_tipodocumento,
-                                    $cnt_numerodocumento,
                                     $cnt_solicitud){
         
                                         
@@ -30,8 +28,8 @@ class contactoModel extends conexion{
         $_idcontacto = '';
         $_idlog      = '';
         $conexion   = $this->objeto->Conectar();
-        $sql        = "INSERT INTO u230156310_fenditrabajo.contacto (nombre, apellido, telefono, email, tipodocumento, numdocumento, solicitud) 
-                       VALUES ('$cnt_nombre', '$cnt_apellido', '$cnt_telefono', '$cnt_email', '$cnt_tipodocumento', '$cnt_numerodocumento', '$cnt_solicitud');";
+        $sql        = "INSERT INTO u230156310_fenditrabajo.contacto (nombre, apellido, telefono, email, solicitud) 
+                       VALUES ('$cnt_nombre', '$cnt_apellido', '$cnt_telefono', '$cnt_email', '$cnt_solicitud');";
         $resultado  = $conexion->prepare($sql);
         $resultado->execute();
         $_idcontacto = $conexion->lastInsertId();
