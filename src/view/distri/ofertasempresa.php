@@ -316,7 +316,7 @@ require_once 'view/_main.php';?>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <div class="listbtn"><a href="detalleempleo.php">Modificar</a></div>
+                            <div class="listbtn"><a href="detalleempleodistri.php">Detalle</a></div>
                         </div>
                     </div>
                 </li>
