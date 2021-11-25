@@ -32,27 +32,15 @@ class registroController{
     
     private function addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password){
         try {
-           /* echo "Registro EDS <br/>";
-            echo "User          :".$user_codsicom2."<br/>";
-            echo "Nombre EDS    :".$nombreEDS."<br/>";
-            echo "Email         :".$emp_email."<br/>";
-            echo "Constraseña   :".$emp_password;
-            
-            /*usuarios
-            usuario_empresa
-            empresa*/
+           
          
             $this->regModel->addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password);
             
-            /*empresa_codsicom
-            representante_legal
-            empresa_replegal
-            info_administrador
-            empresa_infoAdmin*/
+           
             
         } catch (Exception $e)
         {
-            echo $e;
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n";
         }        
     }
     
@@ -64,7 +52,7 @@ class registroController{
         
         } catch (Exception $e) 
         {
-            echo $e;
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n";
         }
         
         return $boolean;

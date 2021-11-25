@@ -34,12 +34,14 @@ class registroModel{
         $id_usuario = '';
         $id_empresa = '';
         
-        echo ''.$this->userModel->addUsuario($user_codsicom2,$emp_password).'<br/>';
+        $this->userModel->addUsuario($user_codsicom2,$emp_password);
         $id_usuario = $this->userModel->getUltimoIdUsuario();
+       // echo 'addUsuario -->'.$id_usuario.'<br/>';
         
-        
-        echo ''.$this->empModel->addEmpresa('', 0, $emp_email, '', '', 0 , 0, '','').'<br/>';
+        $this->empModel->addEmpresa('', 0, $emp_email, '', '', 0 , 0, '','');
         $id_empresa = $this->empModel->getUltimoRegEmpresa();
+       // echo 'addEmpresa --->'.$id_empresa;
+       
         
         /* falta relacionar empresa con la tabla codigo sicom */
         
@@ -52,13 +54,13 @@ class registroModel{
         
        
         
-        echo "-------------------- Registro EDS ----------------------- <br/>";
+        /*echo "-------------------- Registro EDS ----------------------- <br/>";
         echo "User          :".$user_codsicom2."<br/>";
         echo "Nombre EDS    :".$nombreEDS."<br/>";
         echo "Email         :".$emp_email."<br/>";
         echo "Constraseña   :".$emp_password."<br/>";
         echo "id Usuario    :".$id_usuario."<br/>";
-        echo "id Empresa    :".$id_empresa."<br/>";
+        echo "id Empresa    :".$id_empresa."<br/>";*/
         
         
     }

@@ -1,5 +1,4 @@
 <?php
-
 namespace src\view;
 
 require_once '../config.inc.php';
@@ -10,31 +9,19 @@ use src\controller\registroController;
 $nombreEDS      = '';
 $reg = new registroController();
 
-if (isset($_POST['candidatoReg'])) {
-    if ($_POST['password'] === $_POST['password2']) {
-        if ($_POST['password'] != '') {
-            $reg->getPOST();
-            //echo "OK EDS";
-        } else {
-            echo "No se acepta campos vacios EDS Password";
-        }
-    } else {
-        echo "Verificar Password USUARIO";
-    }
-} else {
-    if (isset($_POST['eds_empleadorReg'])) {
-        if ($_POST['emp_password'] === $_POST['emp_password2']) {
+  if (isset($_POST['eds_empleadorReg']))
+  {
+        if ($_POST['emp_password'] == $_POST['emp_password2']) {
             if ($_POST['emp_password'] != '') {
                 $reg->getPOST();
-                //echo "OK EDS";
+                $info = "<div class='container' style='text-align: center' >Se ha registrado de manera correcta la EDS Minorista <br><a href='loginEmpresa.php'>Inicie sesión</a></div>";
             } else {
-                echo "No se acepta campos vacios EDS Password";
+                $error = "No se acepta campos vacios EDS Password";
             }
         } else {
-            echo "Verificar EDS Password";
+            $error = "Las Contrase�as no coinciden";
         }
-    } else {
-
+  } 
 ?>
 
         <!DOCTYPE html>
@@ -114,13 +101,28 @@ if (isset($_POST['candidatoReg'])) {
                                     <img src="<?php echo $img_dir ?>logo.png" class="logo" width="50%" height="50%" alt="" />
                                     <h5>Registrarse</h5>
                                 </div>
-                                <!--<div class="alert alert-success" role="alert"><strong>¡Bien hecho!</strong> Su cuenta se creó correctamente.</div>
-                  <div class="alert alert-warning" role="alert"><strong>¡Advertencia!</strong> Será mejor que te revises, no te ves muy bien.</div>
-                  <div class="alert alert-danger" role="alert"><strong>¡Oh cielos!</strong> Cambie algunas cosas e intente enviar de nuevo.</div>-->
-                                <div class="userbtns ">
+                                 <div class="userbtns ">
                                     <h3> <i class="glyphicon glyphicon-lock"></i> Empresa</h3>
+                                     <?php 
+                                        if(isset($info)){
+                                             echo  "<div class='alert alert-success alert-dismissible' role='alert'>
+                                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                                                                <span aria-hidden='true'>&times;</span></button>
+                                                     <strong>$info</strong>
+                                                  </div>";
+                                         }
+                                      
+                                      
+                                      if(isset($error)){
+                                             echo  "<div class='alert alert-warning alert-dismissible' role='alert'>
+                                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                                                                <span aria-hidden='true'>&times;</span></button>
+                                                     <strong>$error</strong>
+                                                  </div>";
+                                         }
+                                      ?>
                                 </div>
-                                <form action="registro.php" method="post" id="form2">
+                                <form action="registroEmpresa.php" method="post" id="form2">
 
                                     <div id="eds_empleador" class="formpanel tab-pane fade in">
                                         <div class="formrow">
@@ -145,7 +147,7 @@ if (isset($_POST['candidatoReg'])) {
                                             Política de datos
                                         </div>
 
-                                        <button type="submit" class="btn" name="eds_empleadorReg" id="eds_empleadorReg" value="Registrar" onclick="validarCapcha();">Registrar</button>
+                                        <button type="submit" class="btn" name="eds_empleadorReg" id="eds_empleadorReg" value="Registrar" >Registrar</button>
                                     </div>
                             </div>
 
@@ -174,8 +176,4 @@ if (isset($_POST['candidatoReg'])) {
             </script>
 
             <script src="<?php echo $js_dir; ?>main.js"></script>
-            <?php require_once 'view/_footer.php'; ?>
-    <?php
-    }
-}
-    ?>
+            <?php require_once 'view/_footer.php'; ?>  
