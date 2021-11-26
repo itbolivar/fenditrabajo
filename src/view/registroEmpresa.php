@@ -11,15 +11,23 @@ $reg = new registroController();
 
   if (isset($_POST['eds_empleadorReg']))
   {
-        if ($_POST['emp_password'] == $_POST['emp_password2']) {
-            if ($_POST['emp_password'] != '') {
-                $reg->getPOST();
-                $info = "<div class='container' style='text-align: center' >Se ha registrado de manera correcta la EDS Minorista <br><a href='loginEmpresa.php'>Inicie sesión</a></div>";
+        if ($_POST['emp_password'] === $_POST['emp_password2']) {
+            if ($_POST['emp_password'] != '')
+            {
+                if($reg->getPOST() == true)
+                {
+                    $info = "<div class='container' style='text-align: center' >Se ha registrado de manera correcta la EDS Minorista <br><a href='loginEmpresa.php'>Inicie sesión</a></div>";
+                }
+                else
+                {
+                    $error = "<div class='container' style='text-align: center' >El codigo Sicom ya esta registrado en el sistema</div>";
+                }
+                
             } else {
-                $error = "No se acepta campos vacios EDS Password";
+                    $error = "<div class='container' style='text-align: center' >No se acepta campos vacios EDS Password</div>";
             }
         } else {
-            $error = "Las Contrase�as no coinciden";
+            $error = "<div class='container' style='text-align: center' >Las Contraseñas no coinciden</div>";
         }
   } 
 ?>

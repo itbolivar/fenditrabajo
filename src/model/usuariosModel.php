@@ -92,6 +92,28 @@ class usuariosModel{
         return $this->_id;
     }
     
+    /*
+     * 
+     * Validar Duplicidad de usuario
+     * 
+     * */
+    public function validarUsuario($user_codsicom){
+        $res = 1;
+        $this->conexion     = $this->objeto->Conectar();
+        $sql                = "SELECT * FROM u230156310_fenditrabajo.usuarios where user_codsicom='$user_codsicom'";
+        $resultado          = $this->conexion->prepare($sql);
+        $resultado->execute();
+        
+       if($resultado->rowCount() >= 1)
+        {
+                $res = 0;
+        }else{
+            $res = 1;
+            $this->objeto->close();
+        }
+        
+        return $res;
+    }
     
     /*
      * Add Usuario
