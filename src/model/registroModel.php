@@ -72,7 +72,7 @@ class registroModel{
      * 
      * */
     
-    public function addEDS($_descripcion,$_estado){
+    public function addregistroUsuario($_descripcion,$_estado){
         
         
     }

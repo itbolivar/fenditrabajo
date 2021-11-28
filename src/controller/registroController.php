@@ -32,8 +32,13 @@ class registroController{
             return $this->addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password);
         }
     }
-    
+    /*
+     * 
+     * Regsitrso de una Estacion de Servicio
+     * 
+     * */
     private function addRegistroEDS($user_codsicom2,$nombreEDS,$emp_email,$emp_password){
+        $res = 0;
         try {
             $res = $this->userModel->validarUsuario($user_codsicom2);
             switch ($res)
@@ -55,18 +60,34 @@ class registroController{
         return $res;
     }
     
+    /*
+    *
+    * Regsitrso de una una persona aspirante a un puesto
+    *
+    * */
     private function addRegistroUSUARIO($user_codsicom, $password){
-        $boolean = true;
-        try 
-        {
-            echo "Registro USUARIO";
+        $res = 0;
         
-        } catch (Exception $e) 
+        try {
+            $res = $this->userModel->validarUsuario($user_codsicom);
+            switch ($res)
+            {
+                case 1:
+                    $this->regModel->addregistroUsuario($user_codsicom, $password);
+                    //echo "Se regsitra EDS";
+                    break;
+                    
+                case 0:
+                    $res = 0;
+                    break;
+            }
+        } catch (Exception $e)
         {
             echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n";
         }
         
-        return $boolean;
+        return $res;
+        
     }
 }
 

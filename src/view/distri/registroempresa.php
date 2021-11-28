@@ -129,7 +129,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 			<form action="registroempresa.php" method="POST" name="form_emp" id="form_emp" autocomplete="off">
 				<div class="tab-content">
-					<!-- Contenidos inicio -->
+					<!-- INFORMACION EDS -->
 					<!--====================================================================================== -->
 					<div class="tab-pane active" id="eds">
 						<!-- Contenido sobre Informacion Registro de Empresa -->

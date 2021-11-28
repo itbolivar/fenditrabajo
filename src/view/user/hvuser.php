@@ -2,7 +2,17 @@
 
 namespace src\view\user;
 
+
+
+
+$dpDescripcion = '';
+$userExperienciaDescripcion = '';
+
 require_once 'view/_main.php'; ?>
+
+
+
+<link rel="stylesheet" href="<?php echo constant('JS')?>richtexteditor/rte_theme_default.css" />
 
 <div class="container">
 	<h4>Hoja de Vida</h4>
@@ -253,12 +263,15 @@ require_once 'view/_main.php'; ?>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-xs-2">
+								<div class="col-xs-12">
 									<div class="form-group">
-										<label for="estado">Descripción de tu perfil</label>
+										<br>
+										<label for="descripcion">Descripción de perfil</label>
+										<br><br>
 										<div class="input-group">
-											<textarea name="dpDescPerfil" id="dpDescPerfil" cols="100" rows="5" placeholder="Cuentanos tu perfil!!"></textarea>
+											<textarea name="dpDescripcion" id="dpDescripcion" cols="120" rows="5" placeholder="Cuentanos tu perfil !!"></textarea>
 										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -270,7 +283,8 @@ require_once 'view/_main.php'; ?>
 								<span class="help-block">Todos los campos son requeridos</span>
 							</div>
 						</div>
-					</div><!-- Contenido sobre Informacion Esencial Inicio-->
+					</div>
+					<!-- FORMACION Y EDUCACION -->
 					<!--==================================================================================-->
 					<div class="tab-pane" id="info-educacion">
 						<!-- Contenido sobre informacion basica Inicio-->
@@ -415,16 +429,19 @@ require_once 'view/_main.php'; ?>
 							</div>
 
 							<div class="form-group">
-								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 								<input type="button" id="siguiente1" class="btn btn-info btnPrevious" value="Regresar">
+								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 							</div>
 
 							<div class="form-group">
 								<span class="help-block">Todos los campos son requeridos</span>
 							</div>
 						</div>
-					</div><!-- Contenido sobre informacion basica Fin-->
-					<!--Contenido sobre la informacion experiencia-->
+					</div>
+					
+					<!-- EXPERIENCIA LABORAL -->
+					<!--==================================================================================-->
+					
 					<div class="tab-pane" id="info-experiencia">
 						<!-- Contenido sobre informacion experiencia Inicio-->
 						<div class="container well col-xs-12">
@@ -559,27 +576,48 @@ require_once 'view/_main.php'; ?>
 									</div>
 								</div>
 							</div>
+							
 							<div class="row">
 								<div class="col-xs-12">
 									<div class="form-group">
 										<label for="estado">Descripción de las funciones realizadas</label>
 										<div class="input-group">
-											<textarea name="" id="" cols="100" rows="5" placeholder="Cuentanos..."></textarea>
+											<textarea name="userExperienciaDescripcion" id="userExperienciaDescripcion" cols="100" rows="5" placeholder="Cuentanos..."></textarea>
 										</div>
 									</div>
 								</div>
 							</div>
+							
+							
+							<!-- <div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<br>
+										<label for="descripcion">Descripción de las funciones realizadas</label>
+										<br><br>
+										<div class="input-group">
+											<textarea name="userExperienciaDescripcion" id="userExperienciaDescripcion" cols="120" rows="5" placeholder="Cuentanos ..."></textarea>
+										</div>
+										
+									</div>
+								</div>
+							</div> -->
+							
+							
 							<div class="form-group">
-								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 								<input type="button" id="siguiente1" class="btn btn-info btnPrevious" value="Regresar">
+								<input type="button" id="siguiente1" class="btn btn-info btnNext" value="Siguiente">
 							</div>
 
 							<div class="form-group">
 								<span class="help-block">Todos los campos son requeridos</span>
 							</div>
 						</div>
-					</div><!-- Contenido sobre informacion basica Fin-->
+					</div>
+	
+					<!-- REFERENCIAS -->
 					<!--==================================================================================-->
+
 					<div class="tab-pane" id="info-referencia">
 						<!-- Contenido sobre informacion responsable Inicio-->
 						<div class="container well col-xs-12">
@@ -684,14 +722,21 @@ require_once 'view/_main.php'; ?>
 		</div>
 	</div>
 </div>
-<!-- <script>
-	$(document).ready(function() {
-		$('#siguiente1').click(function() {
-			/*$("#home").hide();
-			$('#tab-info-esencial').removeClass('active').addClass('');
-			$("#info-basica").show();
-			$('#tab-info-basica').removeClass('').addClass('active');
-		});
-	});*/
-</script> -->
 <?php require_once 'view/_footer.php'; ?>
+<script type="text/javascript" src="<?php echo constant('JS')?>richtexteditor/rte.js"></script>
+<!--  <script src="./js/next.js"></script> -->
+<script>
+	var editor1 = new RichTextEditor("#dpDescripcion");
+
+	editor1.setHTMLCode("<?php echo $dpDescripcion; ?>");
+
+	function btngetPlainText() {
+		alert(editor1.getPlainText())
+	}
+</script>
+
+<script>
+	RTE_DefaultConfig.url_base = 'richtexteditor'
+</script>
+<script type="text/javascript" src='<?php echo constant('JS')?>richtexteditor/plugins/all_plugins.js'></script>
+<script src="<?php echo constant('JS')?>res/patch.js"></script>
