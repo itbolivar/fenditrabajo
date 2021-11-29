@@ -104,12 +104,27 @@ class registroModel{
 
         $resultado  = $conexion->prepare($sql);
         $resultado->execute();
-       // $id_infoadmin = $conexion->lastInsertId();
+        $id_hojadevida = $conexion->lastInsertId();
         
         //$this->empresa_infoAdmin($id_infoadmin, $id_empresa);
         
         $conexion              =   null;
         $this->objeto->close();
+    }
+
+    private function usuario_hojavida($idusuario, $id_hojadevida){
+
+        $conexion           = $this->objeto->Conectar();
+
+        $sql = "INSERT INTO u230156310_fenditrabajo.usuario_hv (idusuario, idhv) 
+            VALUES('$idusuario', '$id_hojadevida');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+        
+
     }
 
 
@@ -149,6 +164,21 @@ class registroModel{
         $this->objeto->close();
     }
 
+    private function usuario_formacion($iduserFormacion, $id_formacion){
+
+        $conexion           = $this->objeto->Conectar();
+
+        $sql = "INSERT INTO u230156310_fenditrabajo.usuario_formacion (id_usuario, id_formacion) 
+            VALUES('$iduserFormacion', '$id_formacion');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+        
+
+    }
+
     /**
      * 
      * PESTAÑA EXPERIENCIA LABORAL
@@ -182,6 +212,21 @@ class registroModel{
         
         $conexion              =   null;
         $this->objeto->close();
+    }
+
+    private function usuario_experiencia($id_experiencia, $idexperienciaUser){
+
+        $conexion           = $this->objeto->Conectar();
+
+        $sql = "INSERT INTO u230156310_fenditrabajo.usuario_experiencia (id_experiencia, id_usuarios) 
+            VALUES('$id_experiencia', '$idexperienciaUser');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+        
+
     }
 
 
@@ -218,6 +263,21 @@ class registroModel{
         
         $conexion              =   null;
         $this->objeto->close();
+    }
+
+    private function usuario_referencia($idreferenciasUser, $idreferencia){
+
+        $conexion           = $this->objeto->Conectar();
+
+        $sql = "INSERT INTO u230156310_fenditrabajo.usuario_referencia (id_usuario, id_referencia) 
+            VALUES('$idreferenciasUser', '$idreferencia');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+        
+
     }
 
 
