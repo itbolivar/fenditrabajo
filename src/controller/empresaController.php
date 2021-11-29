@@ -109,7 +109,7 @@ class empresaController{
         $this->rep_cel                  = $_POST["rep_cel"];
 
         /*
-         * Informacion Adminsitrador
+         * Informacion Contacto
          */
         $this->admin_nom              = $_POST["admin_nom"];
         $this->admin_tipoid           = $_POST["admin_tipoid"];

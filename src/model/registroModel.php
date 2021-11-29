@@ -47,21 +47,17 @@ class registroModel{
         
         $this->userModel->addUsuario_Empresa($id_usuario,$id_empresa);
         
+        
+        /*
+         * 
+         * Agregando Info de Representante legal como intancias todas en vacio o en 0
+         * 
+         * */
         $this->empModel->addRepLegal('', '', 0, '', '', 0,0, $id_empresa);
         
         $this->empModel->addAdminsitrador('', '', 0, '', '', 0, 0,
             '', '', 0, $id_empresa);
-        
        
-        
-        /*echo "-------------------- Registro EDS ----------------------- <br/>";
-        echo "User          :".$user_codsicom2."<br/>";
-        echo "Nombre EDS    :".$nombreEDS."<br/>";
-        echo "Email         :".$emp_email."<br/>";
-        echo "Constraseña   :".$emp_password."<br/>";
-        echo "id Usuario    :".$id_usuario."<br/>";
-        echo "id Empresa    :".$id_empresa."<br/>";*/
-        
         
     }
     

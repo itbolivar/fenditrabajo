@@ -22,13 +22,12 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 	$user_codsicom              = $_SESSION["user_codsicom"];
 	$id_empresa                 = $emp->getUsuarioEmpresa($id_usuario);
 
-	echo "id_usuario ------> " . $id_usuario . "<br/>";
+	/*echo "id_usuario ------> " . $id_usuario . "<br/>";
 	echo "user_codsicom --->" . $user_codsicom . "<br/>";
-	echo "id_empresa ------>" . $id_empresa . "<br/>";
+	echo "id_empresa ------>" . $id_empresa . "<br/>";*/
 
 	$datacodsicom           = $codsicom->codsicom_check($user_codsicom);
 	foreach ($datacodsicom as $cod_sicom) {
-		//$codsicom_nombre    = $cod_sicom['cod_sicom'];
 		$codsicom_nombre    = $cod_sicom['nombre'];
 	}
 
@@ -51,26 +50,10 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		$emp_num_trabajadores_constratitas    = $demp['num_trabajadores_constratitas'];
 		$emp_descripcion    = $demp['descripcion'];
 		
-		/*echo $emp_idempresa."<br/>";
-		echo $emp_razonsocial."<br/>";
-		echo $emp_nit_empresa."<br/>";
-		echo $emp_depa."<br/>";
-		echo $emp_ciudad."<br/>";
-		echo $tel_empresa."<br/>";
-		echo $cel_empresa."<br/>";
-		echo $dir_empresa."<br/>";
-		echo $emp_email."<br/>";
-		echo $emp_afiliado                     ."<br/>";
-		echo $emp_depeseccional             ."<br/>";
-		echo $emp_arl                             ."<br/>";
-		echo $emp_nivel_riesgo                    ."<br/>";
-		echo $emp_num_trabajadores_constratitas   ."<br/>";
-		echo $emp_descripcion."<br/>";*/
 	}
 
 	$datRepLegal = $emp->selectRepLegal($id_empresa);
 	foreach ($datRepLegal as $drl) {
-		//$emp_idempresa      = $drl['id_empresa'];
 		$emp_rep_nom            = $drl['nombre'];
 		$emp_rep_tipoid         = $drl['tipoId'];
 		$emp_rep_numid          = $drl['numId'];
@@ -93,12 +76,6 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		
 		
 	} 
-
-	//Rep LEgal
-	// id_replegal, nombre, tipoId, numId, cargo, email, telefono, celular
-
-	// Adminsitrador
-	// id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular, arl, nivelriesgo, numTrabajadores
 
 } else {
 	if (isset($_POST['submit'])) {

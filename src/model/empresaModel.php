@@ -154,7 +154,7 @@ class empresaModel{
             foreach ($data as $dat){
                 $id_empresa = $dat['id_empresa'];
             }
-            echo "id_empresa ---------> ".$id_empresa;
+            //echo "id_empresa ---------> ".$id_empresa;
             
             /*$user_agent = $_SERVER['HTTP_USER_AGENT'];
              $logC->setNombreAccion("Inicio de Sesion con el Usuario --> ".$this->email." <--");
@@ -183,6 +183,7 @@ class empresaModel{
         
         $conexion           = $this->objeto->Conectar();
         
+        //nomRazonSocial, nit, departamento, ciudad, telefono, celular, email, direccion, afiliado, dependencia_secional, arl, nivel_riesgo, num_trabajadores_constratitas, descripcion
         $sql                = "INSERT INTO u230156310_fenditrabajo.empresa (nomRazonSocial, nit, departamento, ciudad, telefono, celular, email, direccion,  afiliado, dependencia_secional, arl, nivel_riesgo, num_trabajadores_constratitas, descripcion) VALUES ('$nomRazonSocial', '$nit', '$departamento', '$ciudad', '$telefono', '$celular', '$email', '$direccion', '$afiliado', '$dependencia_secional','$arl', '$nivel_riesgo', '$num_trabajadores_constratitas', '$descripcion');";
         $resultado          = $conexion->prepare($sql);
         $resultado->execute();
