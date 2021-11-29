@@ -205,7 +205,7 @@ class registroModel{
         
         //id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular
         
-        $sql = "INSERT INTO u230156310_fenditrabajo.referencia ( ref_nombre, ref_ocupacion, ref_telpersonal, ref_nomempresa, ref_jefeinmediato, ref_cargo, ref_correo, ref_telempresa) 
+        $sql = "INSERT INTO u230156310_fenditrabajo.referencia ( nombre, ocupacion, telpersonal, nomempresa, jefeinmediato, cargo, email, telempresa) 
             VALUES ( '$ref_nombre', '$ref_ocupacion', '$ref_telpersonal', '$ref_nomempresa', '$ref_jefeinmediato', '$ref_cargo', '$ref_correo', '$ref_telempresa');";
         
         
