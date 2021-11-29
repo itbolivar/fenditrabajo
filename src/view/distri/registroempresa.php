@@ -37,57 +37,62 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		$emp_idempresa      = $demp['id_empresa'];
 		$emp_razonsocial    = $demp['nomRazonSocial'];
 		$emp_nit_empresa    = $demp['nit'];
-		$emp_email          = $demp['email'];
 		$emp_depa           = $demp['departamento'];
 		$emp_ciudad         = $demp['ciudad'];
 		$tel_empresa        = $demp['telefono'];
 		$cel_empresa        = $demp['celular'];
+		$emp_email          = $demp['email'];
 		$dir_empresa        = $demp['direccion'];
+		
+		$emp_afiliado                  = $demp['afiliado']; 
+		$emp_depeseccional             = $demp['dependencia_secional']; 
+		$emp_arl                       = $demp['arl']; 
+		$emp_nivel_riesgo                     = $demp['nivel_riesgo']; 
+		$emp_num_trabajadores_constratitas    = $demp['num_trabajadores_constratitas'];
 		$emp_descripcion    = $demp['descripcion'];
 		
-		echo $emp_idempresa."<br/>";
+		/*echo $emp_idempresa."<br/>";
 		echo $emp_razonsocial."<br/>";
 		echo $emp_nit_empresa."<br/>";
-		echo $emp_email."<br/>";
 		echo $emp_depa."<br/>";
 		echo $emp_ciudad."<br/>";
 		echo $tel_empresa."<br/>";
 		echo $cel_empresa."<br/>";
 		echo $dir_empresa."<br/>";
-		echo $emp_descripcion."<br/>";
+		echo $emp_email."<br/>";
+		echo $emp_afiliado                     ."<br/>";
+		echo $emp_depeseccional             ."<br/>";
+		echo $emp_arl                             ."<br/>";
+		echo $emp_nivel_riesgo                    ."<br/>";
+		echo $emp_num_trabajadores_constratitas   ."<br/>";
+		echo $emp_descripcion."<br/>";*/
 	}
 
 	$datRepLegal = $emp->selectRepLegal($id_empresa);
 	foreach ($datRepLegal as $drl) {
 		//$emp_idempresa      = $drl['id_empresa'];
-		$rep_nom            = $drl['nombre'];
-		$rep_tipoid         = $drl['tipoId'];
-		$rep_numid          = $drl['numId'];
-		$rep_cargo          = $drl['cargo'];
-		$rep_email          = $drl['email'];
-		$rep_tel            = $drl['telefono'];
-		$rep_cel            = $drl['celular'];
-		/*$dir_empresa      = $drl['arl'];
-        $emp_descripcion    = $drl['nivelriesgo'];
-        $emp_idempresa      = $drl['numTrabajadores'];*/
-		echo $datRepLegal;
+		$emp_rep_nom            = $drl['nombre'];
+		$emp_rep_tipoid         = $drl['tipoId'];
+		$emp_rep_numid          = $drl['numId'];
+		$emp_rep_cargo          = $drl['cargo'];
+		$emp_rep_email          = $drl['email'];
+		$emp_rep_tel            = $drl['telefono'];
+		$emp_rep_cel            = $drl['celular'];
 	}
 
 	$datAdministador = $emp->selectAdminsitrador($id_empresa);
 	foreach ($datAdministador as $dadmin) {
 		//$admin_id             = $dadmin['id_infoadmin'];
-		$admin_nom              = $dadmin['nombre'];
-		$admin_tipoid           = $dadmin['tipoId'];
-		$admin_num              = $dadmin['numId'];
-		$admin_email            = $dadmin['cargo'];
-		$admin_cargo            = $dadmin['email'];
-		$admin_cel              = $dadmin['celular'];
-		$admin_tel              = $dadmin['telefono'];
-		$admin_arl              = $dadmin['arl'];
-		$admin_riesgo           = $dadmin['nivelriesgo'];
-		$admin_numtabajador     = $dadmin['numTrabajadores'];
-		echo $datAdministador;
-	}
+		$emp_admin_nom              = $dadmin['nombre'];
+		$emp_admin_tipoid           = $dadmin['tipoId'];
+		$emp_admin_num              = $dadmin['numId'];
+		$emp_admin_email            = $dadmin['cargo'];
+		$emp_admin_cargo            = $dadmin['email'];
+		$emp_admin_cel              = $dadmin['celular'];
+		$emp_admin_tel              = $dadmin['telefono'];
+		
+		
+	} 
 
 	//Rep LEgal
 	// id_replegal, nombre, tipoId, numId, cargo, email, telefono, celular
@@ -172,12 +177,6 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										</div>
 									</div>
 								</div>
-
-								<!--<div class="col-xs-6">
-                                          <input name="file-input" id="file-input" type="file" />
-                                          <br/>
-                                          <img id="imgSalida" width="25%" height="50%" src="" />
-                                    </div>-->
 							</div>
 
 							<div class="row">
@@ -187,8 +186,12 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="password" class="control-label">Departamento:</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
-											<select name="emp_depa" id="emp_depa" class="form-control" value="<?php echo $emp_depa; ?>" required>
+											<select name="emp_depa" id="emp_depa" class="form-control" required>
 												<option value="" selected disabled>Seleccionar</option>
+												<?php echo "<option value='$emp_depa' selected>$emp_depa</option>"; ?>
+												<option value="Bolivar">Bolivar</option>
+												<option value="Atlantico">Atlantico</option>
+												<option value="Magdalena">Magdalena</option>
 												<option value="Tolima">Tolima</option>
 												<option value="Cundinamarca">Cundinamarca</option>
 												<option value="Antioquia">Antioquia</option>
@@ -202,8 +205,13 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label class="control-label">Ciudad o Municipio:</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<select name="emp_ciudad" id="emp_ciudad" class="form-control" value="<?php echo $emp_ciudad; ?>" required>
+											<select name="emp_ciudad" id="emp_ciudad" class="form-control" required>
 												<option value="" selected disabled>Seleccionar</option>
+												
+												<?php echo "<option value='$emp_ciudad' selected>$emp_ciudad</option>"; ?>
+												<option value="Medellín">Cartagena</option>
+												<option value="Medellín">Barranquilla</option>
+												<option value="Medellín">Santa Marta</option>
 												<option value="Medellín">Medellín</option>
 												<option value="Ibagué">Ibagué</option>
 												<option value="Bogotá">Bogotá</option>
@@ -218,7 +226,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label class="control-label">Teléfono Fijo:</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
-											<input type="number" class="form-control" name="tel_empresa" id="tel_empresa" value="<?php echo $tel_empresa; ?>" placeholder="0357276266" required>
+											<input type="number" class="form-control" name="emp_tel_empresa" id="emp_tel_empresa" value="<?php echo $tel_empresa; ?>" placeholder="0357276266" required>
 										</div>
 									</div>
 								</div>
@@ -227,7 +235,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label class="control-label">Celular:</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-											<input type="number" class="form-control" name="cel_empresa" id="cel_empresa" value="<?php echo $cel_empresa; ?>" placeholder="3141234567" required>
+											<input type="number" class="form-control" name="emp_cel_empresa" id="emp_cel_empresa" value="<?php echo $cel_empresa; ?>" placeholder="3141234567" required>
 										</div>
 									</div>
 								</div>
@@ -248,7 +256,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label class="control-label">Dirección de la EDS:</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
-											<input type="text" class="form-control" name="dir_empresa" id="dir_empresa" value="<?php echo $dir_empresa; ?>" placeholder="Cll 30 #78-128 Trans 11" required>
+											<input type="text" class="form-control" name="emp_dir_empresa" id="emp_dir_empresa" value="<?php echo $dir_empresa; ?>" placeholder="Cll 30 #78-128 Trans 11" required>
 										</div>
 									</div>
 								</div>
@@ -257,10 +265,11 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="form-group" class="control-label">Afiliado a Fendipetroleo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-											<select name="campo nuevo" id="campo nuevo" class="form-control" value="campo nuevo" required>
+											<select name="emp_afiliado" id="emp_afiliado" class="form-control" value="<?php echo $emp_afiliado;?>" required>
 												<option value="" selected disabled>Seleccionar</option>
-												<option value="Si">Sí</option>
-												<option value="No">No</option>
+													<?php echo "<option value='$emp_afiliado' selected>$emp_afiliado</option>"; ?>
+    												<option value="Si">Sí</option>
+    												<option value="No">No</option>
 												</option>
 											</select>
 										</div>
@@ -271,8 +280,10 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="form-group" class="control-label">Dependencia o Seccional </label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-											<select name="campo nuevo" id="campo nuevo" class="form-control" value="campo nuevo" required>
+											<select name="emp_depeseccional" id="emp_depeseccional" class="form-control" required>
+												
 												<option value="" selected disabled>Seleccionar</option>
+												<?php echo "<option value='$emp_depeseccional' selected>$emp_depeseccional</option>"; ?>
 												<option value="Adiconar">Adiconar</option>
 												<option value="Imzacom">Imzacom</option>
 												<option value="Seccional Caribe">Seccional Caribe</option>
@@ -287,10 +298,9 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 												<option value="Seccional Santander">Seccional Santander</option>
 												<option value="Seccional Dispeguajira">Seccional Dispeguajira</option>
 												<option value="Seccional Nariño">Seccional Nariño</option>
-												<option value="Dependencia Antioquia Y Chocó">Dependencia Antioquia Y Chocó</option>
-												<option value="Dependencia Bogota Y Cundinamarca">Dependencia Bogota Y Cundinamarca</option>
-												<option value="Seccional Bolivar">Seccional Bolivar</option>
-												<option value="San Andres Y Providencia">San Andres Y Providencia</option>
+												<option value="Seccional Antioquia Y Chocó">Dependencia Antioquia Y Chocó</option>
+												<option value="Seccional Bogota Y Cundinamarca">Dependencia Bogota Y Cundinamarca</option>
+												<option value="Seccional Bolivar San Andres y Providencia">Bolivar, San Andres y Providencia</option>
 												</option>
 											</select>
 										</div>
@@ -303,7 +313,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="correo_r">ARL</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="text" name="admin_arl" id="admin_arl" placeholder="ARL EDS ASEGURADORA" value="<?php echo $admin_arl; ?>" required>
+											<input class="form-control" type="text" name="emp_arl" id="emp_arl" placeholder="ARL EDS ASEGURADORA" value="<?php echo $emp_arl; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -312,7 +322,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numero_r">Nivel de Riesgo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="text" name="admin_riesgo" id="admin_riesgo" placeholder="Escribir el Nivel de Riesgo" value="<?php echo $admin_riesgo; ?>" required>
+											<input class="form-control" type="text" name="emp_riesgo" id="emp_riesgo" placeholder="Escribir el Nivel de Riesgo" value="<?php echo $emp_nivel_riesgo; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -321,7 +331,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="correo_r">Numero de trabajadores y Contratistas</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-refresh"></span></span>
-											<input class="form-control" type="number" name="admin_numtabajador" id="admin_numtabajador" placeholder="4" value="<?php echo $admin_numtabajador; ?>" required>
+											<input class="form-control" type="number" name="emp_numtabajador" id="emp_numtabajador" placeholder="4" value="<?php echo $emp_num_trabajadores_constratitas; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -367,7 +377,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="nombre">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input type="text" class="form-control" name="rep_nom" id="rep_nom" value="<?php echo $rep_nom; ?>" placeholder="Jhon Doe" required />
+											<input type="text" class="form-control" name="emp_rep_nom" id="emp_rep_nom" value="<?php echo $emp_rep_nom; ?>" placeholder="Jhon Doe" required />
 										</div>
 									</div>
 								</div>
@@ -376,8 +386,9 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="form-group" class="control-label">Tipo de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-											<select name="rep_tipoid" id="rep_tipoid" class="form-control" value="<?php echo $rep_tipoid; ?>" required>
+											<select name="rep_tipoid" id="rep_tipoid" class="form-control" value="<?php echo $emp_rep_tipoid; ?>" required>
 												<option value="" selected disabled>Seleccionar</option>
+												<?php echo "<option value='$emp_rep_tipoid' selected>$emp_rep_tipoid</option>"; ?>
 												<option value="Cedula">Cédula</option>
 												<option value="Nit">Nit</option>
 												<option value="Cedula de Extranjeria">Cédula de Extranjéria</option>
@@ -391,7 +402,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numeroid">Numero de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-											<input type="number" class="form-control" name="rep_numid" id="rep_numid" value="<?php echo $rep_numid; ?>" placeholder="123456789" />
+											<input type="number" class="form-control" name="emp_rep_numid" id="emp_rep_numid" value="<?php echo $emp_rep_numid; ?>" placeholder="123456789" />
 										</div>
 									</div>
 								</div>
@@ -403,7 +414,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numero">Correo Electrónico </label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-											<input class="form-control" type="email" name="rep_email" id="rep_email" placeholder="ejemplo@ejemplo.com" value="<?php echo $rep_email; ?>" required>
+											<input class="form-control" type="email" name="emp_rep_email" id="emp_rep_email" placeholder="ejemplo@ejemplo.com" value="<?php echo $emp_rep_email; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -413,7 +424,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="razon_social">Teléfono Fijo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
-											<input class="form-control" type="number" name="rep_tel" id="rep_tel" placeholder="123456789" value="<?php echo $rep_tel; ?>" required>
+											<input class="form-control" type="number" name="emp_rep_tel" id="emp_rep_tel" placeholder="123456789" value="<?php echo $emp_rep_tel; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -422,7 +433,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="giro">Celular</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-											<input class="form-control" type="number" name="rep_cel" id="rep_cel" placeholder="3001234567" value="<?php echo $rep_cel; ?>" required>
+											<input class="form-control" type="number" name="emp_rep_cel" id="emp_rep_cel" placeholder="3001234567" value="<?php echo $emp_rep_cel; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -450,7 +461,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="nombre_r">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input class="form-control" type="text" name="admin_nom" id="admin_nom" placeholder="Jhon Doe" value="<?php echo $admin_nom; ?>" required>
+											<input class="form-control" type="text" name="admin_nom" id="admin_nom" placeholder="Jhon Doe" value="<?php echo $emp_admin_nom; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -459,7 +470,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="form-group" class="control-label">Tipo de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-											<select name="admin_tipoid" id="admin_tipoid" class="form-control" value="<?php echo $admin_tipoid; ?>" required>
+											<select name="admin_tipoid" id="admin_tipoid" class="form-control" value="<?php echo $emp_admin_tipoid; ?>" required>
 												<option value="" selected disabled>Seleccionar</option>
 												<option value="Cedula">Cédula</option>
 												<option value="Nit">Nit</option>
@@ -473,7 +484,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numero_r">Numero de Documento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-pawn"></span></span>
-											<input class="form-control" type="number" name="admin_num" id="admin_num" placeholder="123456789" value="<?php echo $admin_num; ?>" required>
+											<input class="form-control" type="number" name="admin_num" id="admin_num" placeholder="123456789" value="<?php echo $emp_admin_num; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -482,7 +493,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numero_r">Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="fa fa-briefcase"></span></span>
-											<input class="form-control" type="text" name="admin_cargo" id="admin_cargo" placeholder="Cargo" value="<?php echo $admin_cargo; ?>" required>
+											<input class="form-control" type="text" name="admin_cargo" id="admin_cargo" placeholder="Cargo" value="<?php echo $emp_admin_cargo; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -501,7 +512,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="correo_r">Correo electronico</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-											<input class="form-control" type="email" name="admin_email" id="admin_email" placeholder="ejemplo@ejemplo.com" value="<?php echo $admin_email; ?>" required>
+											<input class="form-control" type="email" name="admin_email" id="admin_email" placeholder="ejemplo@ejemplo.com" value="<?php echo $emp_admin_email; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -510,7 +521,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="correo_r">Celular</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-											<input class="form-control" type="number" name="admin_cel" id="admin_cel" placeholder="3005566666" value="<?php echo $admin_cel; ?>" required>
+											<input class="form-control" type="number" name="admin_cel" id="admin_cel" placeholder="3005566666" value="<?php echo $emp_admin_cel; ?>" required>
 										</div>
 									</div>
 								</div>
@@ -519,7 +530,7 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 										<label for="numero_r">Telefono Fijo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
-											<input class="form-control" type="number" name="admin_tel" id="admin_tel" placeholder="123456789" value="<?php echo $admin_tel; ?>" required>
+											<input class="form-control" type="number" name="admin_tel" id="admin_tel" placeholder="123456789" value="<?php echo $emp_admin_tel; ?>" required>
 										</div>
 									</div>
 								</div>

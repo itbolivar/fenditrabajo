@@ -18,6 +18,9 @@ class empresaController{
     private $tel_empresa        ;
     private $cel_empresa        ;
     private $dir_empresa        ;
+    private $emp_arl            ;
+    private $emp_riesgo         ;
+    private $emp_numtabajador   ;
     private $emp_descripcion    ;
 
     /* Datos Representante Legal */
@@ -138,7 +141,7 @@ class empresaController{
         try {
             $data =  $this->empModel->getReplegal();
         } catch (Exception $e) {
-            echo ''.$e->getMessage().'<br/>';
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $data;
     }
@@ -150,7 +153,7 @@ class empresaController{
             $res = $this->empModel->getUsuarioEmpresa($id_usuario);
         } catch (Exception $e) {
             $res = null;
-            echo $e;
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $res;
     }
@@ -160,7 +163,7 @@ class empresaController{
         try {
             $data =  $this->empModel->selectIDEmpresa($id_emp);
         } catch (Exception $e) {
-            echo ''.$e->getMessage().'<br/>';
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $data;
     }
@@ -170,7 +173,7 @@ class empresaController{
         try {
             $data =  $this->empModel->selectRepLegal($id_emp);
         } catch (Exception $e) {
-            echo ''.$e->getMessage().'<br/>';
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $data;
     }
@@ -180,7 +183,7 @@ class empresaController{
         try {
             $data =  $this->empModel->selectAdminsitrador($id_emp);
         } catch (Exception $e) {
-            echo ''.$e->getMessage().'<br/>';
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $data;
     }

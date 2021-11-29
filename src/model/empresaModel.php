@@ -179,11 +179,11 @@ class empresaModel{
      *
      **/
     
-    public function addEmpresa(String $nomRazonSocial, int $nit, String $email, String $departamento, String $ciudad, int $telefono, int $celular, String $direccion, String $descripcion){
+    public function addEmpresa(String $nomRazonSocial, int $nit, String $departamento, String $ciudad, int $telefono, int $celular, String $email, String $direccion,  String $afiliado, String $dependencia_secional, String $arl, String $nivel_riesgo, String $num_trabajadores_constratitas, String $descripcion){
         
         $conexion           = $this->objeto->Conectar();
         
-        $sql                = "INSERT INTO u230156310_fenditrabajo.empresa (nomRazonSocial, nit, email, departamento, ciudad, telefono, celular, direccion, descripcion) VALUES ('$nomRazonSocial', '$nit', '$email', '$departamento', '$ciudad', '$telefono', '$celular', '$direccion','$descripcion');";
+        $sql                = "INSERT INTO u230156310_fenditrabajo.empresa (nomRazonSocial, nit, departamento, ciudad, telefono, celular, email, direccion,  afiliado, dependencia_secional, arl, nivel_riesgo, num_trabajadores_constratitas, descripcion) VALUES ('$nomRazonSocial', '$nit', '$departamento', '$ciudad', '$telefono', '$celular', '$email', '$direccion', '$afiliado', '$dependencia_secional','$arl', '$nivel_riesgo', '$num_trabajadores_constratitas', '$descripcion');";
         $resultado          = $conexion->prepare($sql);
         $resultado->execute();
         $this->id_empresa   = $conexion->lastInsertId();
