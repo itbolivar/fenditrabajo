@@ -33,23 +33,21 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 	$dataemp = $emp->selectIDEmpresa($id_empresa);
 	foreach ($dataemp as $demp) {
-		$emp_idempresa      = $demp['id_empresa'];
-		$emp_razonsocial    = $demp['nomRazonSocial'];
-		$emp_nit_empresa    = $demp['nit'];
-		$emp_depa           = $demp['departamento'];
-		$emp_ciudad         = $demp['ciudad'];
-		$tel_empresa        = $demp['telefono'];
-		$cel_empresa        = $demp['celular'];
-		$emp_email          = $demp['email'];
-		$dir_empresa        = $demp['direccion'];
-		
-		$emp_afiliado                  = $demp['afiliado']; 
-		$emp_depeseccional             = $demp['dependencia_secional']; 
-		$emp_arl                       = $demp['arl']; 
-		$emp_nivel_riesgo                     = $demp['nivel_riesgo']; 
+		$emp_idempresa                = $demp['id_empresa'];
+		$emp_razonsocial              = $demp['nomRazonSocial'];
+		$emp_nit_empresa              = $demp['nit'];
+		$emp_depa                     = $demp['departamento'];
+		$emp_ciudad                   = $demp['ciudad'];
+		$tel_empresa                  = $demp['telefono'];
+		$cel_empresa                  = $demp['celular'];
+		$emp_email                    = $demp['email'];
+		$dir_empresa                  = $demp['direccion'];
+		$emp_afiliado                 = $demp['afiliado']; 
+		$emp_depeseccional            = $demp['dependencia_secional']; 
+		$emp_arl                      = $demp['arl']; 
+		$emp_nivel_riesgo             = $demp['nivel_riesgo']; 
 		$emp_num_trabajadores_constratitas    = $demp['num_trabajadores_constratitas'];
-		$emp_descripcion    = $demp['descripcion'];
-		
+		$emp_descripcion              = $demp['descripcion'];
 	}
 
 	$datRepLegal = $emp->selectRepLegal($id_empresa);
@@ -65,7 +63,6 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 
 	$datAdministador = $emp->selectAdminsitrador($id_empresa);
 	foreach ($datAdministador as $dadmin) {
-		//$admin_id             = $dadmin['id_infoadmin'];
 		$emp_admin_nom              = $dadmin['nombre'];
 		$emp_admin_tipoid           = $dadmin['tipoId'];
 		$emp_admin_num              = $dadmin['numId'];
@@ -73,8 +70,6 @@ if (isset($_SESSION['id_usuaroempresa'])) {
 		$emp_admin_cargo            = $dadmin['email'];
 		$emp_admin_cel              = $dadmin['celular'];
 		$emp_admin_tel              = $dadmin['telefono'];
-		
-		
 	} 
 
 } else {

@@ -40,10 +40,7 @@ class empresaController{
     private $admin_cargo ;
     private $admin_cel ;
     private $admin_tel ;
-    private $admin_arl ;
-    private $admin_riesgo ;
-    private $admin_numtabajador ;
-
+    
 
     public function __construct(){
 
@@ -129,7 +126,7 @@ class empresaController{
         try {
             $data =  $this->empModel->getAllEmpresa();
         } catch (Exception $e) {
-            echo ''.$e->getMessage().'<br/>';
+            echo '<strong>' . htmlspecialchars($e->getMessage(), ENT_COMPAT | ENT_HTML401) . "</strong><br />\n"; 
         }
         return $data;
     }

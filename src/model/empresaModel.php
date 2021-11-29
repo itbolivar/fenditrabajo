@@ -248,12 +248,14 @@ class empresaModel{
       **/
      
      public function addAdminsitrador(String $nombre, String $tipoId, int $numId, String $cargo, String $email, int $telefono, int $celular, 
-                                        String $arl, String $nivelriesgo, int $numTrabajadores, int $id_empresa){
+                                        int $id_empresa){
          
          $conexion           = $this->objeto->Conectar();
          
-         $sql = "INSERT INTO u230156310_fenditrabajo.info_administrador (nombre, tipoId, numId, cargo, email, telefono, celular, arl, nivelriesgo, numTrabajadores) 
-                    VALUES ('$nombre','$tipoId','$numId','$cargo','$email','$telefono','$celular','$arl','$nivelriesgo','$numTrabajadores');";
+         //id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular
+         
+         $sql = "INSERT INTO u230156310_fenditrabajo.info_administrador (nombre, tipoId, numId, cargo, email, telefono, celular) 
+                    VALUES ('$nombre','$tipoId','$numId','$cargo','$email','$telefono','$celular');";
          $resultado  = $conexion->prepare($sql);
          $resultado->execute();
          $id_infoadmin = $conexion->lastInsertId();
