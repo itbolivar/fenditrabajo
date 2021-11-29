@@ -502,7 +502,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Ocupación</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="hvex_Ocupacion" id="hvex_Ocupacion" placeholder="petrozulia" />
+											<input type="text" class="form-control" name="hvex_Ocupacion" id="hvex_Ocupacion" placeholder="Administrador" />
 										</div>
 									</div>
 								</div>
@@ -511,7 +511,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">País</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="hvex_Pais" id="hvex_Pais" placeholder="Adsminitrador" />
+											<input type="text" class="form-control" name="hvex_Pais" id="hvex_Pais" placeholder="Colombia" />
 										</div>
 									</div>
 								</div>
@@ -520,7 +520,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Departamento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="hvex_Departamento" id="hvex_Departamento" placeholder="Auxuliar" />
+											<input type="text" class="form-control" name="hvex_Departamento" id="hvex_Departamento" placeholder="Antioquia" />
 										</div>
 									</div>
 								</div>
@@ -529,7 +529,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Municipio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="hvex_Municipio" id="hvex_Municipio" placeholder="Estudiante">
+											<input type="text" class="form-control" name="hvex_Municipio" id="hvex_Municipio" placeholder="Medellín">
 										</div>
 									</div>
 								</div>
