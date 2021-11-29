@@ -236,7 +236,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Dirección de Residencia</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="text" class="form-control" name="dpDireccion" id="dpDireccion" placeholder="calle 1 b 23-10" required />
+											<input type="text" class="form-control" name="dpDireccionResi" id="dpDireccionResi" placeholder="calle 1 b 23-10" required />
 										</div>
 									</div>
 								</div>
@@ -295,7 +295,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Nivel de Estudio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-o"></i></span>
-											<select name="nestudio" id="nestudio" class="form-control">
+											<select name="hvf_NivEstudio" id="hvf_NivEstudio" class="form-control">
 												<option value="Seleccionar" selected disabled>Seleccionar</option>
 												<option value="Bprimaria">Básica Primaria</option>
 												<option value="Bagraduado">Bachiller Graduado</option>
@@ -314,10 +314,10 @@ require_once 'view/_main.php'; ?>
 								</div>
 								<div class="col-xs-3">
 									<div class="form-group">
-										<label for="ciudad">TÍtulo</label>
+										<label for="ciudad">Título</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-pin"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Titulo" />
+											<input type="text" class="form-control" name="hvf_Titulo" id="hvf_Titulo" placeholder="Titulo" />
 										</div>
 									</div>
 								</div>
@@ -326,7 +326,7 @@ require_once 'view/_main.php'; ?>
 										<label for="direccion">Estudio Informal</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="Curso o taller" required>
+											<input class="form-control" type="text" name="hvf_EstInformal" id="hvf_EstInformal" placeholder="Curso o taller" required>
 										</div>
 									</div>
 								</div>
@@ -335,7 +335,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Universidad ó Institución</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Universidad ó Institución" />
+											<input type="text" class="form-control" name="hvf_Universidad" id="hvf_Universidad" placeholder="Universidad ó Institución" />
 										</div>
 									</div>
 								</div>
@@ -347,7 +347,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">¿Estudia Actualmente?</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<select name="estudiaactual" id="estudiaactual" class="form-control">
+											<select name="hvf_EstudiaActual" id="hvf_EstudiaActual" class="form-control">
 												<option value="Seleccionar" selected disabled>Seleccionar</option>
 												<option value="estudiasi">Si</option>
 												<option value="estudiano">No</option>
@@ -360,7 +360,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Fecha Inicio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
-											<input type="date" class="form-control" name="estado" id="estado" placeholder="06-07-1990" />
+											<input type="date" class="form-control" name="hvf_FechaInicio" id="hvf_FechaInicio" placeholder="06-07-1990" />
 										</div>
 									</div>
 								</div>
@@ -369,7 +369,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Fecha Final</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
-											<input type="date" class="form-control" name="ciudad" id="ciudad" placeholder="06-07-1994" />
+											<input type="date" class="form-control" name="hvf_FechaFinal" id="hvf_FechaFinal" placeholder="06-07-1994" />
 										</div>
 									</div>
 								</div>
@@ -378,7 +378,7 @@ require_once 'view/_main.php'; ?>
 										<label for="direccion">Idiomas</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-											<input class="form-control" type="text" name="direccion" id="direccion" placeholder="español" required>
+											<input class="form-control" type="text" name="hvf_Idiomas" id="hvf_Idiomas" placeholder="español" required>
 										</div>
 									</div>
 								</div>
@@ -387,7 +387,7 @@ require_once 'view/_main.php'; ?>
 										<label for="numero">Nivel</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span>
-											<select name="nivelingles" id="nivelingles" class="form-control">
+											<select name="hvf_NivelIngles" id="hvf_NivelIngles" class="form-control">
 												<option value="Seleccionar" selected disabled>Seleccionar</option>
 												<option value="nivbasico">Básico</option>
 												<option value="nivintermedio">Intermedio</option>
@@ -404,7 +404,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">País</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="text" class="form-control" name="estado" id="estado" placeholder="colombia" />
+											<input type="text" class="form-control" name="hvf_Pais" id="hvf_Pais" placeholder="colombia" />
 										</div>
 									</div>
 								</div>
@@ -413,7 +413,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">Departamento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="cartagena">
+											<input type="text" class="form-control" name="hvf_departamento" id="hvf_departamento" placeholder="cartagena">
 										</div>
 									</div>
 								</div>
@@ -422,7 +422,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Ciudad</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="bolivar">
+											<input type="text" class="form-control" name="hvf_Ciudad" id="hvf_Ciudad" placeholder="bolivar">
 										</div>
 									</div>
 								</div>
@@ -450,7 +450,7 @@ require_once 'view/_main.php'; ?>
 									<div class="form-group">
 										<div class="input-group">
 											<h5>¿Cuenta con Experiencia Laboral?
-												<input type="checkbox" name="nomempresa" id="nomempresa" placeholder="Estudio" />
+												<input type="checkbox" name="hvex_TieneExpe" id="hvex_TieneExpe"/>
 											</h5>
 										</div>
 									</div>
@@ -462,7 +462,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Nombre de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="nomempresa" id="nomempresa" placeholder="Estudio" />
+											<input type="text" class="form-control" name="hvex_NomEmpresa" id="hvex_NomEmpresa" placeholder="Nombre Empresa" />
 										</div>
 									</div>
 								</div>
@@ -471,7 +471,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">Actividad de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="perfillabo" id="perfillabo" placeholder="Titulo" />
+											<input type="text" class="form-control" name="hvex_ActiEmpresa" id="hvex_ActiEmpresa" placeholder="Actividad Empresa" />
 										</div>
 									</div>
 								</div>
@@ -481,7 +481,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Nombre del Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="cargolabo" id="cargolab" placeholder="Universidad ó Institución" />
+											<input type="text" class="form-control" name="hvex_NomCargo" id="hvex_NomCargo" placeholder="Cargo" />
 										</div>
 									</div>
 								</div>
@@ -493,7 +493,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Perfil</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="cargolabo" id="cargolab" placeholder="Universidad ó Institución" />
+											<input type="text" class="form-control" name="hvex_Perfil" id="hvex_Perfil" placeholder="Perfil" />
 										</div>
 									</div>
 								</div>
@@ -502,7 +502,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Ocupación</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="ocupacionlab" id="ocupacionlab" placeholder="petrozulia" />
+											<input type="text" class="form-control" name="hvex_Ocupacion" id="hvex_Ocupacion" placeholder="petrozulia" />
 										</div>
 									</div>
 								</div>
@@ -511,7 +511,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">País</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="paislabor" id="paislabor" placeholder="Adsminitrador" />
+											<input type="text" class="form-control" name="hvex_Pais" id="hvex_Pais" placeholder="Adsminitrador" />
 										</div>
 									</div>
 								</div>
@@ -520,7 +520,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Departamento</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="departamentolab" id="departamentolab" placeholder="Auxuliar" />
+											<input type="text" class="form-control" name="hvex_Departamento" id="hvex_Departamento" placeholder="Auxuliar" />
 										</div>
 									</div>
 								</div>
@@ -529,7 +529,7 @@ require_once 'view/_main.php'; ?>
 										<label for="estado">Municipio</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-											<input type="text" class="form-control" name="municipiolab" id="municipiolab" placeholder="Estudiante">
+											<input type="text" class="form-control" name="hvex_Municipio" id="hvex_Municipio" placeholder="Estudiante">
 										</div>
 									</div>
 								</div>
@@ -540,7 +540,7 @@ require_once 'view/_main.php'; ?>
 										<label for="direccion">¿Labora Actualmente?</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-check"></span></span>
-											<select name="laboractual" id="laboractual" class="form-control">
+											<select name="hvex_laboraActual" id="hvex_laboraActual" class="form-control">
 												<option value="Seleccionar" selected disabled>Seleccionar</option>
 												<option value="laborasi">Si</option>
 												<option value="laborano">No</option>
@@ -553,7 +553,7 @@ require_once 'view/_main.php'; ?>
 										<label for="ciudad">Fecha de ingreso</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="date" class="form-control" name="fechaingres" id="fechaingres">
+											<input type="date" class="form-control" name="hvex_FechaIngreso" id="hvex_FechaIngreso">
 										</div>
 									</div>
 								</div>
@@ -562,7 +562,7 @@ require_once 'view/_main.php'; ?>
 										<label for="form-group" class="control-label">Fecha de retiro</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-											<input type="date" class="form-control" name="fecharetiro" id="fecharetiro" />
+											<input type="date" class="form-control" name="hvex_FechaRetiro" id="hvex_FechaRetiro" />
 										</div>
 									</div>
 								</div>
@@ -571,7 +571,7 @@ require_once 'view/_main.php'; ?>
 										<label for="direccion">Total Tiempo experiencia Laboral</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-											<input class="form-control" type="number" name="direccion" id="direccion" placeholder="años o meses " required>
+											<input class="form-control" type="number" name="hvex_ExperienLaboral" id="hvex_ExperienLaboral" placeholder="años o meses " required>
 										</div>
 									</div>
 								</div>
@@ -582,7 +582,7 @@ require_once 'view/_main.php'; ?>
 									<div class="form-group">
 										<label for="estado">Descripción de las funciones realizadas</label>
 										<div class="input-group">
-											<textarea name="userExperienciaDescripcion" id="userExperienciaDescripcion" cols="100" rows="5" placeholder="Cuentanos..."></textarea>
+											<textarea name="hvex_DescriFunciones" id="hvex_DescriFunciones" cols="100" rows="5" placeholder="Cuentanos..."></textarea>
 										</div>
 									</div>
 								</div>
@@ -629,7 +629,7 @@ require_once 'view/_main.php'; ?>
 										<label for="nombre referencia personal">Nombre Completo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="Maria Gutierrez" required>
+											<input class="form-control" type="text" name="hvref_Nombre" id="hvref_Nombre" placeholder="Maria Gutierrez" required>
 										</div>
 									</div>
 								</div>
@@ -638,7 +638,7 @@ require_once 'view/_main.php'; ?>
 										<label for="Ocupacion referencia personal">Ocupación</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Administradora" required>
+											<input class="form-control" type="text" name="hvref_Ocupacion" id="hvref_Ocupacion" placeholder="Administradora" required>
 										</div>
 									</div>
 								</div>
@@ -647,7 +647,7 @@ require_once 'view/_main.php'; ?>
 										<label for="Telefono referebcia personal">Teléfono</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-											<input class="form-control" type="tel" name="puesto_r" id="puesto_r" placeholder="Teléfono " required>
+											<input class="form-control" type="tel" name="hvref_Telefono" id="hvref_Telefono" placeholder="Teléfono " required>
 										</div>
 									</div>
 								</div>
@@ -662,7 +662,7 @@ require_once 'view/_main.php'; ?>
 										<label for="Nombre de la Empresa">Nombre de la Empresa</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user"></i></span>
-											<input class="form-control" type="text" name="nombre_r" id="nombre_r" placeholder="EDS_Progreso" required>
+											<input class="form-control" type="text" name="hvref_Empresa" id="hvref_Empresa" placeholder="EDS_Progreso" required>
 										</div>
 									</div>
 								</div>
@@ -671,7 +671,7 @@ require_once 'view/_main.php'; ?>
 										<label for="Nombre de el Jefe Inmediato">Nombre de el Jefe Inmediato</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Alfonso Molina " required>
+											<input class="form-control" type="text" name="hvref_JefeInmed" id="hvref_JefeInmed" placeholder="Alfonso Molina " required>
 										</div>
 									</div>
 								</div>
@@ -680,7 +680,7 @@ require_once 'view/_main.php'; ?>
 										<label for="Nombre del Cargo">Nombre del Cargo</label>
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-											<input class="form-control" type="text" name="puesto_r" id="puesto_r" placeholder="Gerente" required>
+											<input class="form-control" type="text" name="hvref_Cargo" id="hvref_Cargo" placeholder="Gerente" required>
 										</div>
 									</div>
 								</div>
@@ -691,7 +691,7 @@ require_once 'view/_main.php'; ?>
 										<label for="email referencia laboral">E-mail</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-											<input class="form-control" type="email" name="correo_r" id="correo_r" placeholder="edsprogfreso22@gmail.com" required>
+											<input class="form-control" type="email" name="hvref_correo" id="hvref_correo" placeholder="edsprogfreso22@gmail.com" required>
 										</div>
 									</div>
 								</div>
@@ -700,7 +700,7 @@ require_once 'view/_main.php'; ?>
 										<label for="telefono referencia laboral">Teléfono</label>
 										<div class="input-group">
 											<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-											<input class="form-control" type="tel" name="numero_r" id="numero_r" placeholder="300777777" required>
+											<input class="form-control" type="tel" name="hvref_telefono" id="hvref_telefono" placeholder="300777777" required>
 										</div>
 									</div>
 								</div>
