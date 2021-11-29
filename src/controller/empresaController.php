@@ -118,9 +118,7 @@ class empresaController{
         $this->admin_cargo            = $_POST["admin_cargo"];
         $this->admin_cel              = $_POST["admin_cel"];
         $this->admin_tel              = $_POST["admin_tel"];
-        $this->admin_arl              = $_POST["admin_arl"];
-        $this->admin_riesgo           = $_POST["admin_riesgo"];
-        $this->admin_numtabajador     = $_POST["admin_numtabajador"]; 
+        
 
     }
 
