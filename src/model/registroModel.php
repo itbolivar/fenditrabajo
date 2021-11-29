@@ -79,7 +79,7 @@ class registroModel{
     
     /**
      * 
-     * Pestaña de datos Personales
+     * PESTAÑA DATOS PERSONALES
      * 
      */
     public function addHVUSer(){
@@ -100,6 +100,8 @@ class registroModel{
         $sql = "INSERT INTO u230156310_fenditrabajo.hoja_de_vida (nombre, apellido, email, tipo_doc, numero_doc, telefono, celular, fecha_nacimiento, pais_nacimiento, dep_nacimiento, ciudad_nacimiento, tipo_genero, estado_civil, ocupacion_profesion, tipo_poblacion, dep_residencia, ciudad_municipio_res, dis_cambio_res, dir_residencia, aspiracion_salarial, tiempo_especiencia, descripcion_perfil) 
             VALUES('$nombre', '$apellido','$email','$tipo_doc','$numero_doc','$telefono','$celular','$fecha_nacimiento','$pais_nacimiento','$dep_nacimiento','$ciudad_nacimiento','$tipo_genero','$estado_civil','$ocupacion_profesion','$tipo_poblacion','$dep_residencia','$ciudad_municipio_res','$dis_cambio_res','$dir_residencia','$aspiracion_salarial','$tiempo_especiencia','$descripcion_perfil');";
         
+        
+
         $resultado  = $conexion->prepare($sql);
         $resultado->execute();
        // $id_infoadmin = $conexion->lastInsertId();
@@ -109,8 +111,116 @@ class registroModel{
         $conexion              =   null;
         $this->objeto->close();
     }
+
+
+
+    /**
+     * 
+     * PESTAÑA FORMACIÓN EDUCACIÓN
+     * 
+     */
+    public function addHVFormacion(){
+        $this->addUsuarioHVFormacion('', '', '', '', '', '', '', '', '', '', '', '');
+        
+    }
     
     
+    private function addUsuarioHVFormacion(String $nivel_estudio, String $titulo, String $estudio_informal,	String $universidad_institucion, String $estudia_actualmente, String $fecha_inicio,	 String $fecha_final, String $idiomas,	String $nivel,	String $pais, String $departamento,	String $ciudad ){
+        
+       /* INSERT INTO u230156310_fenditrabajo.hoja_de_vida (nombre, apellido, email, tipo_doc, numero_doc, telefono, celular, fecha_nacimiento, pais_nacimiento, dep_nacimiento, ciudad_nacimiento, tipo_genero, estado_civil, ocupacion_profesion, tipo_poblacion, dep_residencia, ciudad_municipio_res, dis_cambio_res, dir_residencia, aspiracion_salarial, tiempo_especiencia, descripcion_perfil)
+        VALUES('nombre', 'apellido', 'email', 'tipo_doc', 'numero_doc', 'telefono', 'celular', 'fecha_nacimiento', 'pais_nacimiento', 'dep_nacimiento', 'ciudad_nacimiento', 'tipo_genero', 'estado_civil', 'ocupacion_profesion', 'tipo_poblacion', 'dep_residencia', 'ciudad_municipio_res', 'dis_cambio_res', 'dir_residencia', 'aspiracion_salarial', 'tiempo_especiencia', 'descripcion_perfil');
+       */ 
+        $conexion           = $this->objeto->Conectar();
+        
+        //id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular
+        
+        $sql = "INSERT INTO u230156310_fenditrabajo.formacion (nivel_estudio, titulo, estudio_informal, universidad_institucion, estudia_actualmente, fecha_inicio, fecha_final, idiomas, nivel,	pais, departamento, ciudad) 
+            VALUES('$nivel_estudio', '$titulo',	'$estudio_informal', '$universidad_institucion', '$estudia_actualmente', '$fecha_inicio', '$fecha_final', '$idiomas', '$nivel', '$pais', '$departamento', '$ciudad');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+       // $id_infoadmin = $conexion->lastInsertId();
+        
+        //$this->empresa_infoAdmin($id_infoadmin, $id_empresa);
+        
+        $conexion              =   null;
+        $this->objeto->close();
+    }
+
+    /**
+     * 
+     * PESTAÑA EXPERIENCIA LABORAL
+     * 
+     */
+    public function addHVExperiencia(){
+        $this->addUsuarioHVExperiencia('', '', '', '', '', '', '', '', '', '', '', '', '');
+        
+    }
+    
+    
+    private function addUsuarioHVExperiencia(String $nombre_empresa, String $actividad_empresa, String $nombre_cargo, String $perfil, String $ocupacion, String $pais, String $departamento, String $municipio, String $labora_actualmente, String $fecha_ingreso, String $fecha_retiro, String $tiempo_experiencia, String $descripcion_funciones){
+        
+       /* INSERT INTO u230156310_fenditrabajo.hoja_de_vida (nombre, apellido, email, tipo_doc, numero_doc, telefono, celular, fecha_nacimiento, pais_nacimiento, dep_nacimiento, ciudad_nacimiento, tipo_genero, estado_civil, ocupacion_profesion, tipo_poblacion, dep_residencia, ciudad_municipio_res, dis_cambio_res, dir_residencia, aspiracion_salarial, tiempo_especiencia, descripcion_perfil)
+        VALUES('nombre', 'apellido', 'email', 'tipo_doc', 'numero_doc', 'telefono', 'celular', 'fecha_nacimiento', 'pais_nacimiento', 'dep_nacimiento', 'ciudad_nacimiento', 'tipo_genero', 'estado_civil', 'ocupacion_profesion', 'tipo_poblacion', 'dep_residencia', 'ciudad_municipio_res', 'dis_cambio_res', 'dir_residencia', 'aspiracion_salarial', 'tiempo_especiencia', 'descripcion_perfil');
+       */ 
+        $conexion           = $this->objeto->Conectar();
+        
+        //id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular
+        
+        $sql = "INSERT INTO u230156310_fenditrabajo.experiencia (nombre_empresa, actividad_empresa, nombre_cargo, perfil, ocupacion, pais, departamento, municipio, labora_actualmente, fecha_ingreso, fecha_retiro, tiempo_experiencia, descripcion_funciones) 
+            VALUES('$nombre_empresa', '$actividad_empresa', '$nombre_cargo', '$perfil', '$ocupacion', '$pais', '$departamento', '$municipio', $labora_actualmente', '$fecha_ingreso', '$fecha_retiro', '$tiempo_experiencia', '$descripcion_funciones');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+       // $id_infoadmin = $conexion->lastInsertId();
+        
+        //$this->empresa_infoAdmin($id_infoadmin, $id_empresa);
+        
+        $conexion              =   null;
+        $this->objeto->close();
+    }
+
+
+    /**
+     * 
+     * PESTAÑA REFERENCIAS
+     * 
+     */
+    public function addHVReferencias(){
+        $this->addUsuarioHVReferencias('', '', 0, '', '', '', '', 0);
+        
+    }
+    
+    
+    private function addUsuarioHVReferencias(String $ref_nombre, String $ref_ocupacion, int $ref_telpersonal,	String $ref_nomempresa, String $ref_jefeinmediato, String $ref_cargo, String $ref_correo, int $ref_telempresa ){
+        
+       /* INSERT INTO u230156310_fenditrabajo.hoja_de_vida (nombre, apellido, email, tipo_doc, numero_doc, telefono, celular, fecha_nacimiento, pais_nacimiento, dep_nacimiento, ciudad_nacimiento, tipo_genero, estado_civil, ocupacion_profesion, tipo_poblacion, dep_residencia, ciudad_municipio_res, dis_cambio_res, dir_residencia, aspiracion_salarial, tiempo_especiencia, descripcion_perfil)
+        VALUES('nombre', 'apellido', 'email', 'tipo_doc', 'numero_doc', 'telefono', 'celular', 'fecha_nacimiento', 'pais_nacimiento', 'dep_nacimiento', 'ciudad_nacimiento', 'tipo_genero', 'estado_civil', 'ocupacion_profesion', 'tipo_poblacion', 'dep_residencia', 'ciudad_municipio_res', 'dis_cambio_res', 'dir_residencia', 'aspiracion_salarial', 'tiempo_especiencia', 'descripcion_perfil');
+       */ 
+        $conexion           = $this->objeto->Conectar();
+        
+        //id_infoadmin, nombre, tipoId, numId, cargo, email, telefono, celular
+        
+        $sql = "INSERT INTO u230156310_fenditrabajo.referencia ( ref_nombre, ref_ocupacion, ref_telpersonal, ref_nomempresa, ref_jefeinmediato, ref_cargo, ref_correo, ref_telempresa) 
+            VALUES ( '$ref_nombre', '$ref_ocupacion', '$ref_telpersonal', '$ref_nomempresa', '$ref_jefeinmediato', '$ref_cargo', '$ref_correo', '$ref_telempresa');";
+        
+        
+
+        $resultado  = $conexion->prepare($sql);
+        $resultado->execute();
+       // $id_infoadmin = $conexion->lastInsertId();
+        
+        //$this->empresa_infoAdmin($id_infoadmin, $id_empresa);
+        
+        $conexion              =   null;
+        $this->objeto->close();
+    }
+
+
     
     
     
