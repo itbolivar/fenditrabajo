@@ -32,7 +32,7 @@ require_once 'view/_main.php';?>
         	</p>
           </div>
       <div class="col-md-5">
-        <div class="postimg"><img src="<?php echo $img_dir?>about-us-img1.jpg" alt="your alt text" /></div>
+        <div class="postimg"><img src="<?php echo $img_dir?>about1.jpeg" alt="your alt text" /></div>
       </div>
     </div>
   </div>
